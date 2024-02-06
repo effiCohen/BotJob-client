@@ -4,10 +4,10 @@ import HeaderAdmin from './headerAdmin';
 
 function LayoutAdmin() {
   return (
-    <React.Fragment>
+    <React.StrictMode>
     <HeaderAdmin />
     <Outlet />
-  </React.Fragment>
+  </React.StrictMode>
   )
 }
 
