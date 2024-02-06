@@ -4,10 +4,10 @@ import HeaderClient from './headerClient';
 
 function LayoutClient() {
     return (
-        <React.Fragment>
+        <React.StrictMode>
             <HeaderClient />
             <Outlet />
-        </React.Fragment>
+        </React.StrictMode>
     )
 }
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LayoutAdmin from './componentsAdmin/layoutAdmin'
 import LoginAdmin from './componentsAdmin/loginAdmin'
 import UserListAdmin from './componentsAdmin/userListAdmin'
@@ -11,13 +11,11 @@ import HomeClient from './componentsClient/homeClient'
 import LogoutClient from './componentsClient/logoutClient'
 import Page404 from './componentsClient/Page404'
 
-function AppRoute() {
+function App() {
 
-
-
-    return (
-        <Router>
-            <Routes>
+  return (
+    <BrowserRouter>
+                 <Routes>
                 <Route path="/admin" element={<LayoutAdmin />}>
                     <Route index element={<LoginAdmin />} />
                     <Route path='/admin/users' element={<UserListAdmin />} />
@@ -32,8 +30,8 @@ function AppRoute() {
                     <Route path="/*" element={<Page404 />} />
                 </Route>
             </Routes>
-        </Router >
-    )
+    </BrowserRouter>
+  )
 }
 
-export default AppRoute
+export default App
