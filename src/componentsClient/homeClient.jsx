@@ -2,7 +2,7 @@ import React from 'react'
 
 function HomeClient() {
   return (
-    <div>HomeClient</div>
+    <div>Welcome to Home Client</div>
   )
 }
 
