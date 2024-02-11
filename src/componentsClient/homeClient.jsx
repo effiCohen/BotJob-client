@@ -1,8 +1,8 @@
-import React from 'react'
+// import React from 'react'
 
 function HomeClient() {
   return (
-    <div>Welcome to Home Client</div>
+    <div className='text-xl text-red-300 '>Welcome to Home Client</div>
   )
 }
 
