@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
-import { API_URL, doApiGet, doApiMethod } from '../services/apiService';
+import { API_URL, doApiMethod } from '../services/apiService';
 import { saveTokenLocal } from '../services/localService';
 
 const loginClient = () => {
@@ -24,9 +24,7 @@ const loginClient = () => {
       }
     }
     catch (err) {
-      console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
       console.log(err.response.data);
-
     }
   }
 
