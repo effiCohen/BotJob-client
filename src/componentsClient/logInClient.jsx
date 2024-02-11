@@ -1,4 +1,4 @@
-// import React, { useState } from 'react'
+import React from 'react'
 
 const loginClient = () => {
 
@@ -15,7 +15,7 @@ const loginClient = () => {
             </div>
             <div>
 
-              <div className="  flex items-center justify-center ">
+              <div className="flex items-center justify-center ">
                 <div className="w-full sm:w-64 px-1 mb-2 text-start">
                   <label className="text-xs font-semibold px-1">Email:</label>
                   <div className="flex items-center justify-center">
