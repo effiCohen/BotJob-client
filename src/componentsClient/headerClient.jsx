@@ -7,6 +7,9 @@ function HeaderClient() {
   const onLoginClick = () => {
     nav("/");
   }
+  const onValidationClick = () => {
+    nav("/validation");
+  }
   const onHomeClick = () => {
     nav("/home");
   }
@@ -16,10 +19,10 @@ function HeaderClient() {
 
   return (
     <div>
-      <h1>HeaderClient</h1>
-      <button onClick={onLoginClick}>Login</button>
-      <button onClick={onHomeClick}>Home</button>
-      <button onClick={onSignupClick}>signup</button>
+      <button onClick={onSignupClick}>- signup -</button>
+      <button onClick={onValidationClick}>- validation -</button>
+      <button onClick={onLoginClick}>- Login -</button>
+      <button onClick={onHomeClick}>- Home -</button>
     </div>
   )
 }
