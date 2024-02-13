@@ -40,7 +40,7 @@ function SignUpClient() {
   let dateRef = register("DateOfBirth", { required: true });
 
   const toLogin = () => {
-    nav("/");
+    nav("/login");
   };
 
   return (
@@ -72,7 +72,7 @@ function SignUpClient() {
                     <label className="text-xs font-sans px-1 font-bold text-[#292930]">Email:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                      <input {...emailRef}  type="email" className="w-full -ml-10 pl-10 pr-3 py-1 rounded-xl text-sm  border-2 border-[#292930]  bg-[#FAF7FF] outline-none focus:border-gray-500" placeholder="test@gmail.com" />
+                      <input {...emailRef} type="email" className="w-full -ml-10 pl-10 pr-3 py-1 rounded-xl text-sm  border-2 border-[#292930]  bg-[#FAF7FF] outline-none focus:border-gray-500" placeholder="test@gmail.com" />
                     </div>
                     {errors.email ? <small className='text-red-500'>Email invalid</small> : ""}
 

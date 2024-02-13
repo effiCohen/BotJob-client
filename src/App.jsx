@@ -12,7 +12,7 @@ import LogoutClient from './componentsClient/logoutClient'
 import Page404 from './componentsClient/Page404'
 import ValidationClient from './componentsClient/validationClient';
 import Welcome from './componentsClient/welcome';
-import ForgatPass from './componentsAdmin/forgatPass';
+import ForgatPass from './componentsClient/forgatPass';
 
 function App() {
 
