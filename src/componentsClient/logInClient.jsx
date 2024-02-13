@@ -5,13 +5,14 @@ import { API_URL, doApiMethod } from '../services/apiService';
 import { saveTokenLocal } from '../services/localService';
 
 const loginClient = () => {
-  let nav = useNavigate()
+  let nav = useNavigate();
   let { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubForm = (data) => {
     console.log(data);
     doApi(data);
   }
+ 
   const doApi = async (_dataBody) => {
     let url = API_URL + "/users/login";
     try {
@@ -34,6 +35,10 @@ const loginClient = () => {
   });
   let passwordRef = register("password", { required: true, minLength: 3 });
 
+  const toSignUp = () => {
+    nav("/signup");
+  };
+  
   return (
 
     <div className="min-w-screen min-h-fit  bg-[#FFFDFB] flex items-center justify-center p-5 ">
@@ -75,7 +80,7 @@ const loginClient = () => {
           </form>
 
         </div>
-        <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple] mt-5">Create an Account</button>
+        <button onClick={toSignUp} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple] mt-5">Create an Account</button>
       </div>
     </div >
   )
