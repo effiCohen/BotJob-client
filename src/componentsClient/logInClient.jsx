@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { API_URL, doApiMethod } from '../services/apiService';
 import { saveTokenLocal } from '../services/localService';
+import { Link } from "react-router-dom";
+
 
 const loginClient = () => {
   let nav = useNavigate();
@@ -64,7 +66,11 @@ const loginClient = () => {
                   <input {...passwordRef} type="password" className="w-full -ml-10 pl-10 pr-3 text-sm text-start py-1 rounded-xl border-2   border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500 font-[Poppins] " placeholder="password         ....." />
                 </div>
                 {errors.password ? <small className='text-red-700'>* Enter valid password, min 3 chars</small> : ""}
-                <p className='text-red-700 text-end text-xs cursor-pointer'>Forgot password?</p>
+                <p className='text-red-700 text-end text-xs cursor-pointer'>
+                <Link to="/auth/forgot" className="text-blueGray-200">
+              <small>Forgot password?</small>
+              </Link>                
+              </p>
               </div>
             </div>
             <div className="flex justify-center">

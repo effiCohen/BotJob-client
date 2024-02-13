@@ -12,6 +12,8 @@ import LogoutClient from './componentsClient/logoutClient'
 import Page404 from './componentsClient/Page404'
 import ValidationClient from './componentsClient/validationClient';
 import Welcome from './componentsClient/welcome';
+// import ForgotClient from './componentsClient/forgot';
+
 
 function App() {
 
@@ -31,6 +33,8 @@ function App() {
                     <Route path="/validation" element={<ValidationClient />} />
                     <Route path="/home" element={<HomeClient />} />
                     <Route path="/logout" element={<LogoutClient />} />
+                    {/* <Route path="/forgot" element={<ForgotClient />} /> */}
+
                     <Route path="/*" element={<Page404 />} />
                 </Route>
             </Routes>
