@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { API_URL, doApiMethod } from '../services/apiService';
@@ -12,7 +12,7 @@ const loginClient = () => {
     console.log(data);
     doApi(data);
   }
- 
+
   const doApi = async (_dataBody) => {
     let url = API_URL + "/users/login";
     try {
@@ -38,7 +38,7 @@ const loginClient = () => {
   const toSignUp = () => {
     nav("/signup");
   };
-  
+
   return (
 
     <div className="min-w-screen min-h-fit  bg-[#FFFDFB] flex items-center justify-center p-5 ">
