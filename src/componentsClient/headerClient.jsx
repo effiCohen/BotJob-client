@@ -10,6 +10,9 @@ function HeaderClient() {
   const onLoginClick = () => {
     nav("/login");
   }
+  const onForgatPassClick = () => {
+    nav("/forgatPass");
+  }
   const onValidationClick = () => {
     nav("/validation");
   }
@@ -26,6 +29,7 @@ function HeaderClient() {
       <button onClick={onSignupClick}>- signup -</button>
       <button onClick={onValidationClick}>- validation -</button>
       <button onClick={onLoginClick}>- Login -</button>
+      <button onClick={onForgatPassClick}>- forgatPass -</button>
       <button onClick={onHomeClick}>- Home -</button>
     </div>
   )

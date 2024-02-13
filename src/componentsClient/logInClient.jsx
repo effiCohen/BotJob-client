@@ -38,6 +38,9 @@ const loginClient = () => {
   const toSignUp = () => {
     nav("/signup");
   };
+  const toforgatPass = () => {
+    nav("/forgatPass");
+  };
 
   return (
 
@@ -64,7 +67,7 @@ const loginClient = () => {
                   <input {...passwordRef} type="password" className="w-full -ml-10 pl-10 pr-3 text-sm text-start py-1 rounded-xl border-2   border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500 font-[Poppins] " placeholder="password         ....." />
                 </div>
                 {errors.password ? <small className='text-red-700'>* Enter valid password, min 3 chars</small> : ""}
-                <p className='text-red-700 text-end text-xs cursor-pointer'>Forgot password?</p>
+                <p onClick={toforgatPass} className='text-red-700 text-end text-xs cursor-pointer'>Forgot password?</p>
               </div>
             </div>
             <div className="flex justify-center">
