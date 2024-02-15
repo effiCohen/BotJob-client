@@ -22,6 +22,9 @@ function HeaderClient() {
   const onForgotClick = () => {
     nav("/forgot");
   }
+  const onRestpasswordClick = () => {
+    nav("/resatpassword");
+  }
 
   return (
     <div>
@@ -31,6 +34,8 @@ function HeaderClient() {
       <button onClick={onLoginClick}>- Login -</button>
       <button onClick={onHomeClick}>- Home -</button>
       <button onClick={onForgotClick}>- Forgot -</button>
+      <button onClick={onRestpasswordClick}>- Resat  -</button>
+
 
     </div>
   )

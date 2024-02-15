@@ -14,28 +14,44 @@ export default function Footer() {
             <div className="w-full lg:w-6/12 px-6">
               <div className="mt-2 lg:mb-0 mb-3">
                 <button
-                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="outline-none focus:outline-none"
                   type="button"
                 >
-                  <i className="fab fa-twitter"></i>
+                  <img
+                    src="/src/assets/img/twitter-original.svg"
+                    alt="Twitter"
+                    className="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full mr-2"
+                  />
                 </button>
                 <button
-                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="outline-none focus:outline-none"
                   type="button"
                 >
-                  <i className="fab fa-facebook-square"></i>
+                  <img
+                    src="/src/assets/img/facebook.svg"
+                    alt="Facebook"
+                    className="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full mr-2"
+                  />
                 </button>
                 <button
-                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="outline-none focus:outline-none"
                   type="button"
                 >
-                  <i className="fab fa-dribbble"></i>
+                  <img
+                    src="/src/assets/img/google.svg"
+                    alt="Google"
+                    className="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full mr-2"
+                  />
                 </button>
                 <button
-                  className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="outline-none focus:outline-none"
                   type="button"
                 >
-                  <i className="fab fa-github"></i>
+                  <img
+                    src="/src/assets/img/github.svg"
+                    alt="GitHub"
+                    className="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full mr-2"
+                  />
                 </button>
               </div>
             </div>           

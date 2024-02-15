@@ -67,7 +67,7 @@ const loginClient = () => {
                 </div>
                 {errors.password ? <small className='text-red-700'>* Enter valid password, min 3 chars</small> : ""}
                 <p className='text-red-700 text-end text-xs cursor-pointer'>
-                <Link to="/auth/forgot" className="text-blueGray-200">
+                <Link to="/forgot" className="text-blueGray-200">
               <small>Forgot password?</small>
               </Link>                
               </p>

@@ -13,7 +13,7 @@ function Welcome() {
                         <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-8">
                             <div>
                                 <div className="text-center lg:text-left">
-                                    <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-pj">BotJOB - AI</h1>
+                                    <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-pj">BotJOB  AI</h1>
                                     <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">Now your interviews are in one place and always under control.</p>
                                     <div className="mt-8 text-center" style={{ transform: 'scale(1.2, 1.2)' }}>
 
@@ -38,7 +38,7 @@ function Welcome() {
                             </div>
 
                             <div>
-                                {/* הוספתי סגנון לרקע */}
+
                                 <img className="w-full bg-white" src="/src/assets/img/logo4.jpg" alt="" />
                             </div>
                         </div>
