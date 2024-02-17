@@ -13,6 +13,7 @@ import Page404 from './componentsClient/Page404'
 import ValidationClient from './componentsClient/validationClient';
 import Welcome from './componentsClient/welcome';
 import ForgatPass from './componentsClient/forgatPass';
+import PasswordValid from './componentsClient/PasswordValid';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/forgatPass" element={<ForgatPass />} />
           <Route path="/home" element={<HomeClient />} />
           <Route path="/logout" element={<LogoutClient />} />
+          <Route path="/passwordValidation" element={<PasswordValid />} />
           <Route path="/*" element={<Page404 />} />
         </Route>
       </Routes>
