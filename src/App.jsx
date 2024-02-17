@@ -14,6 +14,7 @@ import ValidationClient from './componentsClient/validationClient';
 import Welcome from './componentsClient/welcome';
 import ForgatPass from './componentsClient/forgatPass';
 import PasswordValid from './componentsClient/PasswordValid';
+import RestPassword from './componentsClient/RestPassword';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/home" element={<HomeClient />} />
           <Route path="/logout" element={<LogoutClient />} />
           <Route path="/passwordValidation" element={<PasswordValid />} />
+          <Route path="/restPasswword" element={<RestPassword />} />
           <Route path="/*" element={<Page404 />} />
         </Route>
       </Routes>

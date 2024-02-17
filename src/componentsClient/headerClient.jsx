@@ -25,6 +25,9 @@ function HeaderClient() {
   const onSignupClick = () => {
     nav("/signup");
   }
+  const onRestPassword = () => {
+    nav("/restPasswword");
+  }
 
   return (
     <div>
@@ -35,6 +38,7 @@ function HeaderClient() {
       <button onClick={onForgatPassClick}>- forgatPass -</button>
       <button onClick={onHomeClick}>- Home -</button>
       <button onClick={onPasswordValidationClick}>- PasswordValid -</button>
+      <button onClick={onRestPassword}>- restPassword -</button>
     </div>
   )
 }

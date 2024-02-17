@@ -13,8 +13,8 @@ const ForgatPass = () => {
 
                     <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                         <div className="text-center mb-4">
-                            <h1 className="font-bold text-3xl text-[#1E1E1E] font-[DM-Sans]">Forgot password?</h1>
-                            <p className='text-gray-300 text-sm font-[simple] text-center'>Don’t worry! It happens. Please enter the email associated with your account.</p>
+                            <h1 className="font-bold text-3xl text-[#1E1E1E] font-[inter]">Forgot password?</h1>
+                            <p className='text-gray-300 text-sm font-[Poppins] text-center'>Don’t worry! It happens. Please enter the email associated with your account.</p>
                         </div>
                         <div>
 
@@ -27,7 +27,7 @@ const ForgatPass = () => {
                                     </div>
 
                                     <div className="w-full px-3 mt-5 ">
-                                        <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple]">Send code</button>
+                                        <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold  text-white rounded-2xl px-3 py-3 font-[simple]">Send code</button>
                                     </div>
                                     <p className='mx-auto text-center mt-8 font-[simple]'>Already have an account? <b onClick={toLogin} className='cursor-pointer'>Sign in </b></p>
 
