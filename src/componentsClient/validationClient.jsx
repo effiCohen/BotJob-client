@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 
 function ValidationClient() {
   const inputFields = Array.from({ length: 5 }, (_, i) => (
@@ -10,17 +10,16 @@ function ValidationClient() {
   ));
   return (
     <>
-      <h1 className="text-center text-[50px] font-sans bg-[#FFFDFB]"> Email Confirm </h1>
+      <h1 className="text-center text-[50px] font-[inter] bg-[#FFFDFB]  "> Let’s go! </h1>
 
-      <div className=" lg:flex-row-reverse flex min-h-screen flex-col items-center justify-center overflow-hidden  bg-[#FFFDFB] ">
+      <div className="  flex min-h-screen flex-col items-center justify-between overflow-hidden container bg-[#fffdfbfa] ">
 
-        <figure className='max-w-lg  '>
-          <img src="/src/assets/Asset@2x-8 1.png" alt="email@ " className='h-auto w-[100%] max-w-lg' />
+        <figure className='max-w-lg  mx-auto  '>
+          <img src="/src/assets/Asset@2x-8 1.png" alt="email@ " className='h-[30%] w-[50%] mx-auto' />
         </figure>
-        <div className="max-w-xl px-5 text-center flex flex-col justify-start items-center mb-20  ">
-          <h1 className='font-bolt font-[Poppins] text-[42px]'>Hi! Sharon</h1>
-          <h4 className=" text-[32px] font-[Poppins] text-[#141414]">Welcome to bootjob.</h4>
-          <p className=" text-lg text-zinc-500"> We’ve sent an Email with an activation code to your mail <span class="font-medium text-[#141414]">fakeOne@ort.il</span>.</p>
+        <div className="max-w-xl px-5 text-center flex flex-col  items-center justify-center mb-auto  ">
+          <h1 className='font-bolt font-[Poppins] text-[42px]'>we just emailed you.</h1>
+          <p className=" text-lg text-zinc-500"> We’ve sent an Email with an activation code to your mail <span className="font-medium text-[#141414]">fakeOne@ort.il</span>.</p>
           <div className="flex gap-5 max-w-lg items-end">
             {inputFields.map((inputField, index) => (
               <div key={index}>{inputField}</div>
