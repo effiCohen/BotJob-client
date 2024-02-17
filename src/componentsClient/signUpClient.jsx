@@ -51,14 +51,14 @@ function SignUpClient() {
 
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
               <div className="text-center mb-4">
-                <h1 className="font-bold text-3xl text-gray-900 font-[DM-Sans]">Sign Up to BotJob.</h1>
-                <p className='text-gray-300 text-sm font-[simple]  pr-[110px]'>Enter your detail below</p>
+                <h1 className="font-bold text-3xl text-gray-900 font-[inter]">Sign Up to BotJob.</h1>
+                <p className='text-gray-300 text-sm font-[Poppins]  pr-[110px]'>Enter your detail below</p>
               </div>
               <div>
 
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-sans px-1 font-bold text-[#292930] ">Full Name:</label>
+                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930] ">Full Name:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className=" text-gray-400 text-lg"></i></div>
                       <input {...fullNameRef} type="text" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Johen Due" />
@@ -69,7 +69,7 @@ function SignUpClient() {
                 </div>
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-sans px-1 font-bold text-[#292930]">Email:</label>
+                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930]">Email:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                       <input {...emailRef} type="email" className="w-full -ml-10 pl-10 pr-3 py-1 rounded-xl text-sm  border-2 border-[#292930]  bg-[#FAF7FF] outline-none focus:border-gray-500" placeholder="test@gmail.com" />
@@ -81,7 +81,7 @@ function SignUpClient() {
 
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-sans px-1 font-bold text-[#292930]">password:</label>
+                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930]">Password:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
                       <input  {...passwordRef} name='password' type="password" className="w-full -ml-10 pl-10 pr-3 text-sm py-1 rounded-xl border-2   border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500 text-left" placeholder="password.              ....." />
@@ -93,7 +93,7 @@ function SignUpClient() {
                 </div>
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-sans px-1 font-bold text-[#292930]">Date of birth:</label>
+                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930]">Date of birth:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
                       <input {...dateRef} type="date" className="w-full -ml-10 pl-10 text-sm   py-1 text-left rounded-xl border-2 gap-10    border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500" />
