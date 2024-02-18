@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initValue = {
-  myEmail:"shimondriham523@gmail.com"
+  myEmail:"test@gmail.com"
 }
 
 const emailSlice = createSlice({
