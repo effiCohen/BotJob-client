@@ -1,6 +1,6 @@
 // import React from 'react'
 import { useSelector } from "react-redux";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { API_URL, doApiMethod } from '../services/apiService';
 import { useForm } from "react-hook-form";
 
@@ -17,7 +17,7 @@ function ValidationClient() {
     let myCode = data.code1 + data.code2 + data.code3 + data.code4 + data.code5;
     let myData = {
       email: myEmail,
-      verifictionCode:myCode
+      verifictionCode: myCode
     };
     console.log(myData);
     doApi(myData);
@@ -29,9 +29,9 @@ function ValidationClient() {
       let resp = await doApiMethod(url, "PATCH", _dataBody);
       console.log(resp);
       if (resp.data.status = 200) {
-      console.log("You are now a valid user");
-      nav("/login");
-      // window.location.reload();
+        console.log("You are now a valid user");
+        nav("/login");
+        // window.location.reload();
       }
     }
     catch (err) {
@@ -71,7 +71,7 @@ function ValidationClient() {
               <div key={index}>{inputField}</div>
                
             ))} */}
-            <input {...codeRef1}  type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg"/>
+            <input {...codeRef1} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
             <input {...codeRef2} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
             <input {...codeRef3} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
             <input {...codeRef4} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
