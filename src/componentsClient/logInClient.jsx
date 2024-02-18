@@ -23,7 +23,7 @@ const loginClient = () => {
       if (resp.data.token) {
         saveTokenLocal(resp.data.token);
         nav("/home");
-        window.location.reload();
+        // window.location.reload();
 
       }
     }
@@ -42,7 +42,7 @@ const loginClient = () => {
     nav("/signup");
   };
   const toforgatPass = () => {
-    nav("/forgatPass");
+    nav("/forgotPass");
   };
 
   return (

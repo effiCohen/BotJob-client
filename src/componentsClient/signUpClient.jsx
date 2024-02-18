@@ -3,9 +3,11 @@
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router';
 import { API_URL, doApiMethod } from '../services/apiService';
+import {  useDispatch } from "react-redux";
 
 function SignUpClient() {
   let nav = useNavigate();
+  const dispatch = useDispatch();
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -18,10 +20,12 @@ function SignUpClient() {
 
   const doApi = async (_dataBody) => {
     let url = API_URL + "/users";
+    console.log("_dataBody", _dataBody);
     try {
       let resp = await doApiMethod(url, "POST", _dataBody);
       console.log("resp", resp);
       if (resp.data._id) {
+        dispatch(addEmail({email:_dataBody.email}));
         console.log("You sign up");
         nav("/validation");
       }
