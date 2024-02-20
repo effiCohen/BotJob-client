@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LayoutAdmin from './componentsAdmin/layoutAdmin'
-import LoginAdmin from './componentsAdmin/loginAdmin'
 import UserListAdmin from './componentsAdmin/userListAdmin'
-import LogoutAdmin from './componentsAdmin/logoutAdmin'
 import LayoutClient from './componentsClient/layoutClient'
 import LogInClient from './componentsClient/logInClient'
 import SignUpClient from './componentsClient/signUpClient'
@@ -16,15 +14,19 @@ import PasswordValid from './componentsClient/passwordValid';
 import RestPassword from './componentsClient/restPassword';
 import ForgotPass from './componentsClient/forgotPass';
 import Setting from './componentsClient/Setting';
+import DashboardAdmin from './componentsAdmin/dashboardAdmin';
+import InterviewAdmin from './componentsAdmin/interviewAdmin';
+import QuestionAdmin from './componentsAdmin/QuestionAdmin';
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/admin" element={<LayoutAdmin />}>
-          <Route index element={<LoginAdmin />} />
+          <Route index element={<DashboardAdmin />} />
           <Route path='/admin/users' element={<UserListAdmin />} />
-          <Route path='/admin/logout' element={<LogoutAdmin />} />
+          <Route path='/admin/interview' element={<InterviewAdmin />} />
+          <Route path='/admin/question' element={<QuestionAdmin />} />
         </Route>
 
         <Route path="/" element={<LayoutClient />}>

@@ -31,6 +31,9 @@ function HeaderClient() {
   const onSetting = () => {
     nav("/setting");
   }
+  const onAdmin = () => {
+    nav("/Admin");
+  }
 
 
   return (
@@ -44,6 +47,7 @@ function HeaderClient() {
       <button onClick={onRestPassword}>- restPassword -</button>
       <button onClick={onHomeClick}>- Home -</button>
       <button onClick={onSetting}>- setting -</button>
+      <button onClick={onAdmin}>- Admin -</button>
     </div>
   )
 }
