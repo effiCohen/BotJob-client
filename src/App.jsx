@@ -14,7 +14,6 @@ import ValidationClient from './componentsClient/validationClient';
 import Welcome from './componentsClient/welcome';
 import ForgotClient from './componentsClient/Forgot';
 import ResatPasswordClient from './componentsClient/ResatPassword';
-// import HomeClient from './componentsClient/homeClient';
 
 function App() {
 
@@ -37,7 +36,6 @@ function App() {
                     <Route path='welcome' element={<Welcome/>} />
                     <Route path="/forgot" element={<ForgotClient />} />
                     <Route path='resatpassword'element={<ResatPasswordClient />} />
-                    {/* <Route path='home' element={<HomeClient />} /> */}
 
 
                     <Route path="/*" element={<Page404 />} />
