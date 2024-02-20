@@ -3,7 +3,6 @@
 function HomeClient() {
   return (
     <div className="mt-3">
-      {/* <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]">Wolcame User</h1> */}
 
       <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj"> Welcame *User*</h1>
 
@@ -20,12 +19,11 @@ function HomeClient() {
                 <thead class="border-b font-medium dark:border-neutral-500">
                   <tr>
                     <th scope="col" className="px-4 py-2">Id</th>
-                    <th scope="col" className="px-4 py-2">ID / Name</th>
                     <th scope="col" className="px-4 py-2">Date</th>
                     <th scope="col" className="px-4 py-2">Role</th>
                     <th scope="col" className="px-4 py-2">Time</th>
-                    <th scope="col" className="px-4 py-2">Rating / More</th>
-                    <th scope="col" className="px-4 py-2">Start Again</th>
+                    <th scope="col" className="px-4 py-2">The number of questions</th>
+                    <th scope="col" className="px-4 py-2">More details</th>
                   </tr>
                 </thead>
                 {/* <tbody>
