@@ -4,17 +4,14 @@ import { useNavigate } from 'react-router-dom';
 function HeaderAdmin() {
   let nav = useNavigate()
 
-  const onWelcomeClick = () => {
-    nav("/admin");
-  }
   const onDashboardAdminClick = () => {
-    nav("/admin/users");
+    nav("/admin");
   }
   const onInterviewAdminClick = () => {
     nav("/admin/interview");
   }
   const onQuestionAdminClick = () => {
-    nav("/admin/users");
+    nav("/admin/question");
   }
   const onUserClick = () => {
     nav("/");
@@ -24,11 +21,10 @@ function HeaderAdmin() {
 
   return (
     <div>
-      <button onClick={onWelcomeClick}>- home Admin -</button>
-      <button onClick={onDashboardAdminClick}>- dashboard  -</button>
+      <button onClick={onDashboardAdminClick}>- dashboard -</button>
       <button onClick={onInterviewAdminClick}>- interview -</button>
       <button onClick={onQuestionAdminClick}>- question  -</button>
-      <button onClick={onUserClick}>-bake to user  -</button>
+      <button onClick={onUserClick}>-Back to user  -</button>
  
     </div>
   )

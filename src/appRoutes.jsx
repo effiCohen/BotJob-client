@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LayoutAdmin from './componentsAdmin/layoutAdmin'
-import UserListAdmin from './componentsAdmin/userListAdmin'
 import LayoutClient from './componentsClient/layoutClient'
 import LogInClient from './componentsClient/logInClient'
 import SignUpClient from './componentsClient/signUpClient'
@@ -24,7 +23,6 @@ function AppRoutes() {
       <Routes>
         <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<DashboardAdmin />} />
-          <Route path='/admin/users' element={<UserListAdmin />} />
           <Route path='/admin/interview' element={<InterviewAdmin />} />
           <Route path='/admin/question' element={<QuestionAdmin />} />
         </Route>
