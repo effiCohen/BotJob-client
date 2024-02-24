@@ -10,12 +10,14 @@ import Page404 from './componentsClient/Page404'
 import ValidationClient from './componentsClient/validationClient';
 import Welcome from './componentsClient/welcome';
 import PasswordValid from './componentsClient/passwordValid';
-import RestPassword from './componentsClient/restPassword';
 import ForgotPass from './componentsClient/forgotPass';
 import Setting from './componentsClient/Setting';
 import DashboardAdmin from './componentsAdmin/dashboardAdmin';
 import InterviewAdmin from './componentsAdmin/interviewAdmin';
 import QuestionAdmin from './componentsAdmin/QuestionAdmin';
+import RestPassword from './componentsClient/RestPassword';
+import InterviewClient from './componentsClient/InterviewClient';
+import QuestionClient from './componentsClient/questionClient';
 
 function AppRoutes() {
   return (
@@ -34,6 +36,8 @@ function AppRoutes() {
           <Route path="/login" element={<LogInClient />} />
           <Route path="/forgotpass" element={<ForgotPass />} />
           <Route path="/home" element={<HomeClient />} />
+          <Route path="/interviewClient" element={<InterviewClient />} />
+          <Route path="/questionClient" element={<QuestionClient />} />
           <Route path="/logout" element={<LogoutClient />} />
           <Route path="/setting" element={<Setting />} />
           <Route path="/passwordValidation" element={<PasswordValid />} />
