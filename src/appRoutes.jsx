@@ -16,6 +16,12 @@ import Setting from './componentsClient/Setting';
 import DashboardAdmin from './componentsAdmin/dashboardAdmin';
 import InterviewAdmin from './componentsAdmin/interviewAdmin';
 import QuestionAdmin from './componentsAdmin/QuestionAdmin';
+import InterviewRole from './componentsClient/InterviewRole';
+import Interview from './componentsClient/Interview';
+import InterviewDone from './componentsClient/InterviewDone';
+import Feedback from './componentsClient/Feedback';
+import Questions from './componentsClient/Questions';
+import Answer from './componentsClient/Answer';
 
 function AppRoutes() {
   return (
@@ -39,6 +45,14 @@ function AppRoutes() {
           <Route path="/passwordValidation" element={<PasswordValid />} />
           <Route path="/restpass" element={<RestPassword />} />
           <Route path="/*" element={<Page404 />} />
+          <Route path='/InterviewRole' element={<InterviewRole />} />
+          <Route path='/Interview' element={<Interview />} />
+          <Route path='/InterviewDone' element={<InterviewDone />} />
+          <Route path='/Feedback' element={<Feedback />} />
+          <Route path='/Questions' element={<Questions />} />
+          <Route path='/Answer' element={<Answer />} />
+
+
         </Route>
       </Routes>
     </BrowserRouter>
