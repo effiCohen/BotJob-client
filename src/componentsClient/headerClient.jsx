@@ -22,6 +22,12 @@ function HeaderClient() {
   const onHomeClick = () => {
     nav("/home");
   }
+  const onHomeQushtionsClick = () => {
+    nav("/homeQushtions");
+  }
+  const onHomeAnswerClick = () => {
+    nav("/homeAnswer");
+  }
   const onSignupClick = () => {
     nav("/signup");
   }
@@ -64,6 +70,8 @@ function HeaderClient() {
       <button onClick={onPasswordValidationClick}>- PasswordValid -</button>
       <button onClick={onRestPassword}>- restPassword -</button>
       <button onClick={onHomeClick}>- Home -</button>
+      <button onClick={onHomeQushtionsClick}>- HomeQushtions -</button>
+      <button onClick={onHomeAnswerClick}>- HomeAnswer -</button>
       <button onClick={onSetting}>- setting -</button>
       <button onClick={onInterviewRole}>- InterviewRole -</button>
       <button onClick={onInterview}>- Interview -</button>

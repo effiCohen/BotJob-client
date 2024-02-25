@@ -23,6 +23,9 @@ import InterviewDone from './componentsClient/InterviewDone';
 import Feedback from './componentsClient/Feedback';
 import Questions from './componentsClient/Questions';
 import Answer from './componentsClient/Answer';
+import InterviewRole from './componentsClient/InterviewRole';
+import HomeQushtions from './componentsClient/homeQushtions';
+import HomeAnswer from './componentsClient/homeAnswer';
 
 function AppRoutes() {
   return (
@@ -41,13 +44,15 @@ function AppRoutes() {
           <Route path="/login" element={<LogInClient />} />
           <Route path="/forgotpass" element={<ForgotPass />} />
           <Route path="/home" element={<HomeClient />} />
+          <Route path="/homeQushtions" element={<HomeQushtions />} />
+          <Route path="/homeAnswer" element={<HomeAnswer />} />
           <Route path="/interviewClient" element={<InterviewClient />} />
           <Route path="/questionClient" element={<QuestionClient />} />
           <Route path="/logout" element={<LogoutClient />} />
           <Route path="/setting" element={<Setting />} />
           <Route path="/passwordValidation" element={<PasswordValid />} />
           <Route path="/restpass" element={<RestPassword />} />
-          {/* <Route path='/InterviewRole' element={<InterviewRole />} /> */}
+          <Route path='/InterviewRole' element={<InterviewRole />} />
           <Route path='/Interview' element={<Interview />} />
           <Route path='/InterviewDone' element={<InterviewDone />} />
           <Route path='/Feedback' element={<Feedback />} />
