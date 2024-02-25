@@ -22,12 +22,6 @@ function HeaderClient() {
   const onHomeClick = () => {
     nav("/home");
   }
-  const onInterviewClientClick = () => {
-    nav("/interviewClient");
-  }
-  const onQuestionClientClick = () => {
-    nav("/questionClient");
-  }
   const onSignupClick = () => {
     nav("/signup");
   }
@@ -36,6 +30,24 @@ function HeaderClient() {
   }
   const onSetting = () => {
     nav("/setting");
+  }
+  const onInterviewRole = () => {
+    nav("/InterviewRole");
+  }
+  const onInterview = () => {
+    nav("/Interview");
+  }
+  const onInterviewDone = () => {
+    nav("/InterviewDone");
+  }
+  const onFeedback = () => {
+    nav("/Feedback");
+  }
+  const onQuestions = () => {
+    nav("/Questions");
+  }
+  const onAnswer = () => {
+    nav("/Answer");
   }
   const onAdmin = () => {
     nav("/Admin");
@@ -52,9 +64,15 @@ function HeaderClient() {
       <button onClick={onPasswordValidationClick}>- PasswordValid -</button>
       <button onClick={onRestPassword}>- restPassword -</button>
       <button onClick={onHomeClick}>- Home -</button>
-      <button onClick={onInterviewClientClick}>- Interview -</button>
-      <button onClick={onQuestionClientClick}>- Question -</button>
       <button onClick={onSetting}>- setting -</button>
+      <button onClick={onInterviewRole}>- InterviewRole -</button>
+      <button onClick={onInterview}>- Interview -</button>
+      <button onClick={onInterviewDone}>- InterviewDone -</button>
+      <button onClick={onFeedback}>- Feedback -</button>
+      <button onClick={onQuestions}>- Questions -</button>
+      <button onClick={onAnswer}>- Answer -</button>
+
+
       <button onClick={onAdmin}>- Admin -</button>
     </div>
   )

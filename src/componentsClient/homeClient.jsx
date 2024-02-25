@@ -24,7 +24,7 @@ function HomeClient() {
       questions : [1,1,1],
     }
   ];
-  const useEffect = async (() => {
+   useEffect(() => {
     setAr(temp_ar)
      doApi()
     console.log("myIntervews", myIntervews);
