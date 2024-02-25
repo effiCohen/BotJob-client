@@ -21,7 +21,7 @@ function Welcome() {
                             <div className="text-center lg:text-start justify-between">
 
                                 <h1 className="text-center text-[34px] font-bold  text-gray-900   font-[inter]">BotJob  Ai</h1>
-                                <p className="text-gray-300 text-sm font-[Poppins] text-center ">Now your interviews are in one place and always under control</p>
+                                <p className="text-gray-400 text-sm font-[Poppins] text-center ">Now your interviews are in one place and always under control</p>
                                 <div className="flex justify-center  items-center lg:flex-row flex-col ">
                                     <div className="w-[40%]">
                                         <button onClick={toLogin} className="block w-[80%]  m-1 mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Login</button>
