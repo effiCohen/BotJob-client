@@ -1,25 +1,49 @@
-// import React from 'react'
-
-import { useSelector } from "react-redux";
+import  {React , useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ItemClient from "./itemClient";
+import { API_URL, doApiGet } from "../services/apiService";
+import { reverse } from "lodash";
+import { addIntervews } from "../featuers/intervewSlice";
 
 function HomeClient() {
+  let [ar, setAr] = useState([]);
   const myEmail = useSelector((myStore) => myStore.emailSlics.myEmail);
-  let ar = [
+  const myIntervews = useSelector((myStore) => myStore.intervewSlice.myIntervews);
+  const dispatch = useDispatch();
+  let temp_ar = [
     {
       "_id": 1,
       date_created : "test",
       job : "test",
-      questions : [1,1],
+      questions : [1,1,1],
     },
     {
       "_id": 2,
       date_created : "test2",
       job : "test2",
-      questions : [1,1],
+      questions : [1,1,1],
     }
   ];
-
+  const useEffect = async (() => {
+    setAr(temp_ar)
+     doApi()
+    console.log("myIntervews", myIntervews);
+  }, [])
+  
+  const doApi = async () => {
+    let url = API_URL + "/interviews/myIntervew"
+    try {
+        let  resData  = await doApiGet(url);  
+        console.log(resData);
+        let data = resData.data
+        reverse(data);
+        setAr(data)
+        dispatch(addIntervews({ myIntervews: data }));
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
   return (
     <div className="mt-3">

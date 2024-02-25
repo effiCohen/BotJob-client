@@ -4,10 +4,12 @@ import { Provider } from 'react-redux';
 import './App.css'
 import AppRoutes from "./appRoutes";
 import  emailSlics from "./featuers/emailSlice";
+import  intervewSlice from "./featuers/intervewSlice";
 
 const myStore = configureStore({
   reducer: {
-    emailSlics
+    emailSlics,
+    intervewSlice
   }
 })
 
