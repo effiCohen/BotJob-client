@@ -20,9 +20,6 @@ import InterviewClient from './componentsClient/InterviewClient';
 import QuestionClient from './componentsClient/questionClient';
 import Interview from './componentsClient/Interview';
 import InterviewDone from './componentsClient/InterviewDone';
-import Feedback from './componentsClient/Feedback';
-import Questions from './componentsClient/Questions';
-import Answer from './componentsClient/Answer';
 import InterviewRole from './componentsClient/InterviewRole';
 import HomeQushtions from './componentsClient/homeQushtions';
 import HomeAnswer from './componentsClient/homeAnswer';
@@ -55,9 +52,6 @@ function AppRoutes() {
           <Route path='/InterviewRole' element={<InterviewRole />} />
           <Route path='/Interview' element={<Interview />} />
           <Route path='/InterviewDone' element={<InterviewDone />} />
-          <Route path='/Feedback' element={<Feedback />} />
-          <Route path='/Questions' element={<Questions />} />
-          <Route path='/Answer' element={<Answer />} />
           <Route path="/*" element={<Page404 />} />
         </Route>
       </Routes>

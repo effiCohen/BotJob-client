@@ -46,15 +46,6 @@ function HeaderClient() {
   const onInterviewDone = () => {
     nav("/InterviewDone");
   }
-  const onFeedback = () => {
-    nav("/Feedback");
-  }
-  const onQuestions = () => {
-    nav("/Questions");
-  }
-  const onAnswer = () => {
-    nav("/Answer");
-  }
   const onAdmin = () => {
     nav("/Admin");
   }
@@ -76,9 +67,7 @@ function HeaderClient() {
       <button onClick={onInterviewRole}>- InterviewRole -</button>
       <button onClick={onInterview}>- Interview -</button>
       <button onClick={onInterviewDone}>- InterviewDone -</button>
-      <button onClick={onFeedback}>- Feedback -</button>
-      <button onClick={onQuestions}>- Questions -</button>
-      <button onClick={onAnswer}>- Answer -</button>
+
 
 
       <button onClick={onAdmin}>- Admin -</button>
