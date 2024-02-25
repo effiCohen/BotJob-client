@@ -36,30 +36,37 @@ const PasswordValid = () => {
         }
     }
 
-    let codeRef1 = register("code1", { required: true, minLength: 1, maxLength: 1 });
-    let codeRef2 = register("code2", { required: true, minLength: 1, maxLength: 1 });
-    let codeRef3 = register("code3", { required: true, minLength: 1, maxLength: 1 });
-    let codeRef4 = register("code4", { required: true, minLength: 1, maxLength: 1 });
-    let codeRef5 = register("code5", { required: true, minLength: 1, maxLength: 1 });
+    let codeRefs = [
+        register("code1", { required: true, minLength: 1, maxLength: 1 }),
+        register("code2", { required: true, minLength: 1, maxLength: 1 }),
+        register("code3", { required: true, minLength: 1, maxLength: 1 }),
+        register("code4", { required: true, minLength: 1, maxLength: 1 }),
+        register("code5", { required: true, minLength: 1, maxLength: 1 })
+    ];
 
     return (
         <>
-            <h1 className="text-center text-[50px] font-[Poppins] bg-[#FFFDFB]  "> Let’s go! </h1>
 
-            <div className="  flex min-h-screen flex-col items-center justify-between overflow-hidden container bg-[#fffdfbfa] ">
+            <div className=" mx-auto flex  flex-col items-center justify-between overflow-hidden container bg-[#FFFDFB] sm:flex sm:flex-col sm:mx-auto lg:h-[100%]">
+                <h1 className="font-bold text-2xl text-gray-900 font-[inter]  "> Let’s go! </h1>
 
-                <figure className='max-w-lg  mx-auto  '>
-                    <img src="/src/assets/validPass.png" alt="email@ " className='h-auto w-[100%] max-w-lg' />
+                <figure className='max-w-lg  flex justify-center items-center   '>
+                    <img src="/src/assets/validPass.png" alt="email@ " className='h-[30%] w-[50%] ' />
                 </figure>
-                <form onSubmit={handleSubmit(send)} className="max-w-xl px-5 text-center flex flex-col  items-center justify-center mb-auto  ">
-                    <h1 className='font-bolt font-[inter] text-[42px]'>we just emailed you.</h1>
-                    <p className=" text-lg text-zinc-500 font-[Poppins]"> We’ve sent an Email with an activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
+                <form onSubmit={handleSubmit(send)} className="max-w-xl px-5 text-center flex flex-col  items-center justify-center   ">
+                    <h1 className='font-bold font-[inter] text-[24px]'>we just emailed you.</h1>
+                    <p className=" text-lg  font-[Poppins]"> We’ve sent an Email with an activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
                     <div className="flex gap-5 max-w-lg items-end">
-                        <input {...codeRef1} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-                        <input {...codeRef2} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-                        <input {...codeRef3} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-                        <input {...codeRef4} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-                        <input {...codeRef5} type="text" className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
+                        <div className="flex gap-5 max-w-lg items-end">
+                            {[1, 2, 3, 4, 5].map((index) => (
+                                <input
+                                    key={index}
+                                    type="text"
+                                    className="w-10 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg"
+                                    {...codeRefs[index]}
+                                />
+                            ))}
+                        </div>
                     </div>
                     {errors.code1 ? <small className='text-red-700'>The first number is invalid</small> : ""}
                     {errors.code2 ? <small className='text-red-700'>The second number is invalid</small> : ""}
@@ -74,7 +81,8 @@ const PasswordValid = () => {
                 </form>
 
 
-            </div>
+
+            </div >
 
         </>
     )

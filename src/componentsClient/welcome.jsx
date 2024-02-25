@@ -14,33 +14,36 @@ function Welcome() {
     };
     return (
         <>
-                <section className="relative py-12 sm:py-16 lg:py-20 lg:pb-36 bg-white">
-                    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-8">
-                            <div>
-                                <div className="text-center lg:text-left">
-                                    <h1 className="text-center text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-pj">BotJob  Ai</h1>
-                                    <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">Now your interviews are in one place and always under control</p>
-                                    <div className="flex justify-center mt-8">
-                                        <div className="w-[25%]">
-                                            <button onClick={toLogin} className="block w-[80%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] mt-5">Login</button>
-                                        </div>
-                                        <div className="w-[60%]">
-                                            <button onClick={toSignUp} className="block w-[80%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] mt-5">Create an Account</button>
-                                        </div>
+            <section className="relative py-12 sm:py-16 lg:py-20 bg-[#FFFDFB]   ">
+                <div className="px-4 mx-auto max-w-6xl  lg:px-8 sm:flex sm:flex-col ">
+                    <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-10 ">
+                        <div>
+                            <div className="text-center lg:text-start justify-between">
+
+                                <h1 className="text-center text-[34px] font-bold  text-gray-900   font-[inter]">BotJob  Ai</h1>
+                                <p className="text-gray-300 text-sm font-[Poppins] text-center ">Now your interviews are in one place and always under control</p>
+                                <div className="flex justify-center  items-center lg:flex-row flex-col ">
+                                    <div className="w-[40%]">
+                                        <button onClick={toLogin} className="block w-[80%]  m-1 mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Login</button>
+                                    </div>
+                                    <div className="w-[60%]">
+                                        <button onClick={toSignUp} className="block w-[80%]  mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Create an Account</button>
                                     </div>
                                 </div>
-                                <div className="flex items-center justify-center mt-10 space-x-6 lg:justify-start sm:space-x-8">
-                                </div>
                             </div>
-                            <div>
-                                <img className="w-full bg-white" src="/src/assets/logo4.jpg" alt="" />
+                            <div className="flex items-center justify-center   lg:justify-start ">
                             </div>
                         </div>
+                        <div>
+                            <img className="lg:w-[80%] w-[50%] mx-auto bg-white lg" src="/src/assets/logo4.jpg" alt="" />
+                        </div>
                     </div>
-                </section>
 
-                <footer className="text-center flex items-center mx-auto">
+
+                </div>
+
+            </section >
+            <footer className="text-center flex items-center mx-auto">
 
                 <div className="mx-auto    rounded-3xl flex flex-col items-center justify-center text-center w-[80%]  ">
                     <div className="flex flex-col  justify-center  item-center    ">
@@ -61,8 +64,9 @@ function Welcome() {
                 </div>
 
             </footer >
-            
         </>
+
+
     );
 }
 export default Welcome;
