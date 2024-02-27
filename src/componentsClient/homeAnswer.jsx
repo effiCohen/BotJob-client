@@ -34,7 +34,7 @@ function HomeAnswer() {
             onClick={() => handleButtonClick(index)}
           >
             {text}
-            <img src={icon} alt={`Your Icon ${index}`} className="w-4 h-4 inline-block ml-2" />
+            {/* <img src={icon} alt={`Your Icon ${index}`} className="w-4 h-4 inline-block ml-2" /> */}
           </button>
         ))}
       </div>
