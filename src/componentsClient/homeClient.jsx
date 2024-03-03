@@ -1,4 +1,4 @@
-import  {React , useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ItemClient from "./itemClient";
 import { API_URL, doApiGet } from "../services/apiService";
@@ -13,42 +13,42 @@ function HomeClient() {
   let temp_ar = [
     {
       "_id": 1,
-      date_created : "test",
-      job : "test",
-      questions : [1,1,1],
+      date_created: "test",
+      job: "test",
+      questions: [1, 1, 1],
     },
     {
       "_id": 2,
-      date_created : "test2",
-      job : "test2",
-      questions : [1,1,1],
+      date_created: "test2",
+      job: "test2",
+      questions: [1, 1, 1],
     }
   ];
-   useEffect(() => {
+  useEffect(() => {
     setAr(temp_ar)
-     doApi()
+    doApi()
     console.log("myIntervews", myIntervews);
   }, [])
-  
+
   const doApi = async () => {
     let url = API_URL + "/interviews/myIntervew"
     try {
-        let  resData  = await doApiGet(url);  
-        console.log(resData);
-        let data = resData.data
-        reverse(data);
-        setAr(data)
-        dispatch(addIntervews({ myIntervews: data }));
-        console.log(data);
+      let resData = await doApiGet(url);
+      console.log(resData);
+      let data = resData.data
+      reverse(data);
+      setAr(data)
+      dispatch(addIntervews({ myIntervews: data }));
+      console.log(data);
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-}
+  }
 
   return (
     <div className="mt-3">
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj"> Welcame {myEmail}</h1>
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">Your History</h1>
+      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter]"> Welcame {myEmail}</h1>
+      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Poppins]">Your History</h1>
       <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">  Your history can teach you and you can only learn from it</p>
       <div className="flex flex-col">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">

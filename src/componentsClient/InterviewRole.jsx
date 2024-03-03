@@ -3,39 +3,31 @@
 function InterviewRole() {
     return (
 
-<> 
-<header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-        
-            <img src="/src/assets/return.png" class="mr-3 h-6 sm:h-6" alt="" />
-               
-            </div>
-           
-    </nav>
-</header>
+        <>
+            <section className="container flex justify-center mx-auto  flex-col w-[80%] lg:w-full items-center">
 
 
-<h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3">Before we start let's set some rules</h1>
+                <h1 className="text-center font-[Inter] text-2xl lg:text-xl font-bold text-[#2E3837]"> Before we start let's set some rules</h1>
 
-<h2 className="text-left text-2xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj mb-3">No Phone</h2>
+                <h1 className="lg:text-start text-center font-[SM-Sans] font-bold text-xl text-bold text-[#2E3837]"> No phone</h1>
 
-<h2 className="text-left text-2xl font-bold leading-tight text-red-400 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj mb-3">Don't use the answer phone or as a distraction, in fact put it aside</h2>
+                <p className="text-lg  leading-tight text-red-400  sm:leading-tight lg:leading-tight font-serif mb-3">Don't use the answer phone or as a distraction, in fact put it aside</p>
 
-<h2 className="text-left text-2xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj mb-3">Without google and Chat Gpt</h2>
+                <h1 className="lg:text-start text-center font-[SM-Sans] font-bold text-xl text-bold text-[#2E3837]"> Without google and Chat Gpt</h1>
 
-<h2 className="text-left text-2xl font-bold leading-tight text-red-400 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj mb-3">Don't fool yourself you are here to do a professional interview</h2>
+                <p className=" text-lg  leading-tight text-red-400  sm:leading-tight lg:leading-tight font-[simple] mb-3">Don't fool yourself you are here to do a professional interview</p>
 
-<h2 className="text-left text-2xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj mb-3">Be clear</h2>
+                <h1 className="lg:text-start text-center font-[SM-Sans] font-bold text-xl text-bold text-[#2E3837]">Be clear</h1>
 
-<h2 className="text-left text-2xl font-bold leading-tight text-red-400 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj mb-3">Give clear answers and be confident</h2>
+                <p className=" text-lg  leading-tight text-red-400  sm:leading-tight lg:leading-tight font-[simple] mb-3">Give clear answers and be confident</p>
+                <h1 className=" text-center font-[SM-Sans] font-bold text-xl  text-[#2E3837]">Professional tip</h1>
+                <h2 className=" text-center font-[SM-Sans]  text-xl font-semibold text-[#2E3837]">Don't forget to breathe</h2>
+                <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple] mt-5">Start</button>
 
-<h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj">  Professional tip </h1>
-<h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj">  Don't forget to breathe </h1>
-<button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] mt-5">Start </button>
+            </section >
 
-  </>  
-      )
-  }
-  
-  export default InterviewRole
+        </>
+    )
+}
+
+export default InterviewRole

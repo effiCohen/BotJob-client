@@ -1,80 +1,105 @@
 import React, { useState, useEffect } from 'react';
-import { Textarea } from "@material-tailwind/react";
 
 
 function InterviewDone() {
-  const [time, setTime] = useState({
-    sec: 0,
-    min: 0,
-    hr: 0
-  });
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTime((prevTime) => {
-        let newTime = { ...prevTime };
 
-        if (newTime.sec < 59) {
-          newTime.sec += 1;
-        } else {
-          newTime.sec = 0;
 
-          if (newTime.min < 59) {
-            newTime.min += 1;
-          } else {
-            newTime.min = 0;
-            newTime.hr += 1;
-          }
-        }
 
-        return newTime;
-      });
-    }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, []);
 
-  const reset = () => {
-    setTime({
-      sec: 0,
-      min: 0,
-      hr: 0
-    });
-  };
+
+
 
   return (
     <>
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3"> Num# question (Programming)</h1>
 
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-4xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3 underline">(question ?)</h1>
+      <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 my-3 m-3">
+        <h2 className="max-w-lg  font-[Inter] text-lg font-bold leading-none text-gray-900 sm:text-xl md:mx-auto">
+          Congratulations on Completing Your Interview!
+        </h2>
+        <p className="text-base text-gray-700 md:text-lg">
+          You have successfully completed the interview!
+        </p>
+        <p className="text-center text-[#4A5568] font-bold">Time Taken: X minutes</p>
+        <p className="text-center text-[#4A5568] font-bold">Score: Y</p>
+        <div className='mx-auto flex justify-center items-center  my-3'>
+          <button className="block lg:w-40 w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To All Ans</button>
+        </div>
+        <div className="hidden md:block w-full lg:flex justify-center mx-auto items-center ">
+          <div className="w-full max-w-xl  justify-center items-center">
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-3 place-items-center mt-3 ">
+              <div className="p-8 text-center bg-white rounded-xl shadow place-items-center  ">
+                <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50">
+                  <svg
+                    className="w-10 h-10 text-indigo-500"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                  >
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    />
+                  </svg>
+                </div>
+                <p className="font-bold tracking-wide text-gray-800">
+                  Work Harder
+                </p>
+              </div>
+              <div className="p-8 text-center bg-white rounded-xl shadow place-items-center">
+                <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50">
+                  <svg
+                    className="w-10 h-10 text-indigo-500"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                  >
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    />
+                  </svg>
+                </div>
+                <p className="font-bold tracking-wide text-gray-800">
+                  Do it Faster
+                </p>
+              </div>
+              <div className="p-8 text-center bg-white rounded-xl shadow place-items-center">
+                <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50">
+                  <svg
+                    className="w-10 h-10 text-indigo-500"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                  >
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    />
+                  </svg>
+                </div>
+                <p className="font-bold tracking-wide text-gray-800">
+                  Make it better
+                </p>
+              </div>
 
-      <div className="flex flex-col items-center w-[32rem] mx-auto">
-        <Textarea variant="static" placeholder="Your Answer..." rows={8} />
-        <div className="flex w-full justify-between py-1.5">
-          <div className="flex gap-2">
+
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="mb-3">
-  <button 
-    className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5"
-  >
-    Done
-  </button>
-</div>
 
-<button class="cursor-pointer font-semibold overflow-hidden relative z-100  group px-8 py-2">
-<button 
-    onClick={reset} 
-    className="rounded-full bg-[#e7e8e8] text-black p-3 text-lg cursor-pointer outline-none border border-solid border-[#2E3837]"
-    style={{ backgroundColor: 'transparent' }}
-  >
-    {`${time.hr < 10 ? '0' : ''}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
-  </button>
-</button>
 
     </>
+
   );
 }
 
