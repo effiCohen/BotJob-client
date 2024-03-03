@@ -64,7 +64,7 @@ function InterviewDone() {
   </button>
 </div>
 
-<button class="cursor-pointer font-semibold overflow-hidden relative z-100  group px-8 py-2">
+<button className="cursor-pointer font-semibold overflow-hidden relative z-100  group px-8 py-2">
 <button 
     onClick={reset} 
     className="rounded-full bg-[#e7e8e8] text-black p-3 text-lg cursor-pointer outline-none border border-solid border-[#2E3837]"
