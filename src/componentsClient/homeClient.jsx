@@ -4,6 +4,7 @@ import ItemClient from "./itemClient";
 import { API_URL, doApiGet } from "../services/apiService";
 import { reverse } from "lodash";
 import { addIntervews } from "../featuers/intervewSlice";
+import { addEmail } from "../featuers/emailSlice";
 
 function HomeClient() {
   let [ar, setAr] = useState([]);
@@ -35,7 +36,10 @@ function HomeClient() {
     try {
         let  resData  = await doApiGet(url);  
         console.log(resData);
-        let data = resData.data
+        let data = resData.data.data
+        let userName = resData.data.name
+        console.log("userName",userName);
+        dispatch(addEmail({ email: userName }));
         reverse(data);
         setAr(data)
         dispatch(addIntervews({ myIntervews: data }));
