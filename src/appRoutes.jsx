@@ -16,7 +16,6 @@ import DashboardAdmin from './componentsAdmin/dashboardAdmin';
 import InterviewAdmin from './componentsAdmin/interviewAdmin';
 import QuestionAdmin from './componentsAdmin/QuestionAdmin';
 import RestPassword from './componentsClient/RestPassword';
-import InterviewClient from './componentsClient/InterviewClient';
 import QuestionClient from './componentsClient/questionClient';
 import Interview from './componentsClient/Interview';
 import InterviewDone from './componentsClient/InterviewDone';
@@ -43,7 +42,6 @@ function AppRoutes() {
           <Route path="/home" element={<HomeClient />} />
           <Route path="/homeQushtions" element={<HomeQushtions />} />
           <Route path="/homeAnswer" element={<HomeAnswer />} />
-          <Route path="/interviewClient" element={<InterviewClient />} />
           <Route path="/questionClient" element={<QuestionClient />} />
           <Route path="/logout" element={<LogoutClient />} />
           <Route path="/setting" element={<Setting />} />
