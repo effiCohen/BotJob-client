@@ -9,7 +9,6 @@ import { addEmail } from '../featuers/emailSlice';
 function SignUpClient() {
   let nav = useNavigate();
   const dispatch = useDispatch();
-
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubForm = (data) => {
@@ -21,7 +20,6 @@ function SignUpClient() {
 
   const doApi = async (_dataBody) => {
     let url = API_URL + "/users";
-    console.log("_dataBody", _dataBody);
     try {
       let resp = await doApiMethod(url, "POST", _dataBody);
       console.log("resp", resp);

@@ -5,11 +5,14 @@ import { API_URL, doApiMethod } from '../services/apiService';
 import { saveTokenLocal } from '../services/localService';
 import Icon from '@mdi/react';
 import { mdiEmailOutline, mdiLockOutline } from '@mdi/js';
+import { useDispatch } from 'react-redux';
+import { addEmail } from '../featuers/emailSlice';
 
 
 const loginClient = () => {
   let nav = useNavigate();
   let { register, handleSubmit, formState: { errors } } = useForm();
+  const dispatch = useDispatch();
 
   const onSubForm = (data) => {
     console.log(data);
@@ -20,11 +23,12 @@ const loginClient = () => {
     let url = API_URL + "/users/login";
     try {
       let resp = await doApiMethod(url, "POST", _dataBody);
+      
       if (resp.data.token) {
         saveTokenLocal(resp.data.token);
+        dispatch(addEmail({ email: _dataBody.email }));
         nav("/home");
         // window.location.reload();
-
       }
     }
     catch (err) {
