@@ -4,11 +4,11 @@ import ItemClient from "./itemClient";
 import { API_URL, doApiGet } from "../services/apiService";
 import { reverse } from "lodash";
 import { addIntervews } from "../featuers/intervewSlice";
-import { addEmail } from "../featuers/emailSlice";
+import { addName } from "../featuers/nameSlice";
 
 function HomeClient() {
   let [ar, setAr] = useState([]);
-  const myEmail = useSelector((myStore) => myStore.emailSlics.myEmail);
+  const myName = useSelector((myStore) => myStore.nameSlice.myName);
   const myIntervews = useSelector((myStore) => myStore.intervewSlice.myIntervews);
   const dispatch = useDispatch();
   let temp_ar = [
@@ -39,7 +39,7 @@ function HomeClient() {
         let data = resData.data.data
         let userName = resData.data.name
         console.log("userName",userName);
-        dispatch(addEmail({ email: userName }));
+        dispatch(addName({ name: userName }));
         reverse(data);
         setAr(data)
         dispatch(addIntervews({ myIntervews: data }));
@@ -51,7 +51,7 @@ function HomeClient() {
 
   return (
     <div className="mt-3">
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj"> Welcame {myEmail}</h1>
+      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj"> Welcame {myName}</h1>
       <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">Your History</h1>
       <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">  Your history can teach you and you can only learn from it</p>
       <div className="flex flex-col">
