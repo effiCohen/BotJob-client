@@ -28,22 +28,18 @@ function HomeClient() {
    useEffect(() => {
     setAr(temp_ar)
      doApi()
-    console.log("myIntervews", myIntervews);
   }, [])
   
   const doApi = async () => {
-    let url = API_URL + "/interviews/myIntervew"
+    let url = API_URL + "/interviews/myInterview"
     try {
-        let  resData  = await doApiGet(url);  
-        console.log(resData);
+      let  resData  = await doApiGet(url);  
         let data = resData.data.data
         let userName = resData.data.name
-        console.log("userName",userName);
         dispatch(addName({ name: userName }));
         reverse(data);
         setAr(data)
         dispatch(addIntervews({ myIntervews: data }));
-        console.log(data);
     } catch (error) {
         console.log(error);
     }
@@ -65,7 +61,7 @@ function HomeClient() {
                     <th scope="col" className="px-4 py-2">Date</th>
                     <th scope="col" className="px-4 py-2">Role</th>
                     <th scope="col" className="px-4 py-2">Time</th>
-                    <th scope="col" className="px-4 py-2">The number of questions</th>
+                    <th scope="col" className="px-4 py-2">Total questions</th>
                     <th scope="col" className="px-4 py-2">More details</th>
                   </tr>
                 </thead>
