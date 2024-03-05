@@ -46,7 +46,9 @@ function Interview() {
     <>
       <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3"> Num# question (Programming)</h1>
 
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-4xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3 underline">(question ?)</h1>
+      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-4xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3 underline" style={{ fontSize: '16px' }}>
+  ("בעידן הטכנולוגיה המתקדם, חיים משתנים בקצב מהיר. יום יום נוצרות חדשות אפשרויות והאדם מתמקד בחיפוש אחרי יצירתיות ושיפור אישי. עולם דיגיטלי משתפר ומתרחב, ואנשים משתמשים ברשתות חברתיות להתחברות ושיתוף מחשבות. החיבור בין אנשים משפר את החוויה האנושית. במקביל, תחושת האחריות לסביבה מתרכזת ונוצרים מהפכות חידוש באנרגיה ירוקה. יש חשיבות רבה לחינוך והתפתחות אישית, וטכנולוגיות חכמות משפרות את האיכות והיעילות שלהן. כל אחד משפר את עצמו ומשתף פעולה בבנייה של עולם טוב ומתקדם.")
+</h1>
 
       <div className="flex flex-col items-center w-[32rem] mx-auto">
         <Textarea variant="static" placeholder="Your Answer..." rows={8} />
