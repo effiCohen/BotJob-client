@@ -1,6 +1,52 @@
-import React from 'react'
+import  {React , useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import ItemAdmin from "./itemAdmin";
+import { API_URL, doApiGet } from "../services/apiService";
+import { reverse } from "lodash";
+import { addIntervews, addThisIntervews } from "../featuers/intervewSlice";
+import { addEmail, addName } from "../featuers/myDetailsSlice";
+
 
 function DashboardAdmin() {
+  let [ar, setAr] = useState([]);
+  const myName = useSelector(state => state.myDetailsSlice.name);
+  const allMyIntervews = useSelector(state => state.intervewSlice.allMyIntervews);
+  const dispatch = useDispatch();
+  let temp_ar = [
+    {
+      "_id": 1,
+      date_created : "test",
+      job : "test",
+      questions : [1,1,1],
+    },
+    {
+      "_id": 2,
+      date_created : "test2",
+      job : "test2",
+      questions : [1,1,1],
+    }
+  ];
+   useEffect(() => {
+    setAr(temp_ar)
+     doApi()
+  }, [])
+  
+  const doApi = async () => {
+    let url = API_URL + "/interviews/myInterview"
+    try {
+      let  resData  = await doApiGet(url);  
+        let data = resData.data.data
+        let userName = resData.data.name
+        let userEmail = resData.data.email
+        dispatch(addName({ name: userName }));
+        dispatch(addEmail({ email: userEmail }));
+        reverse(data);
+        setAr(data)
+        dispatch(addIntervews({ allMyIntervews: data }));
+    } catch (error) {
+        console.log(error);
+    }
+}
   return (
     <>
 
@@ -21,56 +67,27 @@ function DashboardAdmin() {
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
             <div className="overflow-hidden">
-              <table className="min-w-full text-left text-sm font-light">
-                <thead className="border-b font-medium dark:border-neutral-500">
-                  <tr>
-                    <th scope="col" className="px-4 py-2">Id</th>
-                    <th scope="col" className="px-4 py-2">ID / Name</th>
-                    <th scope="col" className="px-4 py-2">Date</th>
-                    <th scope="col" className="px-4 py-2">Role</th>
-                    <th scope="col" className="px-4 py-2">Time</th>
-                    <th scope="col" className="px-4 py-2">The number of questions</th>
-                    <th scope="col" className="px-4 py-2">More details</th>
-                  </tr>
-                </thead>
-                {/* <tbody>
-      <tr
-          className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
-          <td className="whitespace-nowrap px-4 py-2 font-medium">1</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          </tr>
-        <tr
-        className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
-          <td className="whitespace-nowrap px-4 py-2 font-medium ">2</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2 ">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2 ">Cell</td>
-        </tr>
-        <tr className="border-b ">
-          <td className="whitespace-nowrap px-4 py-2 font-medium ">3</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-          <td className="whitespace-nowrap px-4 py-2">Cell</td>
-        </tr>
-      </tbody> */}
-              </table>
+            <table className="min-w-full text-left text-sm font-light">
+                    <thead className="border-b font-medium dark:border-neutral-500">
+                      <tr>
+                        <th scope="col" className="px-4 py-2">Id</th>
+                        <th scope="col" className="px-4 py-2">Date</th>
+                        <th scope="col" className="px-4 py-2">Role</th>
+                        <th scope="col" className="px-4 py-2">Time</th>
+                        <th scope="col" className="px-4 py-2">Total questions</th>
+                        <th scope="col" className="px-4 py-2">More details</th>
+                      </tr>
+                    </thead>
+    
+                    <tbody>
+                      {ar.map((item) => {
+                        return (
+                          <ItemAdmin key={item._id} item={item} />
+                        )
+                      }
+                      )}
+                    </tbody>
+                  </table>
             </div>
 
           </div>

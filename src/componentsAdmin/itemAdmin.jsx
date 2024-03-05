@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addThisIntervews } from '../featuers/intervewSlice';
 
-function ItemClient(props) {
+function ItemAdmin(props) {
     const myIntervews = useSelector(state => state.intervewSlice.allMyIntervews);
     let nav = useNavigate();
     const dispatch = useDispatch();
@@ -11,7 +11,7 @@ function ItemClient(props) {
 
     const toQushtions = () => {
         dispatch(addThisIntervews({ ThisInterview:item._id }));
-        nav("/homeQushtions");
+        nav("/admin/question");
       };
 
     return (
@@ -31,4 +31,4 @@ function ItemClient(props) {
     )
 }
 
-export default ItemClient
+export default ItemAdmin
