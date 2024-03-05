@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router';
 import { API_URL, doApiMethod } from '../services/apiService';
 import { useDispatch } from "react-redux";
-import { addEmail } from '../featuers/emailSlice';
+import { addEmail } from '../featuers/myDetailsSlice';
 
 function SignUpClient() {
   let nav = useNavigate();

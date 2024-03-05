@@ -2,14 +2,14 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import { API_URL, doApiMethod } from '../services/apiService';
-import { addEmail } from "../featuers/emailSlice";
 import {  useDispatch, useSelector } from "react-redux";
+import { addEmail } from '../featuers/myDetailsSlice';
 
 
 const ForgotPass = () => {
     let nav = useNavigate();
     let { register, handleSubmit, formState: { errors } } = useForm();
-    const myEmail = useSelector((myStore) => myStore.emailSlics.myEmail);
+    const myEmail = useSelector(state => state.myDetailsSlice.email);
     const dispatch = useDispatch();
 
     const onSubForm = (data) => {

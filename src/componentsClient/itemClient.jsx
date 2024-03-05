@@ -1,13 +1,16 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addThisIntervews } from '../featuers/intervewSlice';
 
 function ItemClient(props) {
+    const myIntervews = useSelector(state => state.intervewSlice.allMyIntervews);
     let nav = useNavigate();
+    const dispatch = useDispatch();
     let item = props.item;
-    // console.log(item);
 
     const toQushtions = () => {
-        console.log(item._id);
+        dispatch(addThisIntervews({ ThisInterview:item._id }));
         nav("/homeQushtions");
       };
 

@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 function ValidationClient() {
   let nav = useNavigate();
   let { register, handleSubmit, formState: { errors } } = useForm();
-  const myEmail = useSelector((myStore) => myStore.emailSlics.myEmail);
+  const myEmail = useSelector(state => state.myDetailsSlice.email);
 
 
 

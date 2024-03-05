@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import ItemClient from "./itemClient";
 import { API_URL, doApiGet } from "../services/apiService";
 import { reverse } from "lodash";
-import { addIntervews } from "../featuers/intervewSlice";
-import { addName } from "../featuers/nameSlice";
+import { addIntervews, addThisIntervews } from "../featuers/intervewSlice";
+import { addEmail, addName } from "../featuers/myDetailsSlice";
 
 function HomeClient() {
   let [ar, setAr] = useState([]);
-  const myName = useSelector((myStore) => myStore.nameSlice.myName);
-  const myIntervews = useSelector((myStore) => myStore.intervewSlice.myIntervews);
+  const myName = useSelector(state => state.myDetailsSlice.name);
+  const allMyIntervews = useSelector(state => state.intervewSlice.allMyIntervews);
   const dispatch = useDispatch();
   let temp_ar = [
     {
@@ -36,10 +36,12 @@ function HomeClient() {
       let  resData  = await doApiGet(url);  
         let data = resData.data.data
         let userName = resData.data.name
+        let userEmail = resData.data.email
         dispatch(addName({ name: userName }));
+        dispatch(addEmail({ email: userEmail }));
         reverse(data);
         setAr(data)
-        dispatch(addIntervews({ myIntervews: data }));
+        dispatch(addIntervews({ allMyIntervews: data }));
     } catch (error) {
         console.log(error);
     }

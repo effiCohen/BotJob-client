@@ -6,7 +6,7 @@ import { saveTokenLocal } from '../services/localService';
 import Icon from '@mdi/react';
 import { mdiEmailOutline, mdiLockOutline } from '@mdi/js';
 import { useDispatch } from 'react-redux';
-import { addEmail } from '../featuers/emailSlice';
+import { addEmail } from '../featuers/myDetailsSlice';
 
 
 const loginClient = () => {
@@ -26,7 +26,8 @@ const loginClient = () => {
       
       if (resp.data.token) {
         saveTokenLocal(resp.data.token);
-        dispatch(addEmail({ email: _dataBody.email }));
+        // dispatch(addEmail({ email: _dataBody.email }));
+        dispatch(addEmail({email: _dataBody.email }));
         nav("/home");
         // window.location.reload();
       }

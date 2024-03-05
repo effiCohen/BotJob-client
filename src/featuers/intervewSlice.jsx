@@ -1,18 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initValue = {
-  myIntervews: []
+const initialState = {
+  allMyIntervews: [],
+  ThisInterview:"id interview"
 }
 
 const intervewSlice = createSlice({
     name:"myIntervews",
-    initialState:initValue,
+    initialState,
     reducers:{
        addIntervews:(start,activation)=>{
-         start.myIntervews = activation.payload.intervews ;
+         start.allMyIntervews = activation.payload.allMyIntervews ;
+       },
+       addThisIntervews:(start,activation)=>{
+         start.ThisInterview = activation.payload.ThisInterview ;
        }
     }
 }) 
 
-export const {addIntervews}  = intervewSlice.actions 
+export const {addIntervews,addThisIntervews}  = intervewSlice.actions 
 export default intervewSlice.reducer

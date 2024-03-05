@@ -3,15 +3,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import './App.css'
 import AppRoutes from "./appRoutes";
-import  emailSlics from "./featuers/emailSlice";
 import  intervewSlice from "./featuers/intervewSlice";
-import  nameSlice from "./featuers/nameSlice";
+import  myDetailsSlice from "./featuers/myDetailsSlice";
 
 const myStore = configureStore({
   reducer: {
-    emailSlics,
     intervewSlice,
-    nameSlice,
+    myDetailsSlice,
   }
 })
 

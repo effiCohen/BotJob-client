@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 const PasswordValid = () => {
     let nav = useNavigate();
     let { register, handleSubmit, formState: { errors } } = useForm();
-    const myEmail = useSelector((myStore) => myStore.emailSlics.myEmail);
+    const myEmail = useSelector(state => state.myDetailsSlice.email);
 
 
     const send = (data) => {
@@ -48,7 +48,7 @@ const PasswordValid = () => {
         <>
 
             <div className=" mx-auto flex  flex-col items-center justify-between overflow-hidden container bg-[#FFFDFB] sm:flex sm:flex-col sm:mx-auto lg:h-[100%]">
-                <h1 className="font-bold text-2xl text-gray-900 font-[inter]  "> Let’s go! </h1>
+                <h1 className="font-bold text-2xl text-gray-900 font-[inter]  "> Let’s go!</h1>
 
                 <figure className='max-w-lg  flex justify-center items-center   '>
                     <img src="/src/assets/validPass.png" alt="email@ " className='h-[30%] w-[50%] ' />
