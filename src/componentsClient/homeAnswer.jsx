@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { API_URL, doApiGet } from '../services/apiService';
+import { useNavigate } from 'react-router-dom';
 
 function HomeAnswer() {
+  let nav = useNavigate();
   let [thisData, setThisData] = useState({});
   const ThisQuestion = useSelector(state => state.intervewSlice.ThisQuestion);
   const buttons = [
@@ -34,12 +36,15 @@ function HomeAnswer() {
     console.log(thisData[buttons[index].tipe])
     setShowText(thisData[buttons[index].tipe])
   };
+  const BackToQuestions = () => {
+    nav("/homeQushtions");
+  };
 
   return (
     <>
       <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <img src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" />
+          <img onClick={() => BackToQuestions()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" />
           <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-4xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3 underline">HomeAnswer </h1>
           <div></div>
         </div>
