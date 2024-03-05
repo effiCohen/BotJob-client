@@ -22,6 +22,7 @@ import InterviewDone from './componentsClient/InterviewDone';
 import InterviewRole from './componentsClient/InterviewRole';
 import HomeQushtions from './componentsClient/homeQushtions';
 import HomeAnswer from './componentsClient/homeAnswer';
+import HomeHistory from './componentsClient/homeHistory';
 
 function AppRoutes() {
   return (
@@ -40,6 +41,7 @@ function AppRoutes() {
           <Route path="/login" element={<LogInClient />} />
           <Route path="/forgotpass" element={<ForgotPass />} />
           <Route path="/home" element={<HomeClient />} />
+          <Route path="/history" element={<HomeHistory />} />
           <Route path="/homeQushtions" element={<HomeQushtions />} />
           <Route path="/homeAnswer" element={<HomeAnswer />} />
           <Route path="/questionClient" element={<QuestionClient />} />
