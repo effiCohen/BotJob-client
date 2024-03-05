@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   allMyIntervews: [],
-  ThisInterview:"id interview"
+  ThisInterview:"id interview",
+  ThisQuestion:"id Question",
 }
 
 const intervewSlice = createSlice({
@@ -14,9 +15,12 @@ const intervewSlice = createSlice({
        },
        addThisIntervews:(start,activation)=>{
          start.ThisInterview = activation.payload.ThisInterview ;
+       },
+       addThisQuestion:(start,activation)=>{
+         start.ThisQuestion = activation.payload.ThisQuestion ;
        }
     }
 }) 
 
-export const {addIntervews,addThisIntervews}  = intervewSlice.actions 
+export const {addIntervews,addThisIntervews,addThisQuestion}  = intervewSlice.actions 
 export default intervewSlice.reducer
