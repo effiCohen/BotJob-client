@@ -5,11 +5,13 @@ import './App.css'
 import AppRoutes from "./appRoutes";
 import  intervewSlice from "./featuers/intervewSlice";
 import  myDetailsSlice from "./featuers/myDetailsSlice";
+import  newIntervewSlics from "./featuers/newIntervewSlice";
 
 const myStore = configureStore({
   reducer: {
     intervewSlice,
     myDetailsSlice,
+    newIntervewSlics,
   }
 })
 
