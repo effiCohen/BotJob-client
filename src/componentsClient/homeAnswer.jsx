@@ -9,8 +9,8 @@ function HomeAnswer() {
   const ThisQuestion = useSelector(state => state.intervewSlice.ThisQuestion);
   const buttons = [
     { text: "Question", tipe: "question" },
-    { text: "User Answer", tipe: "aiAnswer" },
-    { text: "Ai Answer", tipe: "userAnswer" }
+    { text: "User Answer", tipe: "userAnswer" },
+    { text: "Ai Answer", tipe: "aiAnswer" }
   ];
   const [showText, setShowText] = useState();
 
@@ -20,20 +20,17 @@ function HomeAnswer() {
 
   const doApi = async () => {
     let url = API_URL + "/questions/" + ThisQuestion;
-    console.log(url);
     try {
       let resData = await doApiGet(url);
       console.log(resData.data);
       setThisData(resData.data);
-      setShowText(thisData[question]);
+      setShowText(resData.data[question]);
     } catch (error) {
       console.log(error);
     }
   }
 
   const onAnswerClick = (index) => {
-    console.log(buttons[index].tipe);
-    console.log(thisData[buttons[index].tipe])
     setShowText(thisData[buttons[index].tipe])
   };
   const BackToQuestions = () => {
@@ -58,14 +55,14 @@ function HomeAnswer() {
           </button>
         ))}
       </div>
-      {showText !== null && (
+      {showText !== null ? (
         <div className="flex flex-col items-center w-[32rem] mx-auto">
           <p>{showText}</p>
           <div className="flex w-full justify-between py-1.5">
             <div className="flex gap-2"></div>
           </div>
         </div>
-      )}
+      ):"There is no user response"}
     </>
   );
 }
