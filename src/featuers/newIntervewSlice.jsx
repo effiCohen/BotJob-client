@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  aNewIntervew: "aa",
+  newIntervew:{},
   TheQuestion:"The Question",
 }
 
@@ -10,7 +10,9 @@ const newIntervewSlice = createSlice({
     initialState,
     reducers:{
       addNewIntervew:(start,activation)=>{
-        start.aNewIntervew = activation.payload.newIntervew ;
+        console.log("activation.payload.newIntervew",activation.payload.newIntervew);
+        start.newIntervew = activation.payload.newIntervew ;
+        console.log(start.newIntervew);
       },
        addTheQuestion:(start,activation)=>{
          start.TheQuestion = activation.payload.TheQuestion ;
