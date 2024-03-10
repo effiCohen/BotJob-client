@@ -18,6 +18,11 @@ function InterviewRole() {
 
     const startTheInterview = () => {
        console.log(checkSettingLocal()); 
+    //    {
+    //     "job" : "Software Developer",
+    //     "experience" : "6",
+    //     "questions" :3
+    //  }
         // doApi(seting)
     };
 
