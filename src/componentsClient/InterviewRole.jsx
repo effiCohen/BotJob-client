@@ -17,29 +17,32 @@ function InterviewRole() {
     }
 
     const startTheInterview = () => {
-       console.log(checkSettingLocal()); 
+       let settingLocal = (checkSettingLocal());
+       console.log(settingLocal);
+       seting = settingLocal;
+
     //    {
     //     "job" : "Software Developer",
     //     "experience" : "6",
     //     "questions" :3
     //  }
-        // doApi(seting)
+        doApi(seting)
     };
 
-    // const doApi = async (_dataBody) => {
-    //     let url = API_URL + "/interviews";
-    //     try {
-    //         let resp = await doApiMethod(url, "POST", _dataBody);
-    //         console.log(resp.data);
-    //         if (resp.data._id) {
-    //             dispatch(addNewIntervew({ newIntervew: resp.data }));
-    //             nav("/Interview");
-    //         }
-    //     }
-    //     catch (err) {
-    //         console.log(err.response.data);
-    //     }
-    // }
+    const doApi = async (_dataBody) => {
+        let url = API_URL + "/interviews";
+        try {
+            let resp = await doApiMethod(url, "POST", _dataBody);
+            console.log(resp.data);
+            if (resp.data._id) {
+                dispatch(addNewIntervew({ newIntervew: resp.data }));
+                nav("/Interview");
+            }
+        }
+        catch (err) {
+            console.log(err.response.data);
+        }
+    }
 
 
     return (

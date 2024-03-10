@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Textarea } from "@material-tailwind/react";
+import { useSelector } from 'react-redux';
 
 function Interview() {
+  // const myInterview = useSelector(state => state.newIntervewSlice.name);
   const [time, setTime] = useState({
     sec: 0,
     min: 0,
@@ -11,6 +13,7 @@ function Interview() {
   const [isTimeUp, setIsTimeUp] = useState(false);
 
   useEffect(() => {
+      // console.log(myInterview);
     const intervalId = setInterval(() => {
       setTime((prevTime) => {
         let newTime = { ...prevTime };
