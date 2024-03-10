@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { API_URL, doApiMethod } from '../services/apiService';
 import { addNewIntervew } from '../featuers/newIntervewSlice';
+import { checkSettingLocal } from '../services/settingServis';
 
 
 function InterviewRole() {
@@ -16,23 +17,24 @@ function InterviewRole() {
     }
 
     const startTheInterview = () => {
-        doApi(seting)
+       console.log(checkSettingLocal()); 
+        // doApi(seting)
     };
 
-    const doApi = async (_dataBody) => {
-        let url = API_URL + "/interviews";
-        try {
-            let resp = await doApiMethod(url, "POST", _dataBody);
-            console.log(resp.data);
-            if (resp.data._id) {
-                dispatch(addNewIntervew({ newIntervew: resp.data }));
-                nav("/Interview");
-            }
-        }
-        catch (err) {
-            console.log(err.response.data);
-        }
-    }
+    // const doApi = async (_dataBody) => {
+    //     let url = API_URL + "/interviews";
+    //     try {
+    //         let resp = await doApiMethod(url, "POST", _dataBody);
+    //         console.log(resp.data);
+    //         if (resp.data._id) {
+    //             dispatch(addNewIntervew({ newIntervew: resp.data }));
+    //             nav("/Interview");
+    //         }
+    //     }
+    //     catch (err) {
+    //         console.log(err.response.data);
+    //     }
+    // }
 
 
     return (

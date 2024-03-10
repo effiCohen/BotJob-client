@@ -3,6 +3,7 @@ import { Select, Option } from "@material-tailwind/react";
 import { useState } from "react";
 import { API_URL, doApiGet } from '../services/apiService';
 import { useNavigate } from 'react-router-dom';
+import { saveSettingLocal } from '../services/settingServis';
 
 const Setting = () => {
     let nav = useNavigate();
@@ -11,11 +12,11 @@ const Setting = () => {
         arexperience.push(i);
     }
     let arNum = [1, 2, 3, 4, 5];
-    let num = 3;
-    const [questionCount, setQuestionCount] = useState(num);
+    // let num = 3;
+    const [questionCount, setQuestionCount] = useState(3);
     const [experience, setExperience] = useState("2");
     const [job, setjob] = useState({});
-    const [arRole, setArRole] = useState([{ job: "Software Engineer" }]);
+    const [arRole, setArRole] = useState([{ job: "Software Engineeraa" }]);
 
     useEffect(() => {
         console.log(arexperience);
@@ -34,9 +35,17 @@ const Setting = () => {
     }
 
     const onSaveClick = () => {
+
         console.log("job:", job);
         console.log("experience", experience);
         console.log("questions", questionCount);
+        let settingObg = {
+            "job": job,
+            "experience": experience,
+            "questions": questionCount
+        }
+        console.log(settingObg);
+        saveSettingLocal(settingObg)
         nav("/InterviewRole");
     }
 
