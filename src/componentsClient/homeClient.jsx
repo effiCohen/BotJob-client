@@ -38,7 +38,7 @@ function HomeClient() {
   return (
     <div className="mt-3">
       <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj"> Welcame {myName}</h1>
-      <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">  something.................</p>
+      {/* <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">  something.................</p> */}
       <div className="flex flex-col">
 
         <button onClick={toHistory} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative">
@@ -51,7 +51,7 @@ function HomeClient() {
 
         </button>
       </div>
-      <Carousel
+      <Carousel 
         className="rounded-xl mt-2"
         prevArrow={({ handlePrev }) => (
           <IconButton
@@ -112,14 +112,14 @@ function HomeClient() {
             <Avatar
               size="lg"
               variant="circular"
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              alt="tania andrew"
+              src="/src/assets/365471835_582891800473842_7378122036090440715_n.jpg"
+              alt="Nitay Dalal"
             />
             <div className="flex w-full flex-col gap-0.5">
               <div className="flex items-center justify-between">
                 <Typography variant="h5" color="blue-gray">
-                  Tania Andrew
-                </Typography>
+                Nitay Dalal
+                 </Typography>
                 <div className="5 flex items-center gap-0">
                   <StarIcon />
                   <StarIcon />
@@ -128,14 +128,13 @@ function HomeClient() {
                   <StarIcon />
                 </div>
               </div>
-              <Typography color="blue-gray">Frontend Lead @ Google</Typography>
+              <Typography color="blue-gray">Software Team leader at IDF</Typography>
             </div>
           </CardHeader>
           <CardBody className="mb-6 p-0">
             <Typography>
-              &quot;I found solution to all my design needs from Creative Tim. I use
-              them as a freelancer in my hobby projects for fun! And its really
-              affordable, very humble guys !!!&quot;
+              &quot;This individual, positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces. In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills, and a commitment to efficient upgrade and development of every project.
+&quot;
             </Typography>
           </CardBody>
         </Card>
@@ -149,13 +148,13 @@ function HomeClient() {
             <Avatar
               size="lg"
               variant="circular"
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              alt="tania andrew"
+              src="https://media.licdn.com/dms/image/D4D03AQGkFhULKE39Hw/profile-displayphoto-shrink_400_400/0/1709106759468?e=1715817600&v=beta&t=_GfAASYjRcMeOSiMA-wBtrBVM9wGXDc5HA7ryuBqxWU"
+              alt="Lavie Baxi"
             />
             <div className="flex w-full flex-col gap-0.5">
               <div className="flex items-center justify-between">
                 <Typography variant="h5" color="blue-gray">
-                  Tania Andrew
+                Lavie Baxi
                 </Typography>
                 <div className="5 flex items-center gap-0">
                   <StarIcon />
@@ -165,14 +164,15 @@ function HomeClient() {
                   <StarIcon />
                 </div>
               </div>
-              <Typography color="blue-gray">Frontend Lead @ Google</Typography>
+              <Typography color="blue-gray">Full Stack Developer | Ex-81</Typography>
             </div>
           </CardHeader>
           <CardBody className="mb-6 p-0">
             <Typography>
-              &quot;I found solution to all my design needs from Creative Tim. I use
-              them as a freelancer in my hobby projects for fun! And its really
-              affordable, very humble guys !!!&quot;
+              &quot;I found a solution as an experienced web developer with a demonstrated history of working in the military industry.
+Skilled in JavaScript, TypeScript, Angular, React, AngularJS, NodeJS, Python, Django, DRF, postgresql PL/SQL, .NET framework (C#).
+
+B.Sc Computer Science, The College of Management Academic Studies.&quot;
             </Typography>
           </CardBody>
         </Card>
@@ -186,13 +186,13 @@ function HomeClient() {
             <Avatar
               size="lg"
               variant="circular"
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              alt="tania andrew"
+              src="https://media.licdn.com/dms/image/D4D03AQGlyiqRHGbhGg/profile-displayphoto-shrink_800_800/0/1693995083299?e=1715817600&v=beta&t=3MYZNU49iN0NkCXlpXAJApaEen0vkLv7bBRKiYUNGrk"
+              alt="Keren Katz"
             />
             <div className="flex w-full flex-col gap-0.5">
               <div className="flex items-center justify-between">
                 <Typography variant="h5" color="blue-gray">
-                  Tania Andrew
+                Keren Katz
                 </Typography>
                 <div className="5 flex items-center gap-0">
                   <StarIcon />
@@ -202,14 +202,13 @@ function HomeClient() {
                   <StarIcon />
                 </div>
               </div>
-              <Typography color="blue-gray">Frontend Lead @ Google</Typography>
+              <Typography color="blue-gray">Former CEO & founder, ex-programmer, product manager at Sygnia</Typography>
             </div>
           </CardHeader>
           <CardBody className="mb-6 p-0">
             <Typography>
-              &quot;I found solution to all my design needs from Creative Tim. I use
-              them as a freelancer in my hobby projects for fun! And its really
-              affordable, very humble guys !!!&quot;
+              &quot;
+The former CEO and founder, previously a programmer and product manager at Sygnia, significantly elevated our website. His expertise and leadership were key factors in creating a robust and user-friendly platform. We credit much of our success to his visionary contributions and dedication to excellence.&quot;
             </Typography>
           </CardBody>
         </Card>
