@@ -11,7 +11,7 @@ function ItemAdmin(props) {
 
     const toQushtions = () => {
         dispatch(addThisIntervews({ ThisInterview:item._id }));
-        nav("/admin/question");
+        nav("/admin/interview");
       };
 
     return (
