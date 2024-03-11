@@ -18,14 +18,7 @@ function InterviewRole() {
 
     const startTheInterview = () => {
        let settingLocal = (checkSettingLocal());
-       console.log(settingLocal);
        seting = settingLocal;
-
-    //    {
-    //     "job" : "Software Developer",
-    //     "experience" : "6",
-    //     "questions" :3
-    //  }
         doApi(seting)
     };
 
@@ -33,7 +26,6 @@ function InterviewRole() {
         let url = API_URL + "/interviews";
         try {
             let resp = await doApiMethod(url, "POST", _dataBody);
-            console.log(resp.data);
             if (resp.data._id) {
                 dispatch(addNewIntervew({ newIntervew: resp.data }));
                 nav("/Interview");

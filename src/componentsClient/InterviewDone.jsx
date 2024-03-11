@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import {  useSelector } from 'react-redux';
 
 
 function InterviewDone() {
+  const [time, setTime] = useState({});
+  const finalTime = useSelector(state => state.newIntervewSlice.time);
+
+  useEffect(() => {
+    console.log(finalTime);
+    setTime(finalTime)
+  },[]);
 
   return (
     <>
@@ -13,8 +21,11 @@ function InterviewDone() {
         <p className="text-base text-gray-700 md:text-lg">
           You have successfully completed the interview!
         </p>
-        <p className="text-center text-[#4A5568] font-bold">Time Taken: X minutes</p>
-        <p className="text-center text-[#4A5568] font-bold">Score: Y</p>
+        {/* <p className="text-center text-[#4A5568] font-bold">Time Taken: X minutes</p> */}
+        <p className="text-center text-[#4A5568] font-bold">Time Taken  
+          {` ${time.hr < 10 ? '0' : ' '}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
+        </p>
+        {/* <p className="text-center text-[#4A5568] font-bold">Score: Y</p> */}
         <div className='mx-auto flex justify-center items-center  my-3'>
           <button className="block lg:w-40 w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To All Ans</button>
         </div>
