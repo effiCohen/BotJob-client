@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import {  useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
+import { addThisIntervews } from '../featuers/intervewSlice';
 
 
 function InterviewDone() {
+  let nav = useNavigate();
+  const dispatch = useDispatch();
   const [time, setTime] = useState({});
   const finalTime = useSelector(state => state.newIntervewSlice.time);
+  const intervew = useSelector(state => state.newIntervewSlice.newIntervew);
+
 
   useEffect(() => {
     console.log(finalTime);
-    setTime(finalTime)
-  },[]);
+    setTime(finalTime);
+    console.log(finalTime);
+  }, []);
+
+  const toAllAnsClick = () => {
+    console.log(intervew);
+    dispatch(addThisIntervews({ ThisInterview: intervew._id }));
+    nav("/homeQushtions");
+  }
+
 
   return (
     <>
-
       <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 my-3 m-3">
         <h2 className="max-w-lg  font-[Inter] text-lg font-bold leading-none text-gray-900 sm:text-xl md:mx-auto">
           Congratulations on Completing Your Interview!
@@ -22,12 +35,12 @@ function InterviewDone() {
           You have successfully completed the interview!
         </p>
         {/* <p className="text-center text-[#4A5568] font-bold">Time Taken: X minutes</p> */}
-        <p className="text-center text-[#4A5568] font-bold">Time Taken  
+        <p className="text-center text-[#4A5568] font-bold">Time Taken
           {` ${time.hr < 10 ? '0' : ' '}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
         </p>
         {/* <p className="text-center text-[#4A5568] font-bold">Score: Y</p> */}
         <div className='mx-auto flex justify-center items-center  my-3'>
-          <button className="block lg:w-40 w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To All Ans</button>
+          <button onClick={toAllAnsClick} className="block lg:w-40 w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To All Ans</button>
         </div>
         <div className="hidden md:block w-full lg:flex justify-center mx-auto items-center ">
           <div className="w-full max-w-xl  justify-center items-center">
@@ -37,15 +50,13 @@ function InterviewDone() {
                   <svg
                     className="w-10 h-10 text-indigo-500"
                     stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
+                    viewBox="0 0 52 52">
                     <polygon
                       strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    />
+                      points="29 13 14 29 25 29 23 39 38 23 27 23" />
                   </svg>
                 </div>
                 <p className="font-bold tracking-wide text-gray-800">
@@ -57,15 +68,13 @@ function InterviewDone() {
                   <svg
                     className="w-10 h-10 text-indigo-500"
                     stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
+                    viewBox="0 0 52 52">
                     <polygon
                       strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    />
+                      points="29 13 14 29 25 29 23 39 38 23 27 23" />
                   </svg>
                 </div>
                 <p className="font-bold tracking-wide text-gray-800">
@@ -77,30 +86,23 @@ function InterviewDone() {
                   <svg
                     className="w-10 h-10 text-indigo-500"
                     stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
+                    viewBox="0 0 52 52">
                     <polygon
                       strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    />
+                      points="29 13 14 29 25 29 23 39 38 23 27 23" />
                   </svg>
                 </div>
                 <p className="font-bold tracking-wide text-gray-800">
                   Make it better
                 </p>
               </div>
-
-
             </div>
           </div>
         </div>
       </div>
-
-
-
     </>
 
   );

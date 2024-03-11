@@ -19,7 +19,6 @@ const Setting = () => {
     const [arRole, setArRole] = useState([{ job: "Software Engineeraa" }]);
 
     useEffect(() => {
-        console.log(arexperience);
         doApi()
     }, [])
 
@@ -27,7 +26,6 @@ const Setting = () => {
         let url = API_URL + "/jobs";
         try {
             let resData = await doApiGet(url);
-            console.log(resData.data);
             setArRole(resData.data);
         } catch (error) {
             console.log(error);
@@ -35,10 +33,6 @@ const Setting = () => {
     }
 
     const onSaveClick = () => {
-
-        console.log("job:", job);
-        console.log("experience", experience);
-        console.log("questions", questionCount);
         let settingObg = {
             "job": job,
             "experience": experience,

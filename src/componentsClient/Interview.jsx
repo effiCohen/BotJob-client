@@ -3,6 +3,7 @@ import { Textarea } from "@material-tailwind/react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { API_URL, doApiGet, doApiMethod } from '../services/apiService';
+import { addTime } from '../featuers/newIntervewSlice';
 
 function Interview() {
   let nav = useNavigate();
@@ -83,8 +84,7 @@ function Interview() {
       doApi()
       setAnswer("")
     } else {
-      console.log(time);
-      // dispatch(addTime({ time: time }));
+      dispatch(addTime({ time: time }));
       nav("/InterviewDone");
     }
   }
@@ -94,8 +94,6 @@ function Interview() {
 
   return (
     <>
-
-
       <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3">question</h1>
       <p>{question.question}</p>
       <div className="flex flex-col items-center w-[32rem] mx-auto">

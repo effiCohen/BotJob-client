@@ -9,8 +9,9 @@ import ItemHisturyClient from "./itemHisturyClient";
 
 function HomeHistory() {
     let [ar, setAr] = useState([]);
+    let [ar2, setAr2] = useState([]);
+    let [searchText, setSearchText] = useState("");
     const myName = useSelector(state => state.myDetailsSlice.name);
-    const allMyIntervews = useSelector(state => state.intervewSlice.allMyIntervews);
     const dispatch = useDispatch();
     let temp_ar = [
         {
@@ -42,32 +43,49 @@ function HomeHistory() {
             dispatch(addEmail({ email: userEmail }));
             reverse(data);
             setAr(data)
+            setAr2(data)
             dispatch(addIntervews({ allMyIntervews: data }));
         } catch (error) {
             console.log(error);
         }
     }
+
+    const onSearchClick = () => {
+        console.log(searchText);
+        let tempAr = [];
+        for (let index = 0; index < ar2.length; index++) {
+            if (ar2[index].job == searchText) {
+                tempAr.push(ar2[index]);
+            }
+        }
+        console.log(tempAr);
+        console.log(tempAr.length);
+        if (tempAr.length > 0) {
+            console.log(tempAr.length);
+            setAr(tempAr)
+        } else {
+            console.log("Search term not found");
+            if (searchText == "") {
+                setAr(ar2)
+            }
+        }
+    }
+
+    const handleChange = (event) => {
+        setSearchText(event.target.value);
+    }
+
     return (
         <div className="mt-3">
             <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
-                Welcome {myName}
-            </h1>
-            <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
-                Your History </h1>
-            <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">
-                Your history can teach you and you can only learn from it</p>
-                <div className="flex items-center justify-center">
-  <input
-    type="search"
-    name="search"
-    placeholder="Search"
-    className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
-  />
-  <button type="submit" className="ml-2">
-    <img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" />
-  </button>
-</div>
-
+                Welcome {myName}</h1>
+            <h2 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
+                Your History </h2>
+            <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">Your history can teach you and you can only learn from it</p>
+            <div className="flex items-center justify-center">
+                <input value={searchText} onChange={handleChange} type="search" name="search" placeholder="Search" className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none" />
+                <button onClick={onSearchClick} type="submit" className="ml-2"><img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" /></button>
+            </div>
 
             <div className="flex flex-col">
                 <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -98,8 +116,8 @@ function HomeHistory() {
                                 </thead>
 
                                 <tbody>
-                                    {ar.map((item) => (
-                                        <ItemHisturyClient key={item._id} item={item} />
+                                    {ar.map((item, index) => (
+                                        <ItemHisturyClient key={item._id} item={item} index={index} />
                                     ))}
                                 </tbody>
                             </table>
