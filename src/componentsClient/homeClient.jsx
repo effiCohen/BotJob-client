@@ -35,23 +35,49 @@ function HomeClient() {
       </svg>
     );
   }
+  
   return (
-    <div className="mt-3">
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj"> Welcame {myName}</h1>
-      {/* <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">  something.................</p> */}
-      <div className="flex flex-col">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-[#FFFDFB]">
+        <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
+              Welcome {myName}
+            </h1>
+      <div className="flex justify-center items-center space-x-8">
+        
+    {/* Content on the right side */}
+    <div className="w-1/2 text-center lg:text-start justify-between">
+          <div className="mt-3">
+          
+            {/* <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">  something.................</p> */}
+            <div className="flex flex-col">
+              <button
+                onClick={toHistory}
+                className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative"
+              >
+                Your history
+                <img
+                  src="/src/assets/history.png"
+                  alt="Icon"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 h-5 w-5"
+                />
+              </button>
+              <button
+                onClick={toNewInterview}
+                className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative"
+              >
+                New Interview..
+                <img
+                  src="/src/assets/interview2.png"
+                  alt="Icon"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 h-5 w-5"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
 
-        <button onClick={toHistory} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative">
-          Your history
-          <img src="/src/assets/history.png" alt="Icon" className="absolute right-2 top-1/2 transform -translate-y-1/2 h-5 w-5" />
-        </button>
-        <button onClick={toNewInterview} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative">
-          New Interview..
-          <img src="/src/assets/interview2.png" alt="Icon" className="absolute right-2 top-1/2 transform -translate-y-1/2 h-5 w-5" />
-
-        </button>
-      </div>
-      <Carousel 
+        {/* Carousel on the left side */}
+        <div className="w-1/2">
+        <Carousel 
         className="rounded-xl mt-2"
         prevArrow={({ handlePrev }) => (
           <IconButton
@@ -59,7 +85,7 @@ function HomeClient() {
             color="black"
             size="lg"
             onClick={handlePrev}
-            className="!absolute top-2/4 left-4 -translate-y-2/4 ml-20"
+            className="!absolute top-2/4 left-4 -translate-y-2/4 ml-5"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +109,7 @@ function HomeClient() {
             color="black"
             size="lg"
             onClick={handleNext}
-            className="!absolute top-2/4 !right-4 -translate-y-2/4 mr-20"
+            className="!absolute top-2/4 !right-4 -translate-y-2/4 mr-5"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -218,11 +244,13 @@ The former CEO and founder, previously a programmer and product manager at Sygni
 
 
       </Carousel>
+        </div>
 
-
-
-    </div>
-  )
+    
+      </div>
+    </section>
+  );
 }
+
 
 export default HomeClient
