@@ -1,3 +1,4 @@
+// ItemHisturyClient.js
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +20,12 @@ function ItemHisturyClient(props) {
 
   return (
     <tr
-      className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
+      style={{
+        transition: 'background-color 0.3s ease',
+        borderBottom: '1px solid',
+        borderBottomColor: '#e2e8f0',
+        backgroundColor: isHovered ? '#edf2f7' : 'transparent', // כאשר מועבר העכבר
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -29,20 +35,10 @@ function ItemHisturyClient(props) {
       <td className="whitespace-nowrap px-4 py-2">20:35 min</td>
       <td className="whitespace-nowrap px-4 py-2">{item.questions.length} - questions</td>
       <td onClick={toQushtions} className="whitespace-nowrap px-4 py-2">
-        <img
-          src="/src/assets/7740825.gif"
-          alt="GIF"
-          style={{
-            width: '50px',
-            height: '50px',
-            visibility: isHovered ? 'visible' : 'hidden',
-          }}
-        />
+        <img src="/src/assets/right-arrow3.png" alt="GIF" style={{ width: '30px', height: '30px' }} />
       </td>
     </tr>
   );
 }
 
 export default ItemHisturyClient;
-
-

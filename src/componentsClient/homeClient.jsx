@@ -38,28 +38,18 @@ function HomeClient() {
   
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 bg-[#FFFDFB]">
-        <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
-              Welcome {myName}
-            </h1>
+   <h1 style={{ marginTop: '-50px' }} className="mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
+  Welcome {myName}
+</h1>
       <div className="flex justify-center items-center space-x-8">
         
       
     <div className="w-1/2 text-center lg:text-start justify-between">
-          <div className="mt-3">
+          <div style={{ marginTop: '-150px' }}  className="mt-3">
           
             {/* <p className="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">  something.................</p> */}
             <div className="flex flex-col">
-              <button
-                onClick={toHistory}
-                className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative"
-              >
-                Your history
-                <img
-                  src="/src/assets/history.png"
-                  alt="Icon"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 h-5 w-5"
-                />
-              </button>
+
               <button
                 onClick={toNewInterview}
                 className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative"
@@ -67,6 +57,17 @@ function HomeClient() {
                 New Interview..
                 <img
                   src="/src/assets/interview2.png"
+                  alt="Icon"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 h-5 w-5"
+                />
+              </button>
+              <button
+                onClick={toHistory}
+                className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative"
+              >
+                Your history
+                <img
+                  src="/src/assets/history.png"
                   alt="Icon"
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 h-5 w-5"
                 />
