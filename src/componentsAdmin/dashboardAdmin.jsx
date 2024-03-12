@@ -17,15 +17,16 @@ function DashboardAdmin() {
   }, [])
 
   const doApi = async () => {
-    let url = API_URL + "/interviews/myInterview"
+    let url = API_URL + "/interviews/allInterviews"
     try {
       let resData = await doApiGet(url);
-      let data = resData.data.data;
+      let data = resData.data;
       console.log(data);
       reverse(data);
       setAr(data)
       setAr2(data)
       dispatch(addAdminIntervews({ allAdminIntervews: data }));
+      
     } catch (error) {
       console.log(error);
     }
@@ -70,6 +71,7 @@ const handleChange = (event) => {
                 <thead className="border-b font-medium dark:border-neutral-500">
                   <tr>
                     <th scope="col" className="px-4 py-2">Id</th>
+                    <th scope="col" className="px-4 py-2">Name</th>
                     <th scope="col" className="px-4 py-2">Date</th>
                     <th scope="col" className="px-4 py-2">Role</th>
                     <th scope="col" className="px-4 py-2">Time</th>

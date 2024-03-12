@@ -29,7 +29,7 @@ const loginClient = () => {
         // dispatch(addEmail({ email: _dataBody.email }));
         dispatch(addEmail({email: _dataBody.email }));
         nav("/home");
-        // window.location.reload();
+        window.location.reload();
       }
     }
     catch (err) {

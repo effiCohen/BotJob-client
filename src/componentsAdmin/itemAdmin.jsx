@@ -19,6 +19,7 @@ function ItemAdmin(props) {
         <tr
             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
             <td className="whitespace-nowrap px-4 py-2 font-medium">{index + 1}</td>
+            <td className="whitespace-nowrap px-4 py-2 font-medium">{item.user_id}</td>
             <td className="whitespace-nowrap px-4 py-2">{item.date_created.substring(10, length-1)}</td>
             <td className="whitespace-nowrap px-4 py-2">{item.job}</td>
             <td className="whitespace-nowrap px-4 py-2">20:35 min</td>
