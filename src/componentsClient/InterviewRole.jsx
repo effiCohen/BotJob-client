@@ -4,9 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { API_URL, doApiMethod } from '../services/apiService';
 import { addNewIntervew } from '../featuers/newIntervewSlice';
 import { checkSettingLocal } from '../services/settingServis';
+import { Spinner } from '@material-tailwind/react';
+import { useState } from 'react';
 
 
 function InterviewRole() {
+    const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
     const myName = useSelector(state => state.myDetailsSlice.name);
     let nav = useNavigate();
@@ -25,6 +28,7 @@ function InterviewRole() {
     };
 
     const doApi = async (_dataBody) => {
+        setLoading(true);
         let url = API_URL + "/interviews";
         try {
             let resp = await doApiMethod(url, "POST", _dataBody);
@@ -35,6 +39,7 @@ function InterviewRole() {
         }
         catch (err) {
             console.log(err.response.data);
+            setLoading(false);
         }
     }
 
@@ -52,8 +57,10 @@ function InterviewRole() {
                 <p className=" text-lg  leading-tight text-red-400  sm:leading-tight lg:leading-tight font-[simple] mb-3">Give clear answers and be confident</p>
                 <h2 className=" text-center font-[SM-Sans] font-bold text-xl  text-[#2E3837]">Professional tip</h2>
                 <h3 className=" text-center font-[SM-Sans]  text-xl font-semibold text-[#2E3837]">Don't forget to breathe</h3>
-                <button onClick={startTheInterview} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple] mt-5">Start</button>
+                <button onClick={startTheInterview} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple] m-5 ">Start</button>
+                { loading ? <Spinner/>:<></>}
             </section >
+
         </>
     )
 }

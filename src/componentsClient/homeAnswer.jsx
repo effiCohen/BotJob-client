@@ -24,9 +24,10 @@ function HomeAnswer() {
       let resData = await doApiGet(url);
       console.log(resData.data);
       setThisData(resData.data);
-      setShowText(resData.data[question]);
+      setShowText(resData.data.question);
     } catch (error) {
       console.log(error);
+      nav("/history");
     }
   }
 

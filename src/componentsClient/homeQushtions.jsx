@@ -33,6 +33,7 @@ function HomeQushtions() {
       setAr(dataAr)
     } catch (error) {
       console.log(error);
+      nav("/history");
     }
   }
 

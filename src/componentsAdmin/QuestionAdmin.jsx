@@ -27,6 +27,7 @@ function QuestionAdmin() {
       setShowText(resData.data[buttons[0].tipe]);
     } catch (error) {
       console.log(error);
+      nav("/admin");
     }
   };
 

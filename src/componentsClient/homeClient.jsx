@@ -43,7 +43,7 @@ function HomeClient() {
             </h1>
       <div className="flex justify-center items-center space-x-8">
         
-    {/* Content on the right side */}
+      
     <div className="w-1/2 text-center lg:text-start justify-between">
           <div className="mt-3">
           

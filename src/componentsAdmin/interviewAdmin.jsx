@@ -29,6 +29,7 @@ function InterviewAdmin() {
       setAr(dataAr)
     } catch (error) {
       console.log(error);
+      nav("/admin");
     }
   }
 
