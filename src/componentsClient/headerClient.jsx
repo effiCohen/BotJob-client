@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { checkTokenLocal } from '../services/localService';
@@ -10,38 +10,14 @@ function HeaderClient() {
   useEffect(() => {
     let ifToken = checkTokenLocal()
     if (ifToken) {
-      console.log(true);
       setIfTokenExists(true)
     } else {
-      console.log(false);
       setIfTokenExists(false)
     }
-
   }, []);
 
-  const onWelcomeClick = () => {
-    nav("/");
-  }
-  const onLoginClick = () => {
-    nav("/login");
-  }
-  const onForgotPassClick = () => {
-    nav("/forgotPass");
-  }
-  const onValidationClick = () => {
-    nav("/validation");
-  }
-  const onPasswordValidationClick = () => {
-    nav("/passwordValidation");
-  }
   const onHomeClick = () => {
     nav("/home");
-  }
-  const onHomeHistoryClick = () => {
-    nav("/history");
-  }
-  const onSignupClick = () => {
-    nav("/signup");
   }
   const onRestPassword = () => {
     nav("/restpass");
@@ -49,14 +25,12 @@ function HeaderClient() {
   const onSetting = () => {
     nav("/setting");
   }
-  const onInterviewRole = () => {
-    nav("/InterviewRole");
-  }
   const onAdmin = () => {
     nav("/Admin");
   }
-
-
+  const onlogout = () => {
+    nav("/logout");
+  }
   return (
     <div>
       {ifTokenExists ?
@@ -69,6 +43,8 @@ function HeaderClient() {
           <button onClick={onSetting}>setting</button>
           <button >- - -</button>
           <button onClick={onAdmin}>Admin</button>
+          <button >- - -</button>
+          <button onClick={onlogout}>logout</button>
         </>
         :
         <></>
