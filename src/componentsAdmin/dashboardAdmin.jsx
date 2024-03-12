@@ -8,6 +8,7 @@ import { addAdminIntervews } from "../featuers/intervewSlice";
 
 function DashboardAdmin() {
   let [ar, setAr] = useState([]);
+  let [nameArr, setNameArr] = useState([]);
   let [ar2, setAr2] = useState([]);
   let [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
@@ -26,7 +27,18 @@ function DashboardAdmin() {
       setAr(data)
       setAr2(data)
       dispatch(addAdminIntervews({ allAdminIntervews: data }));
-      
+      doApiUser()
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const doApiUser = async () => {
+    let url = API_URL + "/users"
+    try {
+      let resData = await doApiGet(url);
+      let data = resData.data;
+      console.log(data);
+      setNameArr(data);
     } catch (error) {
       console.log(error);
     }
