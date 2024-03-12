@@ -35,7 +35,7 @@ function Welcome() {
                             </div>
                         </div>
                         <div>
-                            <img className="lg:w-[80%] w-[50%] mx-auto bg-white lg" src="/src/assets/logo4.jpg" alt="" />
+                            <img className="lg:w-[45%] w-[50%] mx-auto bg-white lg" src="/src/assets/newLogo (2).jpg" alt="" />
                         </div>
                     </div>
 
