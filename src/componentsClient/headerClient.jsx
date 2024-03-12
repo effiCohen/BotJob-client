@@ -56,25 +56,29 @@ function HeaderClient() {
 
   return (
     <div>
-      <button onClick={onWelcomeClick}>- Welcome -</button>
-      <button onClick={onSignupClick}>- signup -</button>
-      <button onClick={onValidationClick}>- validation -</button>
-      <button onClick={onLoginClick}>- Login -</button>
-      <button onClick={onForgotPassClick}>- forgotPass -</button>
-      <button onClick={onPasswordValidationClick}>- PasswordValid -</button>
-      <button onClick={onRestPassword}>- restPassword -</button>
-      <button onClick={onHomeClick}>- Home -</button>
-      <button onClick={onHomeHistoryClick}>- History-</button>
-      <button onClick={onHomeQushtionsClick}>- HomeQushtions -</button>
-      <button onClick={onHomeAnswerClick}>- HomeAnswer -</button>
-      <button onClick={onSetting}>- setting -</button>
-      <button onClick={onInterviewRole}>- InterviewRole -</button>
-      <button onClick={onInterview}>- Interview -</button>
-      <button onClick={onInterviewDone}>- InterviewDone -</button>
-
-
-
-      <button onClick={onAdmin}>- Admin -</button>
+      <button onClick={onWelcomeClick}>Welcome</button>
+      <button >- - -</button>
+      <button onClick={onSignupClick}>signup</button>
+      <button >- - -</button>
+      <button onClick={onValidationClick}>validation</button>
+      <button >- - -</button>
+      <button onClick={onLoginClick}>Login</button>
+      <button >- - -</button>
+      <button onClick={onForgotPassClick}>forgotPass</button>
+      <button >- - -</button>
+      <button onClick={onPasswordValidationClick}>PasswordValid</button>
+      <button >- - -</button>
+      <button onClick={onRestPassword}>restPassword</button>
+      <button >- - -</button>
+      <button onClick={onHomeClick}>Home</button>
+      <button >- - -</button>
+      <button onClick={onHomeHistoryClick}>History</button>
+      <button >- - -</button>
+      <button onClick={onSetting}>setting</button>
+      <button >- - -</button>
+      <button onClick={onInterviewRole}>Naw Interview</button>
+      <button >- - -</button>
+      <button onClick={onAdmin}>Admin</button>
     </div>
   )
 }

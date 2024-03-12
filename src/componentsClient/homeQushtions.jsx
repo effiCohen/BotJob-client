@@ -42,18 +42,22 @@ function HomeQushtions() {
     nav("/homeAnswer");
 
   };
+  const BackToHistory = () => {
+    nav("/history");
+  };
 
   return (
     <>
-      {/* <style>
-        {`
-            body {
-              overflow: hidden;
-            }
-        `}
-      </style> */}
-      <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]">Interview for the position of :{interview.job}</h1>
+     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <img onClick={() => BackToHistory()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" />
+
+          <div>
+          <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]">Interview for the position of :{interview.job}</h1>
       <p className='text-[#2E3837] text-sm font-[Poppins] text-center ml-6'> With <b className="text-[#2E3837]">{interview.experience}</b> years of experience </p>
+          </div>
+          <div></div>
+          </div>
+    
 
       <div className=" mx-auto  lg:px-8 place-items-center   grid grid-rows-2 sm:grid-rows-5 grid-flow-col gap-1">
         {ar.map((item, index) => (
