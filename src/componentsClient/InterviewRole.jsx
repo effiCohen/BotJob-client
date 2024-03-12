@@ -10,16 +10,18 @@ function InterviewRole() {
     const dispatch = useDispatch();
     const myName = useSelector(state => state.myDetailsSlice.name);
     let nav = useNavigate();
-    let seting = {
-        job: "Software Developer",
-        experience: "4",
-        questions: 3
-    }
+    let seting = {}
+
 
     const startTheInterview = () => {
-       let settingLocal = (checkSettingLocal());
-       seting = settingLocal;
-        doApi(seting)
+        let settingLocal = (checkSettingLocal());
+        if (settingLocal) {
+            seting = settingLocal;
+            doApi(seting)
+        } else {
+            console.log("go to seting");
+            nav("/setting");
+        }
     };
 
     const doApi = async (_dataBody) => {
