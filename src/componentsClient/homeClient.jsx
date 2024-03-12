@@ -219,6 +219,8 @@ The former CEO and founder, previously a programmer and product manager at Sygni
 
       </Carousel>
 
+
+
     </div>
   )
 }
