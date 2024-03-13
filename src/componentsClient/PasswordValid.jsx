@@ -33,7 +33,6 @@ const PasswordValid = () => {
             }
         }
         catch (err) {
-            toast.error(err);
             console.log(err.response.data);
         }
     }

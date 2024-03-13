@@ -27,7 +27,6 @@ function DashboardAdmin() {
       setAr2(data)
       dispatch(addAdminIntervews({ allAdminIntervews: data }));
     } catch (error) {
-      toast.error(error);
       console.log(error);
     }
   }

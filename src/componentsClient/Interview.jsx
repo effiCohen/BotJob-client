@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { API_URL, doApiGet, doApiMethod } from '../services/apiService';
 import { addTime } from '../featuers/newIntervewSlice';
-import { toast } from 'react-toastify';
 
 function Interview() {
   let nav = useNavigate();
@@ -55,7 +54,6 @@ function Interview() {
       setcuonter(cuont += 1)
     }
     catch (err) {
-      toast.error(err);
       console.log(err.response.data);
     }
   }
@@ -69,13 +67,11 @@ function Interview() {
       let resp = await doApiMethod(url, "PUT", _dataBody);
       if (resp.data.modifiedCount == 1) {
         console.log("The answer was successfully received");
-        toast.success("The answer was successfully received");
       } else {
         console.log("The answer has not been added");
       }
     }
     catch (err) {
-      toast.error(err);
       console.log(err.response.data);
     }
   }

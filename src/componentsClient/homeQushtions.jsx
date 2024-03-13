@@ -4,7 +4,6 @@ import { API_URL, doApiGet } from "../services/apiService";
 import { reverse } from "lodash";
 import { useNavigate } from "react-router-dom";
 import { addThisQuestion } from "../featuers/intervewSlice";
-import { toast } from "react-toastify";
 
 function HomeQushtions() {
   const dispatch = useDispatch();
@@ -33,7 +32,6 @@ function HomeQushtions() {
       reverse(dataAr);
       setAr(dataAr)
     } catch (error) {
-      toast.error(error);
       console.log(error);
       nav("/history");
     }

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { API_URL, doApiGet } from '../services/apiService';
 import { useNavigate } from 'react-router-dom';
 import { saveSettingLocal } from '../services/settingServis';
-import { toast } from 'react-toastify';
 
 const Setting = () => {
     let nav = useNavigate();
@@ -28,7 +27,6 @@ const Setting = () => {
             let resData = await doApiGet(url);
             setArRole(resData.data);
         } catch (error) {
-            toast.error(error);
             console.log(error);
 
         }

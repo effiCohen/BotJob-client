@@ -42,7 +42,6 @@ function InterviewRole() {
         }
         catch (err) {
             console.log(err.response.data);
-            toast.error(err);
             setLoading(false);
         }
     }

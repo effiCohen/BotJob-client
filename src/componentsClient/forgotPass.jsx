@@ -34,7 +34,6 @@ const ForgotPass = () => {
             }
         }
         catch (err) {
-            toast.error(err);
             console.log(err.response);
         }
     }

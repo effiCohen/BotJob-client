@@ -4,7 +4,6 @@ import { API_URL, doApiGet } from "../services/apiService";
 import { reverse } from "lodash";
 import { useNavigate } from "react-router-dom";
 import { addThisAdminQuestion } from "../featuers/intervewSlice";
-import { toast } from "react-toastify";
 
 function InterviewAdmin() {
   let [interview, setInterview] = useState({});
@@ -29,7 +28,6 @@ function InterviewAdmin() {
       reverse(dataAr);
       setAr(dataAr)
     } catch (error) {
-      toast.error(error);
       console.log(error);
       nav("/admin");
     }

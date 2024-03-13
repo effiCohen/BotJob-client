@@ -47,7 +47,6 @@ function HomeHistory() {
             setAr2(data)
             dispatch(addIntervews({ allMyIntervews: data }));
         } catch (error) {
-            toast.error(error);
             console.log(error);
         }
     }

@@ -26,7 +26,6 @@ function QuestionAdmin() {
       setThisData(resData.data);
       setShowText(resData.data[buttons[0].tipe]);
     } catch (error) {
-      toast.error(error);
       console.log(error);
       nav("/admin");
     }

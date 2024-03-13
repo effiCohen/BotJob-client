@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from "react-redux";
 import { API_URL, doApiGet } from '../services/apiService';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 function HomeAnswer() {
   let nav = useNavigate();
@@ -28,7 +27,6 @@ function HomeAnswer() {
       setShowText(resData.data.question);
     } catch (error) {
       console.log(error);
-      toast.error(error);
       nav("/history");
     }
   }

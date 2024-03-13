@@ -32,7 +32,6 @@ function SignUpClient() {
       }
     }
     catch (err) {
-      toast.error(err);
       console.log(err.response.data);
     }
   };
