@@ -4,6 +4,7 @@ import { useState } from "react";
 import { API_URL, doApiGet } from '../services/apiService';
 import { useNavigate } from 'react-router-dom';
 import { saveSettingLocal } from '../services/settingServis';
+import { toast } from 'react-toastify';
 
 const Setting = () => {
     let nav = useNavigate();
@@ -11,12 +12,11 @@ const Setting = () => {
     for (let i = 1; i <= 100; i++) {
         arexperience.push(i);
     }
-    let arNum = [1, 2, 3, 4, 5];
-    // let num = 3;
-    const [questionCount, setQuestionCount] = useState(3);
+    let arNum = ["1", "2", "3", "4", "5"];
+    const [questionCount, setQuestionCount] = useState("3");
     const [experience, setExperience] = useState("2");
-    const [job, setjob] = useState({});
-    const [arRole, setArRole] = useState([{ job: "Software Engineeraa" }]);
+    const [job, setjob] = useState("Software Engineer");
+    const [arRole, setArRole] = useState([{ job: "Software Engineer" }]);
 
     useEffect(() => {
         doApi()
@@ -28,7 +28,9 @@ const Setting = () => {
             let resData = await doApiGet(url);
             setArRole(resData.data);
         } catch (error) {
+            toast.error(error);
             console.log(error);
+
         }
     }
 
@@ -52,7 +54,7 @@ const Setting = () => {
                     <h2 className="font-bold  text-start  sm:text-[20px] text-[16px] text-[#1E1E1E] font-inter">Let's first choose a role</h2>
                     <div className="gap-2 flex   flex-wrap justify-center items-center ">
                         <div className="mb-1 lg:mb-2">
-                            <Select value={"Software Engineer"} label="Select Role" onChange={(e) => setjob(e)} className="w-full">
+                            <Select value={job} label="Select Role" onChange={(e) => setjob(e)} className="w-full">
                                 {arRole.map((item, index) => (
                                     <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
                                 ))}

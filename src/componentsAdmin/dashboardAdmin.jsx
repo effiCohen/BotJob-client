@@ -4,6 +4,7 @@ import ItemAdmin from "./itemAdmin";
 import { API_URL, doApiGet } from "../services/apiService";
 import { reverse } from "lodash";
 import { addAdminIntervews } from "../featuers/intervewSlice";
+import { toast } from "react-toastify";
 
 
 function DashboardAdmin() {
@@ -26,6 +27,7 @@ function DashboardAdmin() {
       setAr2(data)
       dispatch(addAdminIntervews({ allAdminIntervews: data }));
     } catch (error) {
+      toast.error(error);
       console.log(error);
     }
   }
@@ -41,7 +43,8 @@ function DashboardAdmin() {
     if (tempAr.length > 0) {
       setAr(tempAr)
     } else {
-      console.log("Search term not found");
+      toast.error("The search value was not found");
+      console.log("The search value was not found");
       if (searchText == "") {
         setAr(ar2)
       }

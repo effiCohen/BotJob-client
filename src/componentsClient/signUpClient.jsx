@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router';
 import { API_URL, doApiMethod } from '../services/apiService';
 import { useDispatch } from "react-redux";
 import { addEmail } from '../featuers/myDetailsSlice';
+import { toast } from 'react-toastify';
 
 function SignUpClient() {
   let nav = useNavigate();
@@ -25,11 +26,13 @@ function SignUpClient() {
       console.log("resp", resp);
       if (resp.data._id) {
         dispatch(addEmail({ email: _dataBody.email }));
+        toast.success("You sign up");
         console.log("You sign up");
         nav("/validation");
       }
     }
     catch (err) {
+      toast.error(err);
       console.log(err.response.data);
     }
   };

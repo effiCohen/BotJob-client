@@ -7,6 +7,7 @@ import Icon from '@mdi/react';
 import { mdiEmailOutline, mdiLockOutline } from '@mdi/js';
 import { useDispatch } from 'react-redux';
 import { addEmail } from '../featuers/myDetailsSlice';
+import { toast } from 'react-toastify';
 
 
 const loginClient = () => {
@@ -23,16 +24,16 @@ const loginClient = () => {
     let url = API_URL + "/users/login";
     try {
       let resp = await doApiMethod(url, "POST", _dataBody);
-      
       if (resp.data.token) {
+        toast.success("Welcome, you have successfully connected");
         saveTokenLocal(resp.data.token);
-        // dispatch(addEmail({ email: _dataBody.email }));
         dispatch(addEmail({email: _dataBody.email }));
         nav("/home");
         window.location.reload();
       }
     }
     catch (err) {
+      toast.error(err.response.data);
       console.log(err.response.data);
     }
   }

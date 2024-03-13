@@ -5,6 +5,7 @@ import { reverse } from "lodash";
 import { addIntervews } from "../featuers/intervewSlice";
 import { addEmail, addName } from "../featuers/myDetailsSlice";
 import ItemHisturyClient from "./itemHisturyClient";
+import { toast } from "react-toastify";
 
 
 function HomeHistory() {
@@ -46,6 +47,7 @@ function HomeHistory() {
             setAr2(data)
             dispatch(addIntervews({ allMyIntervews: data }));
         } catch (error) {
+            toast.error(error);
             console.log(error);
         }
     }
@@ -64,7 +66,8 @@ function HomeHistory() {
             console.log(tempAr.length);
             setAr(tempAr)
         } else {
-            console.log("Search term not found");
+            toast.error("The search value was not found");
+            console.log("The search value was not found");
             if (searchText == "") {
                 setAr(ar2)
             }

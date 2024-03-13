@@ -6,6 +6,7 @@ import { addNewIntervew } from '../featuers/newIntervewSlice';
 import { checkSettingLocal } from '../services/settingServis';
 import { Spinner } from '@material-tailwind/react';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 function InterviewRole() {
@@ -22,13 +23,15 @@ function InterviewRole() {
             seting = settingLocal;
             doApi(seting)
         } else {
-            console.log("go to seting");
+            console.log("Go to settings to select preferences");
+            toast.error("Go to settings to select preferences");
             nav("/setting");
         }
     };
 
     const doApi = async (_dataBody) => {
         setLoading(true);
+        toast.info("Please wait a moment and a personalized interview will be uploaded for you");
         let url = API_URL + "/interviews";
         try {
             let resp = await doApiMethod(url, "POST", _dataBody);
@@ -39,6 +42,7 @@ function InterviewRole() {
         }
         catch (err) {
             console.log(err.response.data);
+            toast.error(err);
             setLoading(false);
         }
     }

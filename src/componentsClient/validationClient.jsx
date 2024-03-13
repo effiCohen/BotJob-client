@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { API_URL, doApiMethod } from '../services/apiService';
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 
 function ValidationClient() {
@@ -30,8 +31,8 @@ function ValidationClient() {
       console.log(resp);
       if (resp.data.status = 200) {
         console.log("You are now a valid user");
+        toast.success("You are now a valid user");
         nav("/login");
-        // window.location.reload();
       }
     }
     catch (err) {
@@ -45,14 +46,6 @@ function ValidationClient() {
   let codeRef4 = register("code4", { required: true, minLength: 1, maxLength: 1 });
   let codeRef5 = register("code5", { required: true, minLength: 1, maxLength: 1 });
 
-  // const inputFields = Array.from({ length: 5 }, (_, i) => (
-  //   <input
-  //     key={i}
-  //     {...codeRef`${i}`}
-  //     type="text"
-  //     className="w-12 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg"
-  //   />
-  // ));
 
   return (
     <>

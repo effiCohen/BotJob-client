@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import { API_URL, doApiMethod } from '../services/apiService';
 import {  useDispatch, useSelector } from "react-redux";
 import { addEmail } from '../featuers/myDetailsSlice';
+import { toast } from 'react-toastify';
 
 
 const ForgotPass = () => {
@@ -25,6 +26,7 @@ const ForgotPass = () => {
             let resp = await doApiMethod(url, "PATCH", _dataBody);
             if (resp.data.status = 200) {
                 console.log("We will send you a password recovery code to your email");
+                toast.success("We will send you a password recovery code to your email");
                 dispatch(addEmail({email:_dataBody.email}));
                 console.log(myEmail);
                 nav("/passwordValidation");
@@ -32,6 +34,7 @@ const ForgotPass = () => {
             }
         }
         catch (err) {
+            toast.error(err);
             console.log(err.response);
         }
     }

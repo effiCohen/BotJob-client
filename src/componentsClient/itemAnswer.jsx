@@ -2,6 +2,7 @@ import { Textarea } from '@material-tailwind/react';
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { API_URL, doApiMethod } from '../services/apiService';
+import { toast } from 'react-toastify';
 
 function ItemAnswer(props) {
     // const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function ItemAnswer(props) {
             let data = resData.data
             thisQuestion.question = data.question;
         } catch (error) {
+            toast.error(error);
             console.log(error);
         }
     }

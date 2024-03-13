@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { API_URL, doApiMethod } from '../services/apiService';
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const PasswordValid = () => {
     let nav = useNavigate();
@@ -26,12 +27,13 @@ const PasswordValid = () => {
             let resp = await doApiMethod(url, "PATCH", _dataBody);
             console.log(resp);
             if (resp.data.status = 200) {
+                toast.success("Verified user");
                 console.log("Verified user");
                 nav("/restpass");
-                // window.location.reload();
             }
         }
         catch (err) {
+            toast.error(err);
             console.log(err.response.data);
         }
     }

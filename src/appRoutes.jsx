@@ -11,7 +11,6 @@ import ValidationClient from './componentsClient/validationClient';
 import Welcome from './componentsClient/welcome';
 import PasswordValid from './componentsClient/passwordValid';
 import ForgotPass from './componentsClient/forgotPass';
-import Setting from './componentsClient/Setting';
 import DashboardAdmin from './componentsAdmin/dashboardAdmin';
 import InterviewAdmin from './componentsAdmin/interviewAdmin';
 import QuestionAdmin from './componentsAdmin/QuestionAdmin';
@@ -23,6 +22,9 @@ import InterviewRole from './componentsClient/InterviewRole';
 import HomeQushtions from './componentsClient/homeQushtions';
 import HomeAnswer from './componentsClient/homeAnswer';
 import HomeHistory from './componentsClient/homeHistory';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Setting from './componentsClient/setting';
 
 function AppRoutes() {
   return (
@@ -55,6 +57,7 @@ function AppRoutes() {
           <Route path="/*" element={<Page404 />} />
         </Route>
       </Routes>
+      <ToastContainer position="top-right" theme='colored' />
     </BrowserRouter>
   )
 }
