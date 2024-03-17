@@ -93,7 +93,6 @@ const Setting = () => {
                         </button>
                     </div>
                 </div>
-            </div>
 
 
 

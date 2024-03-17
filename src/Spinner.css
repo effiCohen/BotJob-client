@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* על מנת למלא את כל הגובה של הדף */
+    height: 100vh; 
   }
   
   .spinner {
