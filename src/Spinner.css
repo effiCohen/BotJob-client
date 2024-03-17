@@ -10,7 +10,7 @@
   .spinner {
     width: 70.4px;
     height: 70.4px;
-    --clr: rgb(247, 197, 159);
+    --clr: rgb(224, 199, 61);
     --clr-alpha: rgba(247, 197, 159, 0.1);
     animation: spinner 1.6s infinite ease;
     transform-style: preserve-3d;

@@ -46,6 +46,8 @@ const Setting = () => {
 
     return (
         <>
+    <div class="border-double border-8 border-x-blue-300 border-y-white" > 
+
             <div className="mx-auto flex  flex-col items-center justify-between overflow-hidden container bg-[#FFFDFB] sm:flex sm:flex-col sm:mx-auto">
                 <div className="max-w-xl  mx-auto ">
                     <h1 className="font-bold sm:text-[30px] text-[20px]  lg:text-center text-[#1E1E1E] font-inter">Let's build the interview</h1>
@@ -94,7 +96,7 @@ const Setting = () => {
                 </div>
             </div>
 
-
+</div>
 
 
         </>
