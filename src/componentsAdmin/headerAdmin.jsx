@@ -15,9 +15,20 @@ function HeaderAdmin() {
 
   return (
     <div>
-      <button onClick={onDashboardAdminClick}>dashboard</button>
-      <button >- - -</button>
-      <button onClick={onUserClick}>Back to user</button>
+      <div className="flex justify-between  bg-gray-800 mb-auto top-0  w-full text-white">
+        <div></div>
+        <div className='flex'>
+          <div className="my-4 mx-11">
+            <button onClick={onUserClick}>back to user</button>
+          </div>
+          <div className="my-4 mx-11">
+            <button onClick={onDashboardAdminClick}>deshboard</button>
+          </div>
+        </div>
+        <div></div>
+      </div>
+
+
     </div>
   )
 }
