@@ -40,7 +40,7 @@ function HomeAnswer() {
 
   return (
     <>
-      <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <div className=" border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           {/* <img onClick={() => BackToQuestions()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" /> */}
           <button onClick={() => BackToQuestions()} class="cursor-pointer duration-200 hover:scale-125 active:scale-100" title="Go Back">
@@ -61,14 +61,17 @@ function HomeAnswer() {
           </button>
         ))}
       </div>
-      {showText !== null ? (
-        <div className="flex flex-col items-center w-[32rem] mx-auto">
+      <div className=''>
+        {showText !== null ? (
+        <div className="flex flex-col items-center w-[32rem] mx-auto shadow-md rounded-lg p-4 m-5">
           <p>{showText}</p>
           <div className="flex w-full justify-between py-1.5">
             <div className="flex gap-2"></div>
           </div>
         </div>
       ):"There is no user response"}
+      </div>
+      
     </>
   );
 }
