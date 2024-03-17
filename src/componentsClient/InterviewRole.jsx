@@ -44,7 +44,6 @@ function InterviewRole() {
 
     return (
         <>
-             <div class="border-double border-4 border-x-blue-300 border-y-white" > 
 
             <section className="container flex justify-center mx-auto  flex-col w-[80%] lg:w-full items-center">
                 {loading ? (
@@ -81,7 +80,6 @@ function InterviewRole() {
                     </>
                 )}
             </section>
-            </div>
 
         </>
     )
