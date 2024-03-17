@@ -1,11 +1,27 @@
-import { React } from "react";
-import { useSelector } from "react-redux";
+import { React, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Carousel, IconButton } from "@material-tailwind/react";
 import { Card, CardHeader, CardBody, Typography, Avatar } from "@material-tailwind/react";
+import { API_URL, doApiGet } from "../services/apiService";
+import { addName } from "../featuers/myDetailsSlice";
 function HomeClient() {
   const myName = useSelector(state => state.myDetailsSlice.name);
   let nav = useNavigate();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    doApi()
+  }, [])
+  const doApi = async () => {
+    let url = API_URL + "/users/myInfo"
+    try {
+      let resData = await doApiGet(url);
+      let userName = resData.data.FirstName + " " + resData.data.LastName;
+      dispatch(addName({ name: userName }));
+    } catch (error) {
+      console.log(error);
+    }
+  }
   const toHistory = () => {
     nav("/history");
   };
@@ -34,7 +50,7 @@ function HomeClient() {
       <h1 style={{ marginTop: '-50px' }} className="mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
         Welcome {myName}
       </h1>
-      <div className="flex justify-center items-center space-x-8">
+      <div className="flex justify-center items-center space-x-8 pt-10">
 
 
         <div className="w-1/2 text-center lg:text-start justify-between">
