@@ -46,7 +46,6 @@ const Setting = () => {
 
     return (
         <>
-    <div class="border-double border-8 border-x-blue-300 border-y-white" > 
 
             <div className="mx-auto flex  flex-col items-center justify-between overflow-hidden container bg-[#FFFDFB] sm:flex sm:flex-col sm:mx-auto">
                 <div className="max-w-xl  mx-auto ">
@@ -96,7 +95,6 @@ const Setting = () => {
                 </div>
             </div>
 
-</div>
 
 
         </>
