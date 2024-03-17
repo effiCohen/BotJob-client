@@ -52,7 +52,7 @@ const Setting = () => {
                     <h2 className="font-bold  text-start  sm:text-[20px] text-[16px] text-[#1E1E1E] font-inter">Let's first choose a role</h2>
                     <div className="gap-2 flex   flex-wrap justify-center items-center ">
                         <div className="mb-1 lg:mb-2">
-                            <Select value={job} label="Select Role" onChange={(e) => setjob(e)} className="w-full">
+                            <Select  label="Select Role" value={job} onChange={(e) => setjob(e)} className="w-full">
                                 {arRole.map((item, index) => (
                                     <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
                                 ))}

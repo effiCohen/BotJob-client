@@ -25,7 +25,6 @@ const loginClient = () => {
     try {
       let resp = await doApiMethod(url, "POST", _dataBody);
       if (resp.data.token) {
-        // toast.success("Welcome, you have successfully connected");
         saveTokenLocal(resp.data.token);
         dispatch(addEmail({email: _dataBody.email }));
         nav("/home");
@@ -33,8 +32,8 @@ const loginClient = () => {
       }
     }
     catch (err) {
-      toast.error(err.response.data);
-      console.log(err.response.data);
+      toast.error(err.response.data.err);
+      console.log(err.response.data.err);
     }
   }
 
