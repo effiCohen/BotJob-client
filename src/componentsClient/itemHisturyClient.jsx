@@ -20,8 +20,8 @@ function ItemHisturyClient(props) {
 
   return (
     <tr
-    className={`transition-all duration-300 border-b border-gray-200 ${
-      isHovered ? 'bg-gray-400' : 'bg-transparent'
+    className={`transition-all duration-300 border-b border-gray-200 text-black ${
+      isHovered ? 'bg-gray-200' : 'bg-transparent'
     }`}
     onMouseEnter={() => setIsHovered(true)}
     onMouseLeave={() => setIsHovered(false)}
@@ -32,7 +32,6 @@ function ItemHisturyClient(props) {
   
     
         <td className="whitespace-nowrap px-4 py-2 font-medium">{index + 1}</td>
-        <td className="whitespace-nowrap px-4 py-2 font-medium">{item.user_fullName}</td>
         <td className="whitespace-nowrap px-4 py-2">{item.date_created.substring(10, length - 1)}</td>
         <td className="whitespace-nowrap px-4 py-2">{item.job}</td>
         <td className="whitespace-nowrap px-4 py-2">20:35 min</td>

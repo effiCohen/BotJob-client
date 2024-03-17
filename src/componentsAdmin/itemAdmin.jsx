@@ -19,8 +19,8 @@ function ItemAdmin(props) {
 
   return (
  <tr
-  className={`transition-all duration-300 border-b border-gray-200 ${
-    isHovered ? 'bg-gray-400' : 'bg-transparent'
+  className={`transition-all duration-300 border-b border-gray-200 text-black ${
+    isHovered ? 'bg-gray-200' : 'bg-transparent'
   }`}
   onMouseEnter={() => setIsHovered(true)}
   onMouseLeave={() => setIsHovered(false)}

@@ -85,7 +85,7 @@ function HomeHistory() {
                 Your History </h2>
             <p className="m-2 text-lg text-gray-600 sm:mt-8 font-inter">Your history can teach you and you can only learn from it</p>
             <div className="flex items-center justify-center">
-                <input value={searchText} onChange={handleChange} type="search" name="search" placeholder="Search" className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none" />
+                <input value={searchText} onChange={handleChange} type="search" name="search" placeholder="Search" className="bg-white h-10 px-5 pr-10 text-sm focus:outline-none shadow-md rounded-lg p-2 m-2" />
                 <button onClick={onSearchClick} type="submit" className="ml-2"><img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" /></button>
             </div>
 
