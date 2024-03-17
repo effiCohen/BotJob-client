@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { Select, Option } from "@material-tailwind/react";
 import { useState } from "react";
 import { API_URL, doApiGet } from '../services/apiService';
@@ -18,8 +18,8 @@ const Setting = () => {
     const [arRole, setArRole] = useState([{ job: "Software Engineer" }]);
 
     useEffect(() => {
-        doApi()
-    }, [])
+        doApi();
+    }, []);
 
     const doApi = async () => {
         let url = API_URL + "/jobs";
@@ -28,32 +28,29 @@ const Setting = () => {
             setArRole(resData.data);
         } catch (error) {
             console.log(error);
-
         }
-    }
+    };
 
     const onSaveClick = () => {
         let settingObg = {
             "job": job,
             "experience": experience,
             "questions": questionCount
-        }
+        };
         console.log(settingObg);
-        saveSettingLocal(settingObg)
+        saveSettingLocal(settingObg);
         nav("/InterviewRole");
-    }
-
+    };
 
     return (
         <>
-
-            <div className="mx-auto flex  flex-col items-center justify-between overflow-hidden container bg-[#FFFDFB] sm:flex sm:flex-col sm:mx-auto">
-                <div className="max-w-xl  mx-auto ">
-                    <h1 className="font-bold sm:text-[30px] text-[20px]  lg:text-center text-[#1E1E1E] font-inter">Let's build the interview</h1>
-                    <h2 className="font-bold  text-start  sm:text-[20px] text-[16px] text-[#1E1E1E] font-inter">Let's first choose a role</h2>
-                    <div className="gap-2 flex   flex-wrap justify-center items-center ">
+            <div className="mx-auto flex flex-col items-center justify-between overflow-hidden container bg-[#FFFDFB] sm:flex sm:flex-col sm:mx-auto">
+                <div className="max-w-xl mx-auto ">
+                    <h1 className="font-bold sm:text-[30px] text-[20px] lg:text-center text-[#1E1E1E] font-inter">Let's build the interview</h1>
+                    <h2 className="font-bold text-start sm:text-[20px] text-[16px] text-[#1E1E1E] font-inter">Let's first choose a role</h2>
+                    <div className="gap-2 flex flex-wrap justify-center items-center ">
                         <div className="mb-1 lg:mb-2">
-                            <Select  label="Select Role" value={job} onChange={(e) => setjob(e)} className="w-full">
+                            <Select label="Select Role" value={job} onChange={(e) => setjob(e)} className="w-full">
                                 {arRole.map((item, index) => (
                                     <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
                                 ))}
@@ -61,9 +58,9 @@ const Setting = () => {
                         </div>
                     </div>
 
-                    <h2 className="font-bold  text-start  sm:text-[20px] text-[16px] text-[#1E1E1E] font-inter">Select years of experience</h2>
-                    <div className="gap-2 flex   flex-wrap justify-center items-center ">
-                        <div className="mb-1 flex  lg:mb-2 mx-auto justify-center items-center">
+                    <h2 className="font-bold text-start sm:text-[20px] text-[16px] text-[#1E1E1E] font-inter">Select years of experience</h2>
+                    <div className="gap-2 flex flex-wrap justify-center items-center ">
+                        <div className="mb-1 flex lg:mb-2 mx-auto justify-center items-center">
                             <Select label="Years of experience" value={experience} onChange={(e) => setExperience(e)} className="w-full">
                                 {arexperience.map((item, index) => (
                                     <Option key={index} value={(index + 1).toString()}>{(index + 1).toString()}</Option>
@@ -75,8 +72,8 @@ const Setting = () => {
                     <div className="mx-auto flex flex-col text-center justify-center items-center">
                         <h2 className="font-bold sm:text-[20px] text-[16px] text-[#1E1E1E] font-inter">Select the number of questions</h2>
                         <p className="text-gray-500 text-sm mb-2 w-[80%] text-center">.....</p>
-                        <div className=" place-items-center mx-auto">
-                            <div className="mb-1 flex  lg:mb-2 mx-auto justify-center items-center">
+                        <div className="place-items-center mx-auto">
+                            <div className="mb-1 flex lg:mb-2 mx-auto justify-center items-center">
                                 <Select label="Number of Questions" value={questionCount} onChange={(e) => setQuestionCount(e)} className="w-full">
                                     {arNum.map((item, index) => (
                                         <Option key={index} value={arNum[index]}>{arNum[index]}</Option>
@@ -86,18 +83,15 @@ const Setting = () => {
                         </div>
                     </div>
 
-
                     <div className="mt-1">
-                        <button onClick={() => onSaveClick()} className="block   mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-4 py-3 font-simple">
+                        <button onClick={() => onSaveClick()} className="block mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-4 py-3 font-simple">
                             Save
                         </button>
                     </div>
                 </div>
-
-
-
+            </div>
         </>
-    )
-}
+    );
+};
 
-export default Setting
+export default Setting;
