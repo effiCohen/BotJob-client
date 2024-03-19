@@ -43,14 +43,14 @@ function Welcome() {
                             </div>
                             <div className="text-center lg:text-start justify-between">
 
-                                <h1 className="text-center text-[34px] font-bold  text-gray-900   font-[inter]">BotJob  Ai</h1>
+                                <h1 className="text-center text-[34px] font-bold  text-gray-900   font-[inter]">BotJob Ai</h1>
                                 <p className="text-gray-400 text-sm font-[Poppins] text-center ">Now your interviews are in one place and always under control</p>
                                 <div className="flex justify-center  items-center lg:flex-col p-2 flex-col ">
                                     <div className="w-[50%] m-1">
                                         <button onClick={toLogin} className="block w-[80%]  m-1 mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Login</button>
                                     </div>
                                     <div className="w-[50%]">
-                                        <button onClick={toSignUp} className="block w-[80%]  mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Create an Account</button>
+                                        <button onClick={toSignUp} className="block w-[80%]  mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Create account</button>
                                     </div>
                                 </div>
                             </div>
@@ -136,12 +136,13 @@ function Welcome() {
                                                     <StarIcon />
                                                 </div>
                                             </div>
-                                            <Typography color="blue-gray">Software Team leader at IDF</Typography>
+                                            <Typography color="blue-gray">Software team leader in I.D.F</Typography>
                                         </div>
                                     </CardHeader>
                                     <CardBody className="mb-6 p-0">
                                         <Typography>
-                                            &quot;This individual, positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces. In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills, and a commitment to efficient upgrade and development of every project.
+                                            &quot;This individual positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces. 
+                                            In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills and a commitment to efficient upgrade and development of every project.
                                             &quot;
                                         </Typography>
                                     </CardBody>
@@ -210,13 +211,15 @@ function Welcome() {
                                                     <StarIcon />
                                                 </div>
                                             </div>
-                                            <Typography color="blue-gray">Former CEO & founder, ex-programmer, product manager at Sygnia</Typography>
+                                            <Typography color="blue-gray">Former CEO & founder, ex-programmer, product manager in Sygnia</Typography>
                                         </div>
                                     </CardHeader>
                                     <CardBody className="mb-6 p-0">
                                         <Typography>
                                             &quot;
-                                            The former CEO and founder, previously a programmer and product manager at Sygnia, significantly elevated our website. His expertise and leadership were key factors in creating a robust and user-friendly platform. We credit much of our success to his visionary contributions and dedication to excellence.&quot;
+                                            The former CEO and founder, previously a programmer and product manager in Sygnia, significantly elevated our website. 
+                                            His expertise and leadership were key factors in creating a robust and user-friendly platform. 
+                                            We credit much of our success to his visionary contributions and dedication to excellence.&quot;
                                         </Typography>
                                     </CardBody>
                                 </Card>
@@ -238,13 +241,13 @@ function Welcome() {
                             </span>
                             <h2
                                 className="block w-full  text-black font-bold text-3xl sm:text-4xl">
-                                Build a Website That Your Customers Love
+                                Build a Website That Your customers love
                             </h2>
                             <p
                                 className="mx-auto my-4 w-full max-w-xl  text-center font-medium leading-relaxed tracking-wide text-black">
-                                Our templates allow for maximum customization. No technical skills required – our intuitive design tools
-                                let
-                                you get the job done easily.
+                                Our templates allow for maximum customization. 
+                                No technical skills required – our intuitive design tools
+                                let you get the job done easily.
                             </p>
 
                         </div>
@@ -256,7 +259,7 @@ function Welcome() {
                                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-gray-800 rounded-lg"></span>
                                             <div className="relative h-full p-5 bg-white border-2 border-black rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">DAPP Development</h3>
+                                                    <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Development</h3>
                                                 </div>
                                                 <p className="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">------------</p>
                                                 <p className="mb-2 text-gray-600">A decentralized application (dapp) is an application built on a

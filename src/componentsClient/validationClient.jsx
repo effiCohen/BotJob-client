@@ -58,7 +58,7 @@ function ValidationClient() {
         </figure>
         <form onSubmit={handleSubmit(send)} className="max-w-xl px-5 text-center flex flex-col  items-center justify-center mb-auto  ">
           <h1 className='font-bolt font-[inter] text-[30px]'>we just emailed you.</h1>
-          <p className=" text-lg text-zinc-500 font-[Poppins]"> We’ve sent an Email with an activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
+          <p className=" text-lg text-zinc-500 font-[Poppins]"> We’ve sent Email with activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
           <div className="flex gap-5 max-w-lg items-end">
             {/* {inputFields.map((inputField, index) => (
               <div key={index}>{inputField}</div>
