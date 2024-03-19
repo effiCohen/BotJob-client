@@ -43,17 +43,17 @@ function QuestionAdmin() {
     <>
 
 
-      <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800" style={{ marginTop: '70px' }}>
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <img onClick={() => BackToQuestions()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" />
-          <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]">Details of questions and answers</h1>
+          <img onClick={() => BackToQuestions()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" style={{ marginTop: '-70px' }} alt="" />
+          <h1 className="font-[Inter] text-2xl text-[#2E3837] font-bold">Details of questions and answers</h1>
           <div></div>
         </div>
       </div>
 
 
 
-      <div className="flex items-center justify-center w-[32rem] mx-auto space-x-4">
+      <div className="flex items-center justify-center w-[32rem] mx-auto space-x-4" style={{ marginTop: '10px' }}>
         {buttons.map((item, index) => (
           <button
             onClick={() => onAnswerClick(index)}
