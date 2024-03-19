@@ -21,27 +21,27 @@ function Interview() {
     console.log(myInterview.questions);
     doApi(myInterview)
     test()
-  },[]);
+  }, []);
 
   const test = () => {
-  const intervalId = setInterval(() => {
-    setTime((prevTime) => {
-      let newTime = { ...prevTime };
-      if (newTime.sec < 59) { newTime.sec += 1; }
-      else {
-        newTime.sec = 0;
-        if (newTime.min < 59) { newTime.min += 1; }
-        else { newTime.min = 0; newTime.hr += 1; }
-      }
-     
-      if (newTime.min >= timeLimit) {
-        setIsTimeUp(true);
-      }
-      return newTime;
-    });
-  }, 1000);
-  return () => clearInterval(intervalId);
-}
+    const intervalId = setInterval(() => {
+      setTime((prevTime) => {
+        let newTime = { ...prevTime };
+        if (newTime.sec < 59) { newTime.sec += 1; }
+        else {
+          newTime.sec = 0;
+          if (newTime.min < 59) { newTime.min += 1; }
+          else { newTime.min = 0; newTime.hr += 1; }
+        }
+
+        if (newTime.min >= timeLimit) {
+          setIsTimeUp(true);
+        }
+        return newTime;
+      });
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }
 
   const doApi = async () => {
     let url = API_URL + "/questions/" + arQuestions[cuonter];
@@ -74,6 +74,28 @@ function Interview() {
     }
   }
 
+  const doApiTime = async () => {
+    let stringTime = time.hr.toString() + ":" + time.min.toString() + ":" + time.sec.toString();
+    console.log(stringTime);
+    console.log(myInterview._id);
+    let url = API_URL + "/interviews/" + myInterview._id;
+    let _dataBody = {
+      Time: stringTime
+    }
+    console.log(_dataBody);
+    try {
+      let resp = await doApiMethod(url, "PUT", _dataBody);
+      if (resp.data.modifiedCount == 1) {
+        console.log("The answer was update");
+      } else {
+        console.log("The answer was not update");
+      }
+    }
+    catch (err) {
+      console.log(err.response.data);
+    }
+  }
+
   const onNextClick = () => {
     doApiAnswer(answer)
     console.log(cuonter);
@@ -82,6 +104,7 @@ function Interview() {
       doApi()
       setAnswer("")
     } else {
+      doApiTime();
       dispatch(addTime({ time: time }));
       nav("/InterviewDone");
     }
@@ -109,11 +132,11 @@ function Interview() {
       <div className="cursor-pointer font-semibold overflow-hidden relative z-100 group px-8 py-2">
         <button
           className="rounded-full p-3 text-lg cursor-pointer outline-none border border-solid"
-          >
+        >
           {`${time.hr < 10 ? '0' : ''}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
         </button>
       </div>
-     
+
     </>
   );
 }
