@@ -57,19 +57,19 @@ function SignUpClient() {
 
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
               <div className="text-center ">
-                <h1 className="font-bold text-3xl text-gray-900 font-[inter]">Sign Up to BotJob.</h1>
+                <h1 className="font-bold text-3xl text-gray-900 font-[inter]">Sign up to BotJob</h1>
                 <p className='text-gray-300 text-sm font-[Poppins]  pr-[110px]'>Enter your detail below</p>
               </div>
               <div>
 
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930] ">First Name:</label>
+                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930] ">First name:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className=" text-gray-400 text-lg"></i></div>
                       <input {...firstNameRef} type="text" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Johen" />
                     </div>
-                    {errors.FirstName ? <small className='text-red-500'>Enter valid Full Name, min 2 chars max 20</small> : ""}
+                    {errors.FirstName ? <small className='text-red-500'>Enter valid full Name, min 2 chars max 20</small> : ""}
 
                   </div>
                   <div className="w-full px-3 mb-2 text-start">
@@ -78,7 +78,7 @@ function SignUpClient() {
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className=" text-gray-400 text-lg"></i></div>
                       <input {...lastNameRef} type="text" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Due" />
                     </div>
-                    {errors.LastName ? <small className='text-red-500'>Enter valid Full Name, min 2 chars max 20</small> : ""}
+                    {errors.LastName ? <small className='text-red-500'>Enter valid full name, min 2 chars max 20</small> : ""}
 
                   </div>
                 </div>
