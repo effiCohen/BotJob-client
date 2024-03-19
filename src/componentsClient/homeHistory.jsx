@@ -6,9 +6,11 @@ import { addIntervews } from "../featuers/intervewSlice";
 import { addEmail, addName } from "../featuers/myDetailsSlice";
 import ItemHisturyClient from "./itemHisturyClient";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 
 function HomeHistory() {
+    let nav = useNavigate();
     let [ar, setAr] = useState([]);
     let [ar2, setAr2] = useState([]);
     let [searchText, setSearchText] = useState("");
@@ -32,6 +34,10 @@ function HomeHistory() {
         setAr(temp_ar)
         doApi()
     }, [])
+
+    const toNewInterview = () => {
+        nav("/InterviewRole");
+    };
 
     const doApi = async () => {
         let url = API_URL + "/interviews/myInterview"
@@ -84,9 +90,23 @@ function HomeHistory() {
             <h2 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
                 Your history </h2>
             <p className="m-2 text-lg text-gray-600 sm:mt-8 font-inter">Your history can teach you and you can learn from it for the future</p>
-            <div className="flex items-center justify-center">
-                <input value={searchText} onChange={handleChange} type="search" name="search" placeholder="Search" className="bg-white h-10 px-5 pr-10 text-sm focus:outline-none shadow-md rounded-lg p-2 m-2" />
-                <button onClick={onSearchClick} type="submit" className="ml-2"><img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" /></button>
+            <div className="flex items-center justify-around">
+                <div></div>
+
+                <div className="flex items-center justify-center">
+                    <input value={searchText} onChange={handleChange} type="search" name="search" placeholder="Search" className="bg-white h-10 px-5  text-sm focus:outline-none shadow-md rounded-lg p-2 m-2" />
+                    <button onClick={onSearchClick} type="submit" className="ml-2"><img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" /></button>
+                </div>
+                <div>
+                    <button
+                        onClick={toNewInterview}
+                        className="block w-full mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-full py-3 px-6 font-[simple]"
+                    >
+                        +
+                    </button>
+                </div>
+                <div></div>
+
             </div>
 
             <div className="flex flex-col">
