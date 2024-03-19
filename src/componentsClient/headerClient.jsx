@@ -47,7 +47,7 @@ function HeaderClient() {
           <button onClick={onAdmin}>Admin</button>
           <button >- - -</button>
           <button onClick={onlogout}>logout</button> */}
-          <div className="navbar bg-gray-800 mb-auto top-0  w-full ">
+          <div className="navbar bg-gray-800 mb-auto top-0  w-full text-white">
             <div className="navbar-start">
               <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
