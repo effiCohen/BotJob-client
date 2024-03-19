@@ -48,7 +48,7 @@ function HomeAnswer() {
     <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" d="M11 6L5 12M5 12L11 18M5 12H19"></path>
   </svg>
 </button>
-          <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-4xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3 underline">Learn from the answers</h1>
+          <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-4xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3 underline">Learn from answers</h1>
           <div></div>
         </div>
       </div>

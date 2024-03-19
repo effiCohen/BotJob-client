@@ -75,7 +75,7 @@ function HeaderClient() {
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                   <li onClick={onHomeClick}><a>Home</a></li>
                   <li onClick={onSetting}><a>Setting</a></li>
-                  <li onClick={onRestPassword}><a>restPassword</a></li>
+                  <li onClick={onRestPassword}><a>Reset password</a></li>
                   {ifAdmin ?<li onClick={onAdmin}><a>Admin</a></li>:""}
                 </ul>
               </div>
@@ -84,7 +84,7 @@ function HeaderClient() {
             <div className="navbar-center hidden lg:flex">
               <ul className="menu justify-between menu-horizontal px-1">
                 <li onClick={onSetting}><a> Setting <img src="https://i.pinimg.com/originals/50/74/eb/5074eb89bce06dfc710ea21d5c0e2913.png" className='size-6' alt="Icon" /></a></li>
-                <li onClick={onRestPassword}><a>restPassword</a></li>
+                <li onClick={onRestPassword}><a>reset password</a></li>
                 {ifAdmin ?<li onClick={onAdmin}><a>Admin</a></li>:""}
               </ul>
             </div>

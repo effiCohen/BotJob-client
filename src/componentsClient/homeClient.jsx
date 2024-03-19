@@ -62,7 +62,7 @@ function HomeClient() {
                 onClick={toNewInterview}
                 className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5 relative"
               >
-                New Interview..
+                New interview..
                 <img
                   src="/src/assets/interview2.png"
                   alt="Icon"
@@ -163,12 +163,13 @@ function HomeClient() {
                       <StarIcon />
                     </div>
                   </div>
-                  <Typography color="blue-gray">Software Team leader at IDF</Typography>
+                  <Typography color="blue-gray">Software team leader at IDF</Typography>
                 </div>
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;This individual, positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces. In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills, and a commitment to efficient upgrade and development of every project.
+                  &quot;This individual positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces. 
+                  In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills and a commitment to efficient upgrade and development of every project.
                   &quot;
                 </Typography>
               </CardBody>
@@ -206,7 +207,6 @@ function HomeClient() {
                 <Typography>
                   &quot;I found a solution as an experienced web developer with a demonstrated history of working in the military industry.
                   Skilled in JavaScript, TypeScript, Angular, React, AngularJS, NodeJS, Python, Django, DRF, postgresql PL/SQL, .NET framework (C#).
-
                   B.Sc Computer Science, The College of Management Academic Studies.&quot;
                 </Typography>
               </CardBody>
@@ -243,7 +243,9 @@ function HomeClient() {
               <CardBody className="mb-6 p-0">
                 <Typography>
                   &quot;
-                  The former CEO and founder, previously a programmer and product manager at Sygnia, significantly elevated our website. His expertise and leadership were key factors in creating a robust and user-friendly platform. We credit much of our success to his visionary contributions and dedication to excellence.&quot;
+                  The former CEO and founder, previously a programmer and product manager at Sygnia, significantly elevated our website. 
+                  His expertise and leadership were key factors in creating a robust and user-friendly platform. 
+                  We credit much of our success to his visionary contributions and dedication to excellence.&quot;
                 </Typography>
               </CardBody>
             </Card>
