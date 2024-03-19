@@ -33,9 +33,7 @@ function Interview() {
         if (newTime.min < 59) { newTime.min += 1; }
         else { newTime.min = 0; newTime.hr += 1; }
       }
-      if (newTime.sec === 0 && newTime.min % timeLimit === 0) {
-        alert("Don't give up, keep answering");
-      }
+     
       if (newTime.min >= timeLimit) {
         setIsTimeUp(true);
       }
@@ -94,8 +92,8 @@ function Interview() {
 
   return (
     <>
-      <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3">Question :</h1>
-      <p>{question.question}</p>
+      {/* <h1 className="text-4xl font-bold leading-tight font-bold text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3">Question :</h1> */}
+      <h2 className='font-bold text-black'>{question.question}</h2>
       <div className="flex flex-col items-center w-[32rem] mx-auto shadow-md rounded-lg p-4 m-5">
         <Textarea value={answer} onChange={handleChange} variant="static" placeholder="Your Answer..." rows={8} />
         <div className="flex w-full justify-between ">
@@ -111,15 +109,11 @@ function Interview() {
       <div className="cursor-pointer font-semibold overflow-hidden relative z-100 group px-8 py-2">
         <button
           className="rounded-full p-3 text-lg cursor-pointer outline-none border border-solid"
-          style={{backgroundColor: time.min >= 1 ? '#e74c3c' : '#e7e8e8',color: time.min >= 2 ? '#ffffff' : '#000000',}}>
+          >
           {`${time.hr < 10 ? '0' : ''}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
         </button>
       </div>
-      {isTimeUp && (
-        <div className="text-red-500 mt-2 text-center font-bold">
-         Time has passed friend!
-        </div>
-      )}
+     
     </>
   );
 }
