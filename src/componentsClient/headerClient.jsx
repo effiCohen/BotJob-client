@@ -37,11 +37,11 @@ function HeaderClient() {
   }
 
   const onHomeClick = () => {
-    nav("/home");
+    nav("/history");
   }
-  const onRestPassword = () => {
-    nav("/restpass");
-  }
+  // const onRestPassword = () => {
+  //   nav("/restpass");
+  // }
   const onSetting = () => {
     nav("/setting");
   }
