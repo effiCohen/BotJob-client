@@ -7,8 +7,10 @@ import { checkTokenLocal } from '../services/localService';
 function HeaderClient() {
   let nav = useNavigate()
   const [ifTokenExists, setIfTokenExists] = useState(false);
+  const [ifAdmin, setIfAdmin] = useState(false);
 
   useEffect(() => {
+    doApi();
     let ifToken = checkTokenLocal()
     if (ifToken) {
       setIfTokenExists(true)
@@ -16,6 +18,22 @@ function HeaderClient() {
       setIfTokenExists(false)
     }
   }, []);
+
+  const doApi = async () => {
+    let url = API_URL + "/users/checkTokenAdmin" ;
+    try {
+      let resp = await doApiGet(url);
+      console.log(resp);
+      if(resp){
+        setIfAdmin(true)
+      }else{
+        setIfAdmin(false)
+      }
+    }
+    catch (err) {
+      console.log(err.response.data);
+    }
+  }
 
   const onHomeClick = () => {
     nav("/home");
@@ -57,7 +75,7 @@ function HeaderClient() {
                   <li onClick={onHomeClick}><a>Home</a></li>
                   <li onClick={onSetting}><a>Setting</a></li>
                   <li onClick={onRestPassword}><a>restPassword</a></li>
-                  <li onClick={onAdmin}><a>Admin</a></li>
+                  {ifAdmin ?<li onClick={onAdmin}><a>Admin</a></li>:""}
                 </ul>
               </div>
               <img src="/src/assets/navlogo.png" onClick={onHomeClick} className='size-14 hidden lg:flex' alt="" />
@@ -66,7 +84,7 @@ function HeaderClient() {
               <ul className="menu justify-between menu-horizontal px-1">
                 <li onClick={onSetting}><a> Setting <img src="https://i.pinimg.com/originals/50/74/eb/5074eb89bce06dfc710ea21d5c0e2913.png" className='size-6' alt="Icon" /></a></li>
                 <li onClick={onRestPassword}><a>restPassword</a></li>
-                <li onClick={onAdmin}><a>Admin</a></li>
+                {ifAdmin ?<li onClick={onAdmin}><a>Admin</a></li>:""}
               </ul>
             </div>
             <div className="navbar-end">
