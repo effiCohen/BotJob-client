@@ -26,8 +26,8 @@ const loginClient = () => {
       let resp = await doApiMethod(url, "POST", _dataBody);
       if (resp.data.token) {
         saveTokenLocal(resp.data.token);
-        dispatch(addEmail({email: _dataBody.email }));
-        nav("/home");
+        dispatch(addEmail({ email: _dataBody.email }));
+        nav("/history");
         window.location.reload();
       }
     }

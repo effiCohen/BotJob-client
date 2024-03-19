@@ -4,7 +4,6 @@ import LayoutAdmin from './componentsAdmin/layoutAdmin'
 import LayoutClient from './componentsClient/layoutClient'
 import LogInClient from './componentsClient/logInClient'
 import SignUpClient from './componentsClient/signUpClient'
-import HomeClient from './componentsClient/homeClient'
 import LogoutClient from './componentsClient/logoutClient'
 import Page404 from './componentsClient/Page404'
 import ValidationClient from './componentsClient/validationClient';
@@ -42,7 +41,6 @@ function AppRoutes() {
           <Route path="/validation" element={<ValidationClient />} />
           <Route path="/login" element={<LogInClient />} />
           <Route path="/forgotpass" element={<ForgotPass />} />
-          <Route path="/home" element={<HomeClient />} />
           <Route path="/history" element={<HomeHistory />} />
           <Route path="/homeQushtions" element={<HomeQushtions />} />
           <Route path="/homeAnswer" element={<HomeAnswer />} />

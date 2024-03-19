@@ -10,8 +10,8 @@ function LogoutClient() {
     if (confirm("Are you sure you want to log out?")) {
       nav("/");
       window.location.reload();
-    } 
-    nav("/home");
+    }
+    nav("/history");
   }, [])
 
   return (

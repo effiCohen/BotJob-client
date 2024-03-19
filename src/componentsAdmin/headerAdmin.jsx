@@ -8,7 +8,7 @@ function HeaderAdmin() {
     nav("/admin");
   }
   const onUserClick = () => {
-    nav("/home");
+    nav("/history");
   }
 
 
