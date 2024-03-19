@@ -54,7 +54,7 @@ const loginClient = () => {
 
     <div className="min-w-screen min-h-fit  flex items-center justify-center p-5 ">
       <div className="w-full  " style={{ maxWidth: '1000px' }}>
-        <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]"> <b>Log In</b></h1>
+        <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]"> <b>Login</b></h1>
         <div className="md:flex  items-center justify-center w-full px-5">
           <form onSubmit={handleSubmit(onSubForm)} className="md:w-96   md:px-10 ">
             <div className="flex items-center justify-center ">
@@ -80,18 +80,18 @@ const loginClient = () => {
             </div>
             <div className="flex justify-center">
               <div className="w-[50%]">
-                <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] mt-5">Log in</button>
+                <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] mt-5">Login</button>
               </div>
             </div>
             <div className="flex items-center space-x-4 mt-5">
               <hr className="w-[90%] border border-[#D8DADC] border-1" />
-              <div className="font-semibold  text-[#2E3837]">OR</div>
+              <div className="font-semibold  text-[#2E3837]">Or</div>
               <hr className="w-full border border-[#D8DADC] border-1" />
             </div>
           </form>
 
         </div>
-        <button onClick={toSignUp} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple] mt-5">Create an Account</button>
+        <button onClick={toSignUp} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple] mt-5">Create account</button>
       </div>
     </div >
   )

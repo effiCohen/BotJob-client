@@ -62,11 +62,11 @@ function InterviewRole() {
                                     <img src="/src/assets/smartphone.png" alt="Icon" className="inline-block w-6 h-6 mx-2" />
                                 </h2> </li>
                                 <li className=''> <h2 className="lg:text-start text-left font-madimi font-bold text-xl text-bold text-[#2E3837]">
-                                    Without  Google
+                                    Without Google
                                     <img src="/src/assets/google.png" alt="Google Icon" className="inline-block w-6 h-6 mx-2" />
                                 </h2> </li>
                                 <li className=''><h2 className="lg:text-start text-left font-madimi font-bold text-xl text-bold text-[#2E3837]">
-                                    Without  Chat
+                                    Without  chat
                                     <img src="/src/assets/chat-gpt.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
                                 </h2></li>
                                 <li className=''> <h2 className="lg:text-start text-left font-madimi font-bold text-xl text-bold text-[#2E3837]">Be clear

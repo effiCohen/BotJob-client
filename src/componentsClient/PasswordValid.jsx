@@ -55,8 +55,8 @@ const PasswordValid = () => {
                     <img src="/src/assets/validPass.png" alt="email@ " className='h-[30%] w-[50%] ' />
                 </figure>
                 <form onSubmit={handleSubmit(send)} className="max-w-xl px-5 text-center flex flex-col  items-center justify-center   ">
-                    <h1 className='font-bold font-[inter] text-[24px]'>we just emailed you.</h1>
-                    <p className=" text-lg  font-[Poppins]"> We’ve sent an Email with an activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
+                    <h1 className='font-bold font-[inter] text-[24px]'>We just sent you an email.</h1>
+                    <p className=" text-lg  font-[Poppins]"> We've sent Email with  activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
                     <div className="flex gap-5 max-w-lg items-end">
                         <div className="flex gap-5 max-w-lg items-end">
                             {[1, 2, 3, 4, 5].map((index) => (

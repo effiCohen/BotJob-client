@@ -35,7 +35,7 @@ function InterviewDone() {
           You successfully completed the interview!
         </p>
         {/* <p className="text-center text-[#4A5568] font-bold">Time Taken: X minutes</p> */}
-        <p className="text-center text-[#4A5568] font-bold">Time Taken
+        <p className="text-center text-[#4A5568] font-bold">Time taken
           {` ${time.hr < 10 ? '0' : ' '}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
         </p>
         {/* <p className="text-center text-[#4A5568] font-bold">Score: Y</p> */}
