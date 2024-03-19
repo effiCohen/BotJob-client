@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { checkTokenLocal } from '../services/localService';
+import { API_URL, doApiGet } from '../services/apiService';
 
 
 function HeaderClient() {
