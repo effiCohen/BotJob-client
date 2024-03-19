@@ -115,9 +115,10 @@ function Interview() {
 
   return (
     <>
+
       {/* <h1 className="text-4xl font-bold leading-tight font-bold text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3">Question :</h1> */}
-      <h2 className='font-bold text-black'>{question.question}</h2>
-      <div className="flex flex-col items-center w-[32rem] mx-auto shadow-md rounded-lg p-4 m-5">
+      <h2 className='font-bold text-black mt-9 '>{question.question}</h2>
+      <div className="flex flex-col items-center w-[32rem] mx-auto shadow-md rounded-lg p-4 m-5 mt-14">
         <Textarea value={answer} onChange={handleChange} variant="static" placeholder="Your Answer..." rows={8} />
         <div className="flex w-full justify-between ">
           <div className="flex gap-2">
@@ -125,8 +126,8 @@ function Interview() {
         </div>
       </div>
       <div className="mb-3">{cuonter < myInterview.questions.length ?
-        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5">Next</button> :
-        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5">finish</button>}
+        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5">Next question</button> :
+        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[simple] mt-5">Finish</button>}
       </div>
 
       <div className="cursor-pointer font-semibold overflow-hidden relative z-100 group px-8 py-2">
