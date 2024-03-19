@@ -46,7 +46,7 @@ function QuestionAdmin() {
       <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <img onClick={() => BackToQuestions()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" />
-          <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]">The details of the question and the answer</h1>
+          <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]">Details of the questions and the answers</h1>
           <div></div>
         </div>
       </div>
