@@ -58,8 +58,8 @@ function HomeQushtions() {
           {/* <img onClick={() => BackToHistory()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" /> */}
 
           <div>
-          <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]">Interview for the position of :{interview.job}</h1>
-      <p className='text-[#2E3837] text-sm font-[Poppins] text-center ml-6'> With <b className="text-[#2E3837]">{interview.experience}</b> years of experience </p>
+          <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">Interview for the position of :{interview.job}</h1>
+      <p className='"text-4xl font-bold leading-tight text-gray-900 sm:text-4xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj"'> With <b className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-2xl font-pj">{interview.experience}</b> years of experience </p>
           </div>
           <div></div>
           </div>

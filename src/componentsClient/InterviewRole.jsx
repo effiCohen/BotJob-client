@@ -45,37 +45,45 @@ function InterviewRole() {
     return (
         <>
 
-<section className="container flex justify-center mx-auto flex-col w-[80%] lg:w-full items-center">
+<section className="container flex justify-center mx-auto flex-col lg:flex-row-reverse items-center w-[80%] lg:w-full">
     {loading ? (
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-opacity-50 bg-white">
             <Spinner />
         </div>
     ) : (
         <>
-            <h1 className="mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj m-5">Hello :{myName}</h1>
-            <h2 className="text-center font-inter text-2xl lg:text-xl font-bold text-[#2E3837] mt-2"> Before we start let's set some rules</h2>
-            <ul className='m-2'>
-                <li className=''><h2 className="lg:text-start text-center font-madimi font-bold text-xl text-bold text-[#2E3837]">
-                    No phone
-                    <img src="/src/assets/smartphone.png" alt="Icon" className="inline-block w-6 h-6 mx-2" />
-                </h2> </li>
-                <li className=''> <h2 className="lg:text-start text-center font-madimi font-bold text-xl text-bold text-[#2E3837]">
-                    Without  Google
-                    <img src="/src/assets/google.png" alt="Google Icon" className="inline-block w-6 h-6 mx-2" />
-                </h2> </li>
-                <li className=''><h2 className="lg:text-start text-center font-madimi font-bold text-xl text-bold text-[#2E3837]">
-                    Without  Chat
-                    <img src="/src/assets/chat-gpt.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
-                </h2></li>
-                <li className=''> <h2 className="lg:text-start text-center font-madimi font-bold text-xl text-bold text-[#2E3837]">Be clear
-                    <img src="/src/assets/pen.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
-                </h2> </li>
-                <li className=''><h2 className=" text-center font-madimi text-xl font-semibold text-[#2E3837]">Don't forget to breathe</h2> </li>
-            </ul>
-            <button onClick={startTheInterview} className="bg-black w-full lg:w-[35%] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-700 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#000000] before:to-[#000000] before:transition-all before:duration-700 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#ffffff] hover:text-[#ebf7ff] mt-5"> Start</button>
+    <div className="w-full lg:w-[50%]">
+                <img src="/src/assets/20945347.jpg" className="w-full" />
+            </div>
+            <div className="w-full lg:w-[50%] text-left lg:text-right">
+    <h1 className="text-left mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj m-5">Hello :{myName}</h1>
+    <h2 className="text-left font-inter text-2xl lg:text-xl font-bold text-[#2E3837] mt-2"> Before we start let's set some rules</h2>
+    <ul className='m-2'>
+        <li className=''><h2 className="lg:text-start text-left font-madimi font-bold text-xl text-bold text-[#2E3837]">
+            No phone
+            <img src="/src/assets/smartphone.png" alt="Icon" className="inline-block w-6 h-6 mx-2" />
+        </h2> </li>
+        <li className=''> <h2 className="lg:text-start text-left font-madimi font-bold text-xl text-bold text-[#2E3837]">
+            Without  Google
+            <img src="/src/assets/google.png" alt="Google Icon" className="inline-block w-6 h-6 mx-2" />
+        </h2> </li>
+        <li className=''><h2 className="lg:text-start text-left font-madimi font-bold text-xl text-bold text-[#2E3837]">
+            Without  Chat
+            <img src="/src/assets/chat-gpt.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
+        </h2></li>
+        <li className=''> <h2 className="lg:text-start text-left font-madimi font-bold text-xl text-bold text-[#2E3837]">Be clear
+            <img src="/src/assets/pen.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
+        </h2> </li>
+        <li className=''><h2 className=" text-left font-madimi text-xl font-semibold text-[#2E3837]">Don't forget to breathe</h2> </li>
+    </ul>
+                <button onClick={startTheInterview} className="bg-black w-full lg:w-[35%] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-700 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#000000] before:to-[#000000] before:transition-all before:duration-700 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#ffffff] hover:text-[#ebf7ff] mt-5"> Start</button>
+            </div>
+            
+        
         </>
     )}
 </section>
+
 
 
         </>
