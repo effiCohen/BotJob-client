@@ -35,13 +35,13 @@ function ItemAdmin(props) {
       <td className="whitespace-nowrap px-4 py-2">{item.date_created.substring(10, length - 1)}</td>
       <td className="whitespace-nowrap px-4 py-2">{item.job}</td>
       <td className="whitespace-nowrap px-4 py-2">{item.date_created.substring(11, 16)}</td>
-      <td className="whitespace-nowrap px-4 py-2">{item.questions.length} - questions</td>
+      <td className="whitespace-nowrap px-4 py-2">{item.questions.length} - Questions</td>
       <td
         onClick={toQushtions}
         className="whitespace-nowrap px-4 py-2"
-        style={{ cursor: 'pointer' }} // כדי להראות שזה כפתור לחיצה
+        style={{ cursor: 'pointer' }} 
       >
-        {isHovered && ( // תצוגת ה-GIF רק אם הכפתור נמצא במצב hover
+        {isHovered && ( 
           <img src="/src/assets/output.png" alt="GIF" style={{ width: '30px', height: '30px' }} />
         )}
       </td>
