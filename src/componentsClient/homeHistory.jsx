@@ -16,22 +16,8 @@ function HomeHistory() {
     let [searchText, setSearchText] = useState("");
     const myName = useSelector(state => state.myDetailsSlice.name);
     const dispatch = useDispatch();
-    let temp_ar = [
-        {
-            "_id": 1,
-            date_created: "test",
-            job: "test",
-            questions: [1, 1, 1],
-        },
-        {
-            "_id": 2,
-            date_created: "test2",
-            job: "test2",
-            questions: [1, 1, 1],
-        }
-    ];
+    
     useEffect(() => {
-        setAr(temp_ar)
         doApi()
     }, [])
 
