@@ -6,6 +6,8 @@ import { addNewIntervew } from '../featuers/newIntervewSlice';
 import { checkSettingLocal } from '../services/settingServis';
 import { toast } from 'react-toastify';
 import Spinner from "../Spinner";
+import Lottie from 'react-lottie';
+import lottieJson from '../assets/z9LLOpaVwt (3).json'
 
 function InterviewRole() {
     const [loading, setLoading] = useState(false);
@@ -53,7 +55,7 @@ function InterviewRole() {
                 ) : (
                     <div className='flex  items-center  justify-between'> 
                         <div></div>
-                        <div className="w-full lg:w-[40%] text-left lg:text-right m-12">
+                        <div className="w-full lg:w-[40%] text-left lg:text-left m-12">
                             <h1 className="text-left mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj m-5">Hello :{myName}</h1>
                             <h2 className="text-left font-inter text-2xl lg:text-xl font-bold text-[#2E3837] mt-2"> Before we start let's set some rules</h2>
                             <ul className='m-2' >
@@ -95,7 +97,7 @@ function InterviewRole() {
     <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
         <span className="mr-2">&#8226;</span> {/* Dot character */}
         <h2 className="text-left font-madimi text-xl font-semibold text-[#2E3837]">
-        Stopwatch activated for test precision
+        Stopwatch activat for test precision
         <img src="/src/assets/clock.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
         </h2>
     </li>
@@ -104,15 +106,21 @@ function InterviewRole() {
                             <button onClick={startTheInterview} className="bg-black w-full lg:w-[70%] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-700 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#000000] before:to-[#000000] before:transition-all before:duration-700 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#ffffff] hover:text-[#ebf7ff] mt-5"> Start</button>
                         </div>
                         <div className="w-full lg:w-[50%]">
-                            <img src="/src/assets/20945347.jpg" className="w-full" />
+                            {/* <img src="/src/assets/20945347.jpg" className="w-full" /> */}
+                            <Lottie options={{loop: true, autoplay: true, animationData: lottieJson}} height={500} width={500} />
+
                         </div>
 
                     </div>
                 )}
             </section>
 
-            <p className='font-bold'>" They say time changes things but actually you have to change them yourself "</p>
-            <p className='font-bold'> Andy Warhol </p>
+            <div className="flex flex-col items-center mt-10">
+    <p className='font-bold m-1' style={{ position: 'relative', top: '-40px' }}> Andy Warhol </p>
+    <p className='font-bold mt-2 text-1.5xl' style={{ position: 'relative', top: '-40px' }}> "They say time changes things but actually you have to change them yourself" </p>
+</div>
+
+           
 
 
         </>
