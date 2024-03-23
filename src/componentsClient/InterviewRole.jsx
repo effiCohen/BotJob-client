@@ -59,7 +59,7 @@ function InterviewRole() {
                 ) : (
                     <div className='flex  items-center  justify-between'>
                         <div></div>
-                        <div className="w-full lg:w-[40%] text-left lg:text-left m-12">
+                        <div className="w-full lg:w-[50%] text-left lg:text-left m-12">
                             <h1 className="text-left mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj m-5">Hello :{myName}</h1>
                             <h2 className="text-left font-inter text-2xl lg:text-xl font-bold text-[#2E3837] mt-2"> Before we start let's set some rules</h2>
                             <ul className='m-2' >
@@ -119,7 +119,7 @@ function InterviewRole() {
                 )}
             </section>
 
-            <div className="flex flex-col items-center mt-10">
+            <div className="flex flex-col items-center">
                 <p className='font-bold m-1' style={{ position: 'relative', top: '-40px' }}> Andy Warhol </p>
                 <p className='font-bold mt-2 text-1.5xl' style={{ position: 'relative', top: '-40px' }}> "They say time changes things but actually you have to change them yourself" </p>
             </div>
