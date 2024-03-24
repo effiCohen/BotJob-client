@@ -70,16 +70,16 @@ function HomeHistory() {
     }
 
     return (
-        <div className="mt-3 w-full">
-            <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter]">
+        <div className="mt-12 w-full my-6 ">
+            <h1 className="text-4xl  font-bold leading-tight text-gray-900 sm:text-5xl  lg:text-3xl m-8 font-[Inter]">
                 Welcome {myName}</h1>
-            <h2 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter]">
+            <h2 className="text-2xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight m-3 lg:text-3xl font-[Inter]">
                 Your history </h2>
-            <p className="m-2 text-lg text-gray-600 sm:mt-8 font-[Inter]">Your history can teach you and you can learn from it for the future</p>
+            <p className=" text-lg text-gray-600  font-[Inter]">Your history can teach you and you can learn from it for the future</p>
             <div className="flex items-center justify-around">
                 <div></div>
 
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center m-5">
                     <input value={searchText} onChange={handleChange} type="search" name="search" placeholder="Search" className="bg-white h-10 px-5  text-sm focus:outline-none shadow-md rounded-lg p-2 m-2" />
                     <button onClick={onSearchClick} type="submit" className="ml-2"><img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" /></button>
                 </div>
@@ -95,7 +95,7 @@ function HomeHistory() {
                             viewBox="0 0 24 24"
                             height="45px"
                             width="45px"
-                            xmlns="http://www.w3.org/2000/svg"
+
                         >
                             <path
                                 strokeWidth="1.5"
