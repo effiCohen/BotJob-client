@@ -141,7 +141,7 @@ function Welcome() {
                                     </CardHeader>
                                     <CardBody className="mb-6 p-0">
                                         <Typography>
-                                            &quot;This individual positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces. 
+                                            &quot;This individual positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces.
                                             In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills and a commitment to efficient upgrade and development of every project.
                                             &quot;
                                         </Typography>
@@ -217,8 +217,8 @@ function Welcome() {
                                     <CardBody className="mb-6 p-0">
                                         <Typography>
                                             &quot;
-                                            The former CEO and founder, previously a programmer and product manager in Sygnia, significantly elevated our website. 
-                                            His expertise and leadership were key factors in creating a robust and user-friendly platform. 
+                                            The former CEO and founder, previously a programmer and product manager in Sygnia, significantly elevated our website.
+                                            His expertise and leadership were key factors in creating a robust and user-friendly platform.
                                             We credit much of our success to his visionary contributions and dedication to excellence.&quot;
                                         </Typography>
                                     </CardBody>
@@ -245,7 +245,7 @@ function Welcome() {
                             </h2>
                             <p
                                 className="mx-auto my-4 w-full max-w-xl  text-center font-medium leading-relaxed tracking-wide text-black">
-                                Our templates allow for maximum customization. 
+                                Our templates allow for maximum customization.
                                 No technical skills required – our intuitive design tools
                                 let you get the job done easily.
                             </p>

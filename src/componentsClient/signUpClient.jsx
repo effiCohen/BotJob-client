@@ -73,7 +73,7 @@ function SignUpClient() {
 
                   </div>
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930] ">Last Name:</label>
+                    <label className="text-xs font-[Inter] px-1 font-bold text-[#292930] ">Last Name:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className=" text-gray-400 text-lg"></i></div>
                       <input {...lastNameRef} type="text" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Due" />
@@ -84,7 +84,7 @@ function SignUpClient() {
                 </div>
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930]">Email:</label>
+                    <label className="text-xs font-[Inter] px-1 font-bold text-[#292930]">Email:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                       <input {...emailRef} type="email" className="w-full -ml-10 pl-10 pr-3 py-1 rounded-xl text-sm  border-2 border-[#292930]  bg-[#FAF7FF] outline-none focus:border-gray-500" placeholder="test@gmail.com" />
@@ -96,10 +96,10 @@ function SignUpClient() {
 
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930]">Password:</label>
+                    <label className="text-xs font-[Inter] px-1 font-bold text-[#292930]">Password:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                      <input  {...passwordRef} name='password' type="password" className="w-full -ml-10 pl-10 pr-3 text-sm py-1 rounded-xl border-2   border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500 text-left" placeholder="password.              ....." />
+                      <input  {...passwordRef} name='password' type="password" className="w-full -ml-10 pl-10 pr-3 text-sm py-1 rounded-xl border-2   border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500 text-left" placeholder="password" />
                     </div>
                     {errors.password ? <small className='text-red-500'>* Enter valid password, min 4 chars</small> : ""}
 
@@ -108,7 +108,7 @@ function SignUpClient() {
                 </div>
                 <div className="flex-mx-3">
                   <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-[inter] px-1 font-bold text-[#292930]">Date of birth:</label>
+                    <label className="text-xs font-[Inter] px-1 font-bold text-[#292930]">Date of birth:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
                       <input {...dateRef} type="date" className="w-full -ml-10 pl-10 text-sm   py-1 text-left rounded-xl border-2 gap-10    border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500" />
@@ -120,8 +120,8 @@ function SignUpClient() {
                 </div>
                 <div className="flex -mx-3">
                   <div className="w-full px-3 mt-5">
-                    <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple]">Create an Account</button>
-                    <p className='mx-auto text-center mt-8 font-[simple]'>Already have an account? <b onClick={toLogin} className='cursor-pointer'>Sign in </b></p>
+                    <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[Inter]">Create an Account</button>
+                    <p className='mx-auto text-center mt-8 text-[#2E3837]  font-[Inter]'>Already have an account? <b onClick={toLogin} className='cursor-pointer'>Sign in </b></p>
                   </div>
                 </div>
               </div>
