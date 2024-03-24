@@ -10,7 +10,7 @@
   .spinner {
     width: 90.4px;
     height: 90.4px;
-    --clr: #ffafcc;
+    --clr: #f996ba;
     --clr-alpha: #ffe7f0;
     animation: spinner 1.6s infinite ease;
     transform-style: preserve-3d;
