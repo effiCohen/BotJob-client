@@ -115,7 +115,7 @@ function Welcome() {
                                         color="transparent"
                                         floated={false}
                                         shadow={false}
-                                        className="mx-0 flex items-center gap-4 pt-0 pb-8"
+                                        className="mx-0 flex items-center font-[Inter] gap-4 pt-0 pb-8"
                                     >
                                         <Avatar
                                             size="lg"
@@ -124,8 +124,8 @@ function Welcome() {
                                             alt="Nitay Dalal"
                                         />
                                         <div className="flex w-full flex-col gap-0.5">
-                                            <div className="flex items-center justify-between">
-                                                <Typography variant="h5" color="blue-gray">
+                                            <div className="flex items-center justify-between font-[Inter]">
+                                                <Typography variant="h5" className="font-[Inter]" color="blue-gray">
                                                     Nitay Dalal
                                                 </Typography>
                                                 <div className="5 flex items-center gap-0">
@@ -139,7 +139,7 @@ function Welcome() {
                                             <Typography color="blue-gray">Software team leader in I.D.F</Typography>
                                         </div>
                                     </CardHeader>
-                                    <CardBody className="mb-6 p-0">
+                                    <CardBody className="mb-6 p-0 font-[Inter]">
                                         <Typography>
                                             &quot;This individual positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces.
                                             In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills and a commitment to efficient upgrade and development of every project.
@@ -236,15 +236,15 @@ function Welcome() {
 
 
                         <div className="relative mx-auto max-w-5xl text-center">
-                            <span className="text-black my-3 flex items-center justify-center font-medium uppercase tracking-wider">
+                            <span className="text-black my-3 flex items-center justify-center font-[Inter] uppercase tracking-wider">
                                 Why choose us
                             </span>
                             <h2
-                                className="block w-full  text-black font-bold text-3xl sm:text-4xl">
+                                className="block w-full font-[Inter]  text-black font-bold text-3xl sm:text-4xl">
                                 Build a Website That Your customers love
                             </h2>
                             <p
-                                className="mx-auto my-4 w-full max-w-xl  text-center font-medium leading-relaxed tracking-wide text-black">
+                                className="mx-auto my-4 w-full max-w-xl  text-center font-[Inter] leading-relaxed tracking-wide text-black">
                                 Our templates allow for maximum customization.
                                 No technical skills required – our intuitive design tools
                                 let you get the job done easily.
@@ -259,9 +259,9 @@ function Welcome() {
                                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-gray-800 rounded-lg"></span>
                                             <div className="relative h-full p-5 bg-white border-2 border-black rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Development</h3>
+                                                    <h3 className="my-2 font-[Inter] ml-3 text-lg  text-gray-800">Development</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">------------</p>
+                                                <p className="mt-3 mb-1 text-xs font-[Inter] text-indigo-500 uppercase">------------</p>
                                                 <p className="mb-2 text-gray-600">A decentralized application (dapp) is an application built on a
                                                     decentralized network that combines a smart contract and a frontend user interface.</p>
                                             </div>
@@ -272,9 +272,9 @@ function Welcome() {
                                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                             <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Web 3.0 Development</h3>
+                                                    <h3 className="my-2 ml-3 text-lg font-[Inter] text-gray-800">Web 3.0 Development</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 text-xs font-medium text-black uppercase">------------</p>
+                                                <p className="mt-3 mb-1 text-xs font-[Inter] text-black uppercase">------------</p>
                                                 <p className="mb-2 text-gray-600">Web 3.0 is the third generation of Internet services that will
                                                     focus on understanding and analyzing data to provide a semantic web.</p>
                                             </div>
@@ -287,9 +287,9 @@ function Welcome() {
                                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                             <div className="relative h-full p-5 bg-white border-2 border-gray-900 rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Project Audit</h3>
+                                                    <h3 className="my-2 ml-3 text-lg font-[Inter] text-gray-800">Project Audit</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">------------</p>
+                                                <p className="mt-3 mb-1 text-xs font-[Inter] text-blue-400 uppercase">------------</p>
                                                 <p className="mb-2 text-gray-600">A Project Audit is a formal review of a project, which is intended
                                                     to assess the extent up to which project management standards are being upheld.</p>
                                             </div>
@@ -300,9 +300,9 @@ function Welcome() {
                                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
                                             <div className="relative h-full p-5 bg-white border-2 border-gray-700 rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Hacking / RE</h3>
+                                                    <h3 className="my-2 ml-3 text-lg font-[Inter] text-gray-800">Hacking / RE</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase">------------</p>
+                                                <p className="mt-3 mb-1 text-xs font-[Inter] text-yellow-400 uppercase">------------</p>
                                                 <p className="mb-2 text-gray-600">A security hacker is someone who explores methods for breaching
                                                     defenses and exploiting weaknesses in a computer system or network.</p>
                                             </div>
@@ -313,9 +313,9 @@ function Welcome() {
                                             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-700 rounded-lg"></span>
                                             <div className="relative h-full p-5 bg-white border-2 border-gray-800 rounded-lg">
                                                 <div className="flex items-center -mt-1">
-                                                    <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">Bot/Script Development</h3>
+                                                    <h3 className="my-2 ml-3 text-lg font-[Inter] text-gray-800">Bot/Script Development</h3>
                                                 </div>
-                                                <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">------------</p>
+                                                <p className="mt-3 mb-1 text-xs font-[Inter] text-green-500 uppercase">------------</p>
                                                 <p className="mb-2 text-gray-600">Bot development frameworks were created as advanced software tools
                                                     that eliminate a large amount of manual work and accelerate the development process.</p>
                                             </div>
