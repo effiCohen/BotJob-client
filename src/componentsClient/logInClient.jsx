@@ -54,12 +54,12 @@ const loginClient = () => {
 
     <div className="min-w-screen min-h-fit  flex items-center justify-center p-5 ">
       <div className="w-full  " style={{ maxWidth: '1000px' }}>
-        <h1 className="font-[SM-Sans] text-2xl text-[#2E3837]"> <b>Login</b></h1>
+        <h1 className="font-[Inter] text-2xl text-[#292930]"> <b>Login</b></h1>
         <div className="md:flex  items-center justify-center w-full px-5">
           <form onSubmit={handleSubmit(onSubForm)} className="md:w-96   md:px-10 ">
             <div className="flex items-center justify-center ">
               <div className="w-full sm:w-64 px-1 mb-2 text-start">
-                <label className="text-xs font-semibold px-1">Email:</label>
+                <label className="text-xs font-[Inter] text-[#292930] px-1">Email:</label>
                 <div className="flex items-center justify-center">
                   <div className="w-10 z-10 pl-0  pointer-events-none flex items-center justify-center"><Icon path={mdiEmailOutline} size={0.7} /> </div>
                   <input {...emailRef} type="email" className="w-full text-start text-sm -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl border-2 border-[#292930c6] outline-none focus:border-gray-400 font-[Poppins] text-black" placeholder="JohenDue@gmail.com" />
@@ -69,7 +69,7 @@ const loginClient = () => {
             </div>
             <div className="  flex items-center justify-center">
               <div className="w-full sm:w-64 px-1 mb-2 text-start">
-                <label className="text-xs font-semibold px-1"> Password:</label>
+                <label className="text-xs  font-[Inter] px-1 text-[#292930]"> Password:</label>
                 <div className="flex items-center justify-center">
                   <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><Icon path={mdiLockOutline} size={0.7} /></div>
                   <input {...passwordRef} type="password" className="w-full -ml-10 pl-10 pr-3 text-sm text-start py-1 rounded-xl border-2   border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500 font-[Poppins] " placeholder="password." />
@@ -80,12 +80,12 @@ const loginClient = () => {
             </div>
             <div className="flex justify-center">
               <div className="w-[50%]">
-                <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] mt-5">Login</button>
+                <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[Inter] mt-5">Login</button>
               </div>
             </div>
             <div className="flex items-center space-x-4 mt-5">
               <hr className="w-[90%] border border-[#D8DADC] border-1" />
-              <div className="font-semibold  text-[#2E3837]">Or</div>
+              <div className=" font-[Inter]  text-[#2E3837]">Or</div>
               <hr className="w-full border border-[#D8DADC] border-1" />
             </div>
           </form>
