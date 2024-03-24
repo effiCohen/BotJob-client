@@ -70,8 +70,8 @@ function HomeHistory() {
     }
 
     return (
-        <div className="mt-12 w-full my-6">
-            <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl  lg:text-3xl m-3 font-[Inter]">
+        <div className="mt-12 w-full my-6 ">
+            <h1 className="text-4xl  font-bold leading-tight text-gray-900 sm:text-5xl  lg:text-3xl m-8 font-[Inter]">
                 Welcome {myName}</h1>
             <h2 className="text-2xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight m-3 lg:text-3xl font-[Inter]">
                 Your history </h2>
