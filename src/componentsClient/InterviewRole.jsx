@@ -50,6 +50,8 @@ function InterviewRole() {
 
     return (
         <>
+            <h1 className=" mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter] m-2 text-center mx-auto">Hello :{myName}</h1>
+
 
             <section className="container flex justify-center mx-auto flex-col lg:flex-row-reverse items-center w-[80%] lg:w-full">
                 {loading ? (
@@ -59,8 +61,8 @@ function InterviewRole() {
                 ) : (
                     <div className='flex  items-center  justify-between'>
                         <div></div>
+
                         <div className="w-full lg:w-[50%] text-left lg:text-left m-12">
-                            <h1 className="text-left mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter] m-5">Hello :{myName}</h1>
                             <h2 className="text-left font-[Inter] text-2xl lg:text-xl font-bold text-[#2E3837] mt-2"> Before we start let's set some rules</h2>
                             <ul className='m-2' >
                                 <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
