@@ -16,7 +16,7 @@ function HomeHistory() {
     let [searchText, setSearchText] = useState("");
     const myName = useSelector(state => state.myDetailsSlice.name);
     const dispatch = useDispatch();
-    
+
     useEffect(() => {
         doApi()
     }, [])
@@ -70,12 +70,12 @@ function HomeHistory() {
     }
 
     return (
-        <div className="mt-3">
-            <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
+        <div className="mt-3 w-full">
+            <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter]">
                 Welcome {myName}</h1>
-            <h2 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj">
+            <h2 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter]">
                 Your history </h2>
-            <p className="m-2 text-lg text-gray-600 sm:mt-8 font-inter">Your history can teach you and you can learn from it for the future</p>
+            <p className="m-2 text-lg text-gray-600 sm:mt-8 font-[Inter]">Your history can teach you and you can learn from it for the future</p>
             <div className="flex items-center justify-around">
                 <div></div>
 
@@ -86,7 +86,7 @@ function HomeHistory() {
                 <div>
                     <button
                         onClick={toNewInterview}
-                        className="block w-full mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-full py-3 px-6 font-[simple]"
+                        className="block w-full mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-full py-3 px-6 font-[Inter]"
                     >
                         +
                     </button>

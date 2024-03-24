@@ -27,19 +27,19 @@ function InterviewDone() {
 
   return (
     <>
-      <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 my-3 m-3">
-        <h2 className="max-w-lg  font-[Inter] text-lg font-bold leading-none text-gray-900 sm:text-xl md:mx-auto">
-           Congratulations on completing your interview!
+      <div className="max-w-xl md:mx-auto flex justify-between flex-col mt-3 sm:text-center lg:max-w-2xl md:mb-12 my-6 m-3">
+        <h2 className="max-w-lg  m-2 font-[Inter] text-lg font-bold leading-none text-gray-900 sm:text-xl md:mx-auto">
+          Congratulations on completing your interview!
         </h2>
-        <p className="text-base text-gray-700 md:text-lg">
+        <p className="font-[Inter] m-2 text-gray-700 md:text-lg">
           You successfully completed the interview!
         </p>
         {/* <p className="text-center text-[#4A5568] font-bold">Time Taken: X minutes</p> */}
-        <p className="text-center text-[#4A5568] font-bold">Time taken
+        <p className="text-center font-[Inter] text-[#4A5568] font-bold m-2">Time taken
           {` ${time.hr < 10 ? '0' : ' '}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
         </p>
         {/* <p className="text-center text-[#4A5568] font-bold">Score: Y</p> */}
-        <div className='mx-auto flex justify-center items-center  my-3'>
+        <div className='mx-auto flex justify-center items-center  my-4'>
           <button onClick={toAllAnsClick} className="block lg:w-40 w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To all answers</button>
         </div>
         <div className="hidden md:block w-full lg:flex justify-center mx-auto items-center ">
