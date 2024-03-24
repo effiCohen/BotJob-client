@@ -28,7 +28,7 @@ function InterviewDone() {
   return (
     <>
       <div className="max-w-xl md:mx-auto flex justify-between flex-col mt-3 sm:text-center lg:max-w-2xl md:mb-12 my-6 m-3">
-        <h2 className="max-w-lg  m-2 font-[Inter] text-lg font-bold leading-none text-gray-900 sm:text-xl md:mx-auto">
+        <h2 className="max-w-lg  m-2 font-[Inter] text-lg font-bold leading-none text-gray-900 sm:text-3xl md:mx-auto">
           Congratulations on completing your interview!
         </h2>
         <p className="font-[Inter] m-2 text-gray-700 md:text-lg">
@@ -40,9 +40,9 @@ function InterviewDone() {
         </p>
         {/* <p className="text-center text-[#4A5568] font-bold">Score: Y</p> */}
         <div className='mx-auto flex justify-center items-center  my-4'>
-          <button onClick={toAllAnsClick} className="block lg:w-40 w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To all answers</button>
+          <button onClick={toAllAnsClick} className="mt-10 block lg:w-40 w-[95%]  bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To all answers</button>
         </div>
-        <div className="hidden md:block w-full lg:flex justify-center mx-auto items-center ">
+        <div className=" mt-5 hidden md:block w-full lg:flex justify-center mx-auto items-center ">
           <div className="w-full max-w-xl  justify-center items-center">
             <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-3 place-items-center mt-3 ">
               <div className="p-8 text-center bg-white rounded-xl shadow place-items-center  ">
