@@ -45,49 +45,47 @@ const Setting = () => {
     };
 
     return (
-        <>
-        <div className="flex justify-center items-center h-screen bg-gray-100">
-           
-            <div className="container mx-auto bg-white p-8 rounded-3xl shadow-lg border border-gray-300  ">
-              
-                <div className="w-full m - -m-7 ">
-
-                    <h1 className="font-bold text-3xl text-[#1E1E1E] ">Let's build the interview</h1>
-                    <Lottie  options={{ loop: true, autoplay: true, animationData: lottieJson }} height={150} width={150} />
-
-                    <h2 className="font-bold text-lg text-[#1E1E1E] mb-4 ">Let's first choose a role</h2>
-                    <div className="mb-4">
-                        <Select label="Select Role" value={job} onChange={(e) => setjob(e)} className="w-full">
-                            {arRole.map((item, index) => (
-                                <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
-                            ))}
-                        </Select>
-                    </div>
-                    <h2 className="font-bold text-lg text-[#1E1E1E] mb-4 ">Select years of experience</h2>
-                    <div className="mb-4">
-                        <Select label="Years of experience" value={experience} onChange={(e) => setExperience(e)} className="w-full">
-                            {arexperience.map((item, index) => (
-                                <Option key={index} value={(index + 1).toString()}>{(index + 1).toString()}</Option>
-                            ))}
-                        </Select>
-                    </div>
-                    <div className="text-center mb-4">
-                        <h2 className="font-bold text-lg text-[#1E1E1E] mb-4 ">Select number of questions</h2>
-                        <div className="mt-4">
-                            <Select label="Number of Questions" value={questionCount} onChange={(e) => setQuestionCount(e)} className="w-full">
-                                {arNum.map((item, index) => (
-                                    <Option key={index} value={arNum[index]}>{arNum[index]}</Option>
-                                ))}
-                            </Select>
-                        </div>
-                    </div>
-                    <button onClick={() => onSaveClick()} className="block mx-auto bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-lg px-6 py-3">
-                        Save
-                    </button>
+<>
+    <div className="flex justify-center items-center min-h-screen bg-white">
+        <div className="container mx-auto  bg-white p-8 rounded-3xl shadow-lg border border-gray-300 flex flex-col md:flex-row">
+            <div className="w-full md:w-1/2">
+                <h1 className="font-bold text-3xl text-[#1E1E1E] font-inter mb-4">Let's build the interview</h1>
+                <h2 className="font-bold text-sm text-[#1E1E1E] font-inter mb-4">Let's first choose a role</h2>
+                <div className="mb-4">
+                    <Select label="Select Role" value={job} onChange={(e) => setjob(e)} className="w-full">
+                        {arRole.map((item, index) => (
+                            <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
+                        ))}
+                    </Select>
                 </div>
+                <h2 className="font-bold text-sm text-[#1E1E1E] font-inter mb-4">Select years of experience</h2>
+                <div className="mb-4">
+                    <Select label="Years of experience" value={experience} onChange={(e) => setExperience(e)} className="w-full">
+                        {arexperience.map((item, index) => (
+                            <Option key={index} value={(index + 1).toString()}>{(index + 1).toString()}</Option>
+                        ))}
+                    </Select>
+                </div>
+                <div className="text-center mb-4">
+                    <h2 className="font-bold text-sm text-[#1E1E1E] font-inter mb-4">Select number of questions</h2>
+                    <div className="mt-4">
+                        <Select label="Number of Questions" value={questionCount} onChange={(e) => setQuestionCount(e)} className="w-full">
+                            {arNum.map((item, index) => (
+                                <Option key={index} value={arNum[index]}>{arNum[index]}</Option>
+                            ))}
+                        </Select>
+                    </div>
+                </div>
+                <button onClick={() => onSaveClick()} className="block mx-auto bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-lg px-6 py-3">
+                    Save
+                </button>
+            </div>
+            <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+                <Lottie options={{ loop: true, autoplay: true, animationData: lottieJson }} height={300} width={300} />
             </div>
         </div>
-    </>
+    </div>
+</>
     );
 };
 
