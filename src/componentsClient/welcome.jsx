@@ -43,68 +43,103 @@ function Welcome() {
                         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Rehearse</h1>
                         <p className="text-gray-500 text-lg mb-6">Now you can practice the job interviews in one place and always be in control</p>
                         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
-                            <button onClick={toLogin} className="btn btn-primary lg:mr-4  mb-2 lg:mb-0">Login</button>
-                            <button onClick={toSignUp} className="btn btn-secondary">Create account</button>
+                            <button onClick={toLogin} className="btn hover:bg-[#ffafccc2] text-white border-none bg-[#ffafcc] lg:mr-4  mb-2 lg:mb-0">Login</button>
+                            <button onClick={toSignUp} className="btn hover:bg-[#3871c1bc] text-white border-none bg-[#3871C1]">Create account</button>
                         </div>
                     </div>
 
                 </div>
                 <section className="px-6 md:py-20 md:px-10 rounded-xl mt-10">
-                <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Why Choose Us</h2>
-        <p className="mt-7 text-lg text-gray-700">Prepare for Your Next Job Interview with Confidence</p>
-    </div>
-    <div className="max-w-6xl mx-auto mt-10 grid grid-cols-1 gap-10 md:grid-cols-2">
-        <div className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">Expert Interview Feedback</h3>
-            <p className="mb-4 text-sm text-gray-600">Get personalized feedback from industry experts to refine your interview skills.</p>
-        </div>
-        <div className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">Mock Interviews</h3>
-            <p className="mb-4 text-sm text-gray-600">Practice with simulated interviews tailored to your target industry and role.</p>
-        </div>
-        <div className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">Comprehensive Resources</h3>
-            <p className="mb-4 text-sm text-gray-600">Access a wide range of resources including interview guides, tips, and sample questions.</p>
-        </div>
-        <div className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">Real User Experiences</h3>
-            <p className="mb-4 text-sm text-gray-600">Hear success stories and insights from individuals who secured their dream jobs with our platform.</p>
-        </div>
-        <div className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">Tailored Learning Paths</h3>
-            <p className="mb-4 text-sm text-gray-600">Receive personalized recommendations and guidance to improve your interview performance.</p>
-        </div>
-        <div className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">Save Your Progress</h3>
-            <p className="mb-4 text-sm text-gray-600">Track your interview preparation progress and access your history to monitor your improvement over time.</p>
-        </div>
-        <div className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">AI-Powered Insights</h3>
-            <p className="mb-4 text-sm text-gray-600">Leverage AI-driven analytics to gain valuable insights into your interview performance and areas for improvement.</p>
-        </div>
-    </div>
-    <div className="max-w-5xl mx-auto mt-10">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">What Our Users Say</h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="text-gray-800 text-sm mb-4">"Using this website has greatly improved my confidence and performance in job interviews. The mock interview sessions are incredibly helpful."</p>
-                <p className="text-gray-600 text-xs">- John Doe</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="text-gray-800 text-sm mb-4">"As someone preparing for job interviews, I find the resources on this website to be invaluable. The tips and guidance provided have made a significant difference in my interview preparation."</p>
-                <p className="text-gray-600 text-xs">- Jane Smith</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="text-gray-800 text-sm mb-4">"I highly recommend this website to anyone looking to improve their interview skills. The interactive practice sessions and expert advice have been instrumental in my job search journey."</p>
-                <p className="text-gray-600 text-xs">- Michael Johnson</p>
-            </div>
-        </div>
-    </div>
-</section>
+                    <div className="max-w-5xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl font-[Inter]">Why Choose Us</h2>
+                        <p className="mt-7 font-[Inter] text-lg text-gray-700">Prepare for Your Next Job Interview with Confidence</p>
+                    </div>
+                    <div className="max-w-6xl mx-auto mt-10 grid grid-cols-1 gap-10 md:grid-cols-2">
+                        <div className="relative p-6 backdrop-blur-sm bg-white border border-gray-200 rounded-xl shadow-lg ">
+                            <h3 className="mb-2 text-lg font-semibold text-gray-900">Expert Interview Feedback</h3>
+                            <p className="mb-4 text-sm text-gray-600">Get personalized feedback from industry experts to refine your interview skills.</p>
+                        </div>
+                        <div className="relative p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
+                            <h3 className="mb-2 text-lg font-semibold text-gray-900">Mock Interviews</h3>
+                            <p className="mb-4 text-sm text-gray-600">Practice with simulated interviews tailored to your target industry and role.</p>
+                        </div>
+                        <div className="relative p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
+                            <h3 className="mb-2 text-lg font-semibold text-gray-900">Comprehensive Resources</h3>
+                            <p className="mb-4 text-sm text-gray-600">Access a wide range of resources including interview guides, tips, and sample questions.</p>
+                        </div>
+                        <div className="relative p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
+                            <h3 className="mb-2 text-lg font-semibold text-gray-900">Real User Experiences</h3>
+                            <p className="mb-4 text-sm text-gray-600">Hear success stories and insights from individuals who secured their dream jobs with our platform.</p>
+                        </div>
+                        <div className="relative p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
+                            <h3 className="mb-2 text-lg font-semibold text-gray-900">Tailored Learning Paths</h3>
+                            <p className="mb-4 text-sm text-gray-600">Receive personalized recommendations and guidance to improve your interview performance.</p>
+                        </div>
+                        <div className="relative p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
+                            <h3 className="mb-2 text-lg font-semibold text-gray-900">Save Your Progress</h3>
+                            <p className="mb-4 text-sm text-gray-600">Track your interview preparation progress and access your history to monitor your improvement over time.</p>
+                        </div>
+                        <div className="relative p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
+                            <h3 className="mb-2 text-lg font-semibold text-gray-900">AI-Powered Insights</h3>
+                            <p className="mb-4 text-sm text-gray-600">Leverage AI-driven analytics to gain valuable insights into your interview performance and areas for improvement.</p>
+                        </div>
+                    </div>
+
+                </section>
 
 
-
+                <div className="pb-5">
+                    <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
+                        <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white font-[Inter]">Here&#x27;s what our customers said</h2>
+                        <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl font-[Inter]">Testimonails is a great way to increase the brand trust and awareness. Use this section to highlight your popular customers.</p>
+                    </div>
+                    <div className="container p-6 mx-auto mb-10 xl:px-0">
+                        <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
+                            <div className="lg:col-span-2 xl:col-auto">
+                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
+                                    <p className="text-2xl leading-normal">Share a<mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">testimonial</mark>that hits some of your benefits from one of your popular customer.</p>
+                                    <div className="flex items-center mt-8 space-x-3">
+                                        <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                                            <img alt="Avatar" src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=100&amp;h=100" loading="lazy" />
+                                        </div>
+                                        <div>
+                                            <div className="text-lg font-medium">Sarah Steiner</div>
+                                            <div className="text-gray-600 dark:text-gray-400">VP Sales at Google</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="">
+                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
+                                    <p className="text-2xl leading-normal ">Make sure you only pick the <mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">right sentence</mark> to keep it short and simple.</p>
+                                    <div className="flex items-center mt-8 space-x-3">
+                                        <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                                            <img alt="Avatar" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;crop=faces&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" loading="lazy" />
+                                        </div>
+                                        <div>
+                                            <div className="text-lg font-medium">Dylan Ambrose</div>
+                                            <div className="text-gray-600 dark:text-gray-400">Lead marketer at Netflix </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="">
+                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
+                                    <p className="text-2xl leading-normal">This is an <mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">awesome</mark> landing page template I&#x27;ve seen. I would use this for anything.</p>
+                                    <div className="flex items-center mt-8 space-x-3">
+                                        <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                                            <img alt="Avatar" src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;crop=faces&amp;q=80" loading="lazy" />
+                                        </div>
+                                        <div>
+                                            <div className="text-lg font-medium">Gabrielle Winn</div>
+                                            <div className="text-gray-600 dark:text-gray-400">Co-founder of Acme Inc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 

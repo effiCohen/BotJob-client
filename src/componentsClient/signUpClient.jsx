@@ -57,8 +57,8 @@ function SignUpClient() {
 
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
               <div className="text-center ">
-                <h1 className="font-bold text-3xl text-gray-900 font-[inter]">Sign up to BotJob</h1>
-                <p className='text-gray-300 text-sm font-[Poppins]  pr-[110px]'>Enter your detail below</p>
+                <h1 className="font-bold text-3xl text-gray-900 font-[inter]">Sign up to Rehearse</h1>
+                <p className='text-gray-400 text-sm font-[Poppins]  pr-[110px] mt-3'>Enter your detail below</p>
               </div>
               <div>
 
@@ -120,7 +120,7 @@ function SignUpClient() {
                 </div>
                 <div className="flex -mx-3">
                   <div className="w-full px-3 mt-5">
-                    <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[Inter]">Create an Account</button>
+                    <button className="mt-2 block w-[90%] max-w-xs mx-auto bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[Inter]">Create an Account</button>
                     <p className='mx-auto text-center mt-8 text-[#2E3837]  font-[Inter]'>Already have an account? <b onClick={toLogin} className='cursor-pointer'>Sign in </b></p>
                   </div>
                 </div>
