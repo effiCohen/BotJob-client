@@ -34,7 +34,7 @@ function ItemHisturyClient(props) {
       <td className="whitespace-nowrap px-4 py-2 font-[Inter]">{item.date_created.substring(10, length - 1)}</td>
       <td className="whitespace-nowrap px-4 py-2 font-[Inter]">{item.job}</td>
       <td className="whitespace-nowrap px-4 py-2 font-[Inter]">{item.Time}</td>
-      <td className="whitespace-nowrap px-4 py-2 font-[Inter]">{item.questions.length}</td>
+      <td className="whitespace-nowrap px-12 py-2 font-[Inter]">{item.questions.length}</td>
       <td
         onClick={toQushtions}
         className="whitespace-nowrap px-4 py-2"
