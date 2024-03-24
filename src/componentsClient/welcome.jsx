@@ -49,7 +49,7 @@ function Welcome() {
                     </div>
 
                 </div>
-                <section className="px-6 md:py-20 md:px-10 rounded-xl mt-10">
+                <section className=" font-[Inter] px-6 md:py-20 md:px-10 rounded-xl mt-10">
                     <div className="max-w-5xl mx-auto text-center">
                         <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl font-[Inter]">Why Choose Us</h2>
                         <p className="mt-7 font-[Inter] text-lg text-gray-700">Prepare for Your Next Job Interview with Confidence</p>
@@ -88,7 +88,7 @@ function Welcome() {
                 </section>
 
 
-                <div className="pb-5">
+                <div className="pb-5 font-[Inter]">
                     <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
                         <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white font-[Inter]">Hear What Our Users Say</h2>
                         <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl font-[Inter]">Discover how our platform has transformed job interview preparation for our users.</p>
@@ -143,7 +143,7 @@ function Welcome() {
             </section>
 
 
-            <footer className="bg-gray-900 text-white py-6">
+            <footer className="font-[Inter] bg-gray-900 text-white py-6">
                 <div className="max-w-6xl mx-auto text-center">
                     <p className="text-lg">&copy; 2024 Rehearse team. All rights reserved.</p>
                 </div>

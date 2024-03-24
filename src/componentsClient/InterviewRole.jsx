@@ -58,7 +58,7 @@ function InterviewRole() {
     </div>
 )}
 
-                 : (
+                
                     <div className='flex  items-center  justify-between'>
                         <div></div>
 
@@ -82,7 +82,7 @@ function InterviewRole() {
                                 <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
                                     <span className="mr-2">&#8226;</span> {/* Dot character */}
                                     <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
-                                        Without chat
+                                        Without chatGPT
                                         <img src="/src/assets/artificial-intelligence.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
                                     </h2>
                                 </li>
