@@ -33,206 +33,39 @@ function Welcome() {
     }
 
     return (
-        <>
-            <section className="relative  sm:py-16 lg:py-20 bg-[#FFFDFB] h-auto   ">
-                <div className="px-4 mx-auto max-w-6xl  lg:px-8 sm:flex sm:flex-col ">
-                    <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-10 ">
-                        <div>
-                            <div>
-                                <img className="lg:w-[15%] w-[20%] mx-auto bg-white lg" src="/src/assets/newLogo (2).jpg" alt="" />
-                            </div>
-                            <div className="text-center lg:text-start justify-between">
-
-                                <h1 className="text-center text-[34px] font-bold  text-gray-900   font-[inter]">BotJob Ai</h1>
-                                <p className="text-gray-400 text-sm font-[Poppins] text-center ">Now your interviews are in one place and always under control</p>
-                                <div className="flex justify-center  items-center lg:flex-col p-2 flex-col ">
-                                    <div className="w-[50%] m-1">
-                                        <button onClick={toLogin} className="block w-[80%]  m-1 mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Login</button>
-                                    </div>
-                                    <div className="w-[50%]">
-                                        <button onClick={toSignUp} className="block w-[80%]  mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl  py-3 font-[simple] ">Create account</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-center   lg:justify-start ">
-                            </div>
-                        </div>
-
-                        <div className="w-full mt-10">
-                            <Carousel
-                                className="rounded-xl mt-2 hidden lg:flex"
-                                prevArrow={({ handlePrev }) => (
-                                    <IconButton
-                                        variant="text"
-                                        color="black"
-                                        size="lg"
-                                        onClick={handlePrev}
-                                        className="!absolute top-2/4 left-4 -translate-y-2/4 ml-5 "
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth={2}
-                                            stroke="currentColor"
-                                            className="h-6 w-6"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                                            />
-                                        </svg>
-                                    </IconButton>
-                                )}
-                                nextArrow={({ handleNext }) => (
-                                    <IconButton
-                                        variant="text"
-                                        color="black"
-                                        size="lg"
-                                        onClick={handleNext}
-                                        className="!absolute top-2/4 !right-4 -translate-y-2/4 mr-5"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth={2}
-                                            stroke="currentColor"
-                                            className="h-6 w-6"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                                            />
-                                        </svg>
-                                    </IconButton>
-                                )}
-                            >
-                                <Card color="transparent" shadow={false} className="w-full max-w-[26rem] mx-auto">
-                                    <CardHeader
-                                        color="transparent"
-                                        floated={false}
-                                        shadow={false}
-                                        className="mx-0 flex items-center font-[Inter] gap-4 pt-0 pb-8"
-                                    >
-                                        <Avatar
-                                            size="lg"
-                                            variant="circular"
-                                            src="/src/assets/365471835_582891800473842_7378122036090440715_n.jpg"
-                                            alt="Nitay Dalal"
-                                        />
-                                        <div className="flex w-full flex-col gap-0.5">
-                                            <div className="flex items-center justify-between font-[Inter]">
-                                                <Typography variant="h5" className="font-[Inter]" color="blue-gray">
-                                                    Nitay Dalal
-                                                </Typography>
-                                                <div className="5 flex items-center gap-0">
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                </div>
-                                            </div>
-                                            <Typography color="blue-gray">Software team leader in I.D.F</Typography>
-                                        </div>
-                                    </CardHeader>
-                                    <CardBody className="mb-6 p-0 font-[Inter]">
-                                        <Typography>
-                                            &quot;This individual positioning himself as a front-end development specialist, takes pride in his ability to craft precise and stunning user interfaces.
-                                            In addition to his advanced technical skills, he serves as a team lead with a dedicated approach, guiding his team with insight, excellent management skills and a commitment to efficient upgrade and development of every project.
-                                            &quot;
-                                        </Typography>
-                                    </CardBody>
-                                </Card>
-                                <Card color="transparent" shadow={false} className="w-full max-w-[26rem] mx-auto">
-                                    <CardHeader
-                                        color="transparent"
-                                        floated={false}
-                                        shadow={false}
-                                        className="mx-0 flex items-center gap-4 pt-0 pb-8"
-                                    >
-                                        <Avatar
-                                            size="lg"
-                                            variant="circular"
-                                            src="https://media.licdn.com/dms/image/D4D03AQGkFhULKE39Hw/profile-displayphoto-shrink_400_400/0/1709106759468?e=1715817600&v=beta&t=_GfAASYjRcMeOSiMA-wBtrBVM9wGXDc5HA7ryuBqxWU"
-                                            alt="Lavie Baxi"
-                                        />
-                                        <div className="flex w-full flex-col gap-0.5">
-                                            <div className="flex items-center justify-between">
-                                                <Typography variant="h5" color="blue-gray">
-                                                    Lavie Baxi
-                                                </Typography>
-                                                <div className="5 flex items-center gap-0">
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                </div>
-                                            </div>
-                                            <Typography color="blue-gray">Full Stack Developer | Ex-81</Typography>
-                                        </div>
-                                    </CardHeader>
-                                    <CardBody className="mb-6 p-0">
-                                        <Typography>
-                                            &quot;I found a solution as an experienced web developer with a demonstrated history of working in the military industry.
-                                            Skilled in JavaScript, TypeScript, Angular, React, AngularJS, NodeJS, Python, Django, DRF, postgresql PL/SQL, .NET framework (C#).
-
-                                            B.Sc Computer Science, The College of Management Academic Studies.&quot;
-                                        </Typography>
-                                    </CardBody>
-                                </Card>
-                                <Card color="transparent" shadow={false} className="w-full max-w-[26rem] mx-auto">
-                                    <CardHeader
-                                        color="transparent"
-                                        floated={false}
-                                        shadow={false}
-                                        className="mx-0 flex items-center gap-4 pt-0 pb-8"
-                                    >
-                                        <Avatar
-                                            size="lg"
-                                            variant="circular"
-                                            src="https://media.licdn.com/dms/image/D4D03AQGlyiqRHGbhGg/profile-displayphoto-shrink_800_800/0/1693995083299?e=1715817600&v=beta&t=3MYZNU49iN0NkCXlpXAJApaEen0vkLv7bBRKiYUNGrk"
-                                            alt="Keren Katz"
-                                        />
-                                        <div className="flex w-full flex-col gap-0.5">
-                                            <div className="flex items-center justify-between">
-                                                <Typography variant="h5" color="blue-gray">
-                                                    Keren Katz
-                                                </Typography>
-                                                <div className="5 flex items-center gap-0">
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                    <StarIcon />
-                                                </div>
-                                            </div>
-                                            <Typography color="blue-gray">Former CEO & founder, ex-programmer, product manager in Sygnia</Typography>
-                                        </div>
-                                    </CardHeader>
-                                    <CardBody className="mb-6 p-0">
-                                        <Typography>
-                                            &quot;
-                                            The former CEO and founder, previously a programmer and product manager in Sygnia, significantly elevated our website.
-                                            His expertise and leadership were key factors in creating a robust and user-friendly platform.
-                                            We credit much of our success to his visionary contributions and dedication to excellence.&quot;
-                                        </Typography>
-                                    </CardBody>
-                                </Card>
-
-
-
-
-
-                            </Carousel>
+               <>
+            <section className="relative py-16 lg:py-20 bg-white">
+                <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
+                    <div className="flex-shrink-0 w-full lg:w-1/2 mb-10 lg:mb-0">
+                        <img className="w-3/4 lg:w-full mx-auto lg:mx-0" src="src/assets/Rehearse.svg" alt="BotJob Ai Logo" />
+                    </div>
+                    <div className="text-center lg:text-left lg:w-1/2">
+                        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">BotJob Ai</h1>
+                        <p className="text-gray-500 text-lg mb-6">Now your interviews are in one place and always under control</p>
+                        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
+                            <button onClick={toLogin} className="btn btn-primary lg:mr-4 mb-2 lg:mb-0">Login</button>
+                            <button onClick={toSignUp} className="btn btn-secondary">Create account</button>
                         </div>
                     </div>
-                    <section
-                        className="relative block px-6 md:py-20 md:px-10  border-neutral-900 rounded-2xl">
+                </div>
+                <div className="max-w-6xl mx-auto mt-10">
+                    <Carousel
+                        autoPlay={true}
+                        interval={5000}
+                        infiniteLoop={true}
+                        showIndicators={false}
+                        showThumbs={false}
+                        showStatus={false}
+                        showArrows={true}
+                        swipeable={true}
+                        stopOnHover={true}
+                        dynamicHeight={true}
+                    >
+                        {/* Add your Carousel cards here */}
+                    </Carousel>
+                </div>
+            </section>
+            <section className="relative block px-6 md:py-20 md:px-10  border-neutral-900 rounded-2xl">
 
 
                         <div className="relative mx-auto max-w-5xl text-center">
@@ -326,19 +159,11 @@ function Welcome() {
                         </div>
                     </section >
 
+            <footer className="bg-gray-900 text-white py-6">
+                <div className="max-w-6xl mx-auto text-center">
+                    <p className="text-lg">&copy; 2024 BotJob team. All rights reserved.</p>
                 </div>
-
-
-
-            </section >
-
-            <footer>
-                <div className="bg-black h-[40px]  w-full ">
-                    <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-purple-50">©️ 2024 Copyright: BotJob teem</p>                    </div>
             </footer>
-
-
-
         </>
 
     );
