@@ -52,11 +52,13 @@ function InterviewRole() {
         <>
             <h1 className=" mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-[Inter] m-2 text-center mx-auto">Hello {myName}</h1>
             <section className="container flex justify-center mx-auto flex-col lg:flex-row-reverse items-center w-[80%] lg:w-full">
-                {loading ? (
-                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-opacity-50 bg-white">
-                        <Spinner />
-                    </div>
-                ) : (
+            {loading && (
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-opacity-50 bg-[#ffffff00]">
+        <Spinner />
+    </div>
+)}
+
+                 : (
                     <div className='flex  items-center  justify-between'>
                         <div></div>
 
@@ -118,7 +120,7 @@ function InterviewRole() {
                         </div>
 
                     </div>
-                )}
+                
             </section>
 
             <div className="flex flex-col items-center">
