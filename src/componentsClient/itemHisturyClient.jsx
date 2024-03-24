@@ -39,9 +39,9 @@ function ItemHisturyClient(props) {
         <td
           onClick={toQushtions}
           className="whitespace-nowrap px-4 py-2"
-          style={{ cursor: 'pointer' }} // כדי להראות שזה כפתור לחיצה
+          style={{ cursor: 'pointer' }} 
         >
-          {isHovered && ( // תצוגת ה-GIF רק אם הכפתור נמצא במצב hover
+          {isHovered && ( 
             <img src="/src/assets/output.png" alt="GIF" style={{ width: '30px', height: '30px' }} />
           )}
         </td>
