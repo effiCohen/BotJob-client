@@ -84,20 +84,42 @@ function HomeHistory() {
                     <button onClick={onSearchClick} type="submit" className="ml-2"><img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" /></button>
                 </div>
                 <div>
-                    <button
+                <button
+                 onClick={toNewInterview}
+
+                 className="group cursor-pointer outline-none hover:rotate-90 duration-300"
+                 title="Add New"
+>
+<svg
+  className="stroke-teal-500 fill-none group-hover:bg-white group-active:stroke-teal-200 group-active:fill-teal-600 group-active:duration-0 duration-300"
+  viewBox="0 0 24 24"
+  height="45px"
+  width="45px"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    strokeWidth="1.5"
+    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+  ></path>
+  <path strokeWidth="1.5" d="M8 12H16"></path>
+  <path strokeWidth="1.5" d="M12 16V8"></path>
+</svg>
+
+</button>
+
+                    {/* <button
                         onClick={toNewInterview}
                         className="block w-full mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-full py-3 px-6 font-[Inter]"
                     >
                         +
-                    </button>
+                    </button> */}
                 </div>
                 <div></div>
 
             </div>
 
             <div className="flex flex-col">
-                <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                    <div className="inline-block min-w-full py-2 sm:px-6 lg:px-6">
                         <div className="overflow-hidden">
                             <table className="min-w-full text-left text-sm font-light">
                                 <thead className="border-b font-medium dark:border-neutral-500">
@@ -133,7 +155,6 @@ function HomeHistory() {
                     </div>
                 </div>
             </div>
-        </div>
     );
 
 }
