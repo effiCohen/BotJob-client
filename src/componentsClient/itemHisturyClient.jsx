@@ -45,9 +45,12 @@ function ItemHisturyClient(props) {
         )}
 
       </td>
+      
       {isHovered && (
+              <div className="whitespace-nowrap px-8 ">
 
-      <img src="/src/assets/delete.PNG" alt="GIF" style={{ width: '30px', height: '30px' , margin:'5px'}} />
+      <img src="/src/assets/delete.PNG" alt="GIF" style={{cursor: 'pointer',  width: '40px', height: '40px' , margin:'5px' }} />
+       </div>
       )}
 
     </tr>

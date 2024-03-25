@@ -156,7 +156,7 @@ function HomeHistory() {
                                         More details
                                     </th>
                                     <th scope="col" className="px-4 py-2">
-X
+                                        Delete Interview
                                     </th>
                                 </tr>
                             </thead>
