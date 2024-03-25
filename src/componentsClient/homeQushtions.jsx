@@ -50,14 +50,17 @@ function HomeQushtions() {
   return (
     <>
       <div className="flex flex-wrap justify-between items-center my-3  mx-auto max-w-screen-xl">
-        {/* <button onClick={() => BackToHistory()} class="cursor-pointer duration-200 hover:scale-125 active:scale-100" title="Go Back">
+        {/* <button onClick={() => BackToHistory()} class="cursor-pointer duration-200 hover:scale-125 active:scale-100" title="Go Back"> 
   <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" class="stroke-blue-300">
     <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" d="M11 6L5 12M5 12L11 18M5 12H19"></path>
   </svg>
-</button> */}
+</button>  */}
         {/* <img onClick={() => BackToHistory()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" /> */}
 
-        <div className="mx-auto">
+        <img onClick={() => BackToHistory()} src="/src/assets/left-arrow.png" className="mr-3 h-6 sm:h-6" style={{ marginTop: '-110px', marginLeft: '-20px' ,height:'30px' }} alt="" />
+
+
+        <div className="mx-auto mt-10">
           <h1 className="text-xl font-bold text-gray-900 sm:text-3xl  m-3 font-[Inter]">Interview for the position of {interview.job}</h1>
           <p className='"text-xl font-bold  text-gray-900 sm:text-lg m-3   font-[Inter]"'> With <b className="text-xl font-bold  text-gray-900 sm:text-xl lg:text-lg font-[Inter]">{interview.experience}</b> years of experience </p>
         </div>

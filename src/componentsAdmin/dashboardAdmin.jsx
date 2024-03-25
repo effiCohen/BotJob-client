@@ -84,6 +84,8 @@ function DashboardAdmin() {
                     <th scope="col" className="px-4 py-2">Time</th>
                     <th scope="col" className="px-4 py-2">Total questions</th>
                     <th scope="col" className="px-4 py-2">More details</th>
+                    <th scope="col" className="px-4 py-2">Delete Interview</th>
+
                   </tr>
                 </thead>
 

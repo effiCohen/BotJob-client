@@ -44,6 +44,12 @@ function ItemAdmin(props) {
           <img src="/src/assets/output.png" alt="GIF" style={{ width: '30px', height: '30px' }} />
         )}
       </td>
+      {isHovered && (
+              <div className="whitespace-nowrap px-8 ">
+
+      <img src="/src/assets/delete.PNG" alt="GIF" style={{cursor: 'pointer',  width: '40px', height: '40px' , margin:'5px' }} />
+       </div>
+      )}
     </tr>
   );
 }
