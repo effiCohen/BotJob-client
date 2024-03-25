@@ -43,7 +43,13 @@ function ItemHisturyClient(props) {
         {isHovered && (
           <img src="/src/assets/output.png" alt="GIF" style={{ width: '30px', height: '30px' }} />
         )}
+
       </td>
+      {isHovered && (
+
+      <img src="/src/assets/delete.PNG" alt="GIF" style={{ width: '30px', height: '30px' , margin:'5px'}} />
+      )}
+
     </tr>
   );
 }
