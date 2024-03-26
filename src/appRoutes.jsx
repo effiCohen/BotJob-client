@@ -24,6 +24,7 @@ import HomeHistory from './componentsClient/homeHistory';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Setting from './componentsClient/setting';
+import Diagram from './componentsAdmin/Diagram';
 
 function AppRoutes() {
   return (
@@ -33,6 +34,7 @@ function AppRoutes() {
           <Route index element={<DashboardAdmin />} />
           <Route path='/admin/interview' element={<InterviewAdmin />} />
           <Route path='/admin/question' element={<QuestionAdmin />} />
+          <Route path='/admin/diagram' element={<Diagram />} />
         </Route>
 
         <Route path="/" element={<LayoutClient />}>

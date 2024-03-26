@@ -78,13 +78,14 @@ function DashboardAdmin() {
                 <thead className="border-b font-medium dark:border-neutral-500">
                   <tr>
                     <th scope="col" className="px-4 py-2">Id</th>
-                    <th scope="col" className="px-4 py-2">Name</th>
+                    <th scope="col" className="px-4 py-2">Full name</th>
+                    <th scope="col" className="px-4 py-2">Email</th>
                     <th scope="col" className="px-4 py-2">Date</th>
                     <th scope="col" className="px-4 py-2">Role</th>
                     <th scope="col" className="px-4 py-2">Time</th>
                     <th scope="col" className="px-4 py-2">Total questions</th>
                     <th scope="col" className="px-4 py-2">More details</th>
-                    <th scope="col" className="px-4 py-2">Delete Interview</th>
+                    <th scope="col" className="px-4 py-2">Delete </th>
 
                   </tr>
                 </thead>
