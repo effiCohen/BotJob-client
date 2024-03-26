@@ -9,14 +9,13 @@
   min-width: 100%;
   min-height: 100vh;
 }
- 
+
 /* body{
   background-color: white;
 } */
-body{
+body {
   background-color: #fffdfb;
 }
-
 
 button {
   background-color: transparent;
