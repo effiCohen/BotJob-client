@@ -10,6 +10,9 @@ function HeaderAdmin() {
   const onUserClick = () => {
     nav("/history");
   }
+  const onDiagram = () => {
+    nav("/admin/diagram");
+  }
 
 
 
@@ -23,6 +26,9 @@ function HeaderAdmin() {
           </div>
           <div className="my-4 mx-11">
             <button onClick={onDashboardAdminClick}>Deshboard</button>
+          </div>
+          <div className="my-4 mx-11">
+            <button onClick={onDiagram}>Diagrm</button>
           </div>
         </div>
         <div></div>
