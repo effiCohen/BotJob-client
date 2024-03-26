@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { API_URL, doApiGet } from "../services/apiService";
-import { reverse } from "lodash";
 import { useNavigate } from "react-router-dom";
 import { addThisAdminQuestion } from "../featuers/intervewSlice";
 
@@ -25,7 +24,6 @@ function InterviewAdmin() {
       console.log(data);
       setInterview(data)
       console.log(dataAr);
-      reverse(dataAr);
       setAr(dataAr)
     } catch (error) {
       console.log(error);

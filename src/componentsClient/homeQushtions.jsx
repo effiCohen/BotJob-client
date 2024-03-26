@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { API_URL, doApiGet } from "../services/apiService";
-import { reverse } from "lodash";
 import { useNavigate } from "react-router-dom";
 import { addThisQuestion } from "../featuers/intervewSlice";
 
@@ -29,7 +28,6 @@ function HomeQushtions() {
       setInterview(data)
       console.log(data)
       let dataAr = resData.data.questions
-      reverse(dataAr);
       setAr(dataAr)
     } catch (error) {
       console.log(error);
