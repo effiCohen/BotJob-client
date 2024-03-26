@@ -69,42 +69,42 @@ function InterviewRole() {
                                 <span className="mr-2">&#8226;</span> {/* Dot character */}
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     No phone
-                                    <img src="/src/assets/no-phone.png" alt="Icon" className="inline-block w-6 h-6 mx-2" />
+                                    {/* <img src="/src/assets/no-phone.png" alt="Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
                             <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
                                 <span className="mr-2">&#8226;</span> {/* Dot character */}
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     Without Google
-                                    <img src="/src/assets/google1.png" alt="Google Icon" className="inline-block w-6 h-6 mx-2" />
+                                    {/* <img src="/src/assets/google1.png" alt="Google Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
                             <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
                                 <span className="mr-2">&#8226;</span> {/* Dot character */}
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     Without chat
-                                    <img src="/src/assets/artificial-intelligence.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
+                                    {/* <img src="/src/assets/artificial-intelligence.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
                             <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
                                 <span className="mr-2">&#8226;</span> {/* Dot character */}
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     Be clear
-                                    <img src="/src/assets/pencil.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
+                                    {/* <img src="/src/assets/pencil.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
                             <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
                                 <span className="mr-2">&#8226;</span> {/* Dot character */}
                                 <h2 className="text-left font-[Inter] text-xl font-semibold text-[#2E3837]">
                                     Don't forget to breathe
-                                    <img src="/src/assets/difficulty-breathing.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
+                                    {/* <img src="/src/assets/difficulty-breathing.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
                             <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
                                 <span className="mr-2">&#8226;</span> {/* Dot character */}
                                 <h2 className="text-left font-[Inter] text-xl font-semibold text-[#2E3837]">
                                     Stopwatch activat for test precision
-                                    <img src="/src/assets/clock.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" />
+                                    {/* <img src="/src/assets/clock.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
                         </ul>
