@@ -59,11 +59,12 @@ const Diagram = () => {
 
         }
         if (tempAr.length > 0) {
-
+            setAr(tempAr)
         } else {
-            toast.error("no");
+            toast.error("no ...");
+            setAr([])
         }
-        setAr(tempAr)
+
         console.log(tempAr);
         console.log(ar.length);
         console.log(ar2.length);
@@ -79,30 +80,41 @@ const Diagram = () => {
 
 
     return (
-        <>
-
-            <h2 className="font-bold text-sm text-[#1E1E1E] font-inter mb-4">Let's first choose a role</h2>
-            <div className="mb-4">
-                <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e) }} className="w-full">
-                    {arRole.map((item, index) => (
-                        <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
-                    ))}
-                </Select>
+        <div>
+            
+        <div className='flex'>
+            <div>
+                <PieChart
+                    series={[
+                        {
+                            data: [
+                                { id: 0, value: ar.length, label: 'series A' },
+                                { id: 1, value: ar2.length - ar.length, label: 'series B' },
+                            ],
+                        },
+                    ]}
+                    width={400}
+                    height={200}
+                />
             </div>
-            <div>{job}</div>
-            <PieChart
-                series={[
-                    {
-                        data: [
-                            { id: 0, value: ar.length, label: 'series A' },
-                            { id: 1, value: ar2.length - ar.length, label: 'series B' },
-                        ],
-                    },
-                ]}
-                width={400}
-                height={200}
-            />
-        </>
+            <div>
+                <h2 className="font-bold text-sm text-[#1E1E1E] font-inter mb-4">Let's first choose a role</h2>
+                <div className="mb-4">
+                    <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e) }} className="w-full">
+                        {arRole.map((item, index) => (
+                            <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
+                        ))}
+                    </Select>
+                </div>
+
+                <div>num all: {ar2.length}</div>
+                <div>num {job}: {ar.length}</div>
+                {ar.length > 0 ? <p>frome: {ar[ar.length - 1].date_created.substring(10, length - 1)},to: {ar[0].date_created.substring(10, length - 1)}</p> : ""}
+            </div>
+
+
+        </div>
+        </div>
     )
 }
 
