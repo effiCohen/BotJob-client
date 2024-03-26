@@ -107,7 +107,7 @@ function SignUpClient() {
 
                 </div>
                 <div className="flex-mx-3">
-                  <div className="w-full px-3 mb-2 text-start">
+                  {/* <div className="w-full px-3 mb-2 text-start">
                     <label className="text-xs font-[Inter] px-1 font-bold text-[#292930]">Date of birth:</label>
                     <div className="flex">
                       <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
@@ -115,7 +115,7 @@ function SignUpClient() {
                     </div>
                     {errors.DateOfBirth ? <small className='text-red-500'>Missing date of birth</small> : ""}
 
-                  </div>
+                  </div> */}
 
                 </div>
                 <div className="flex -mx-3">
