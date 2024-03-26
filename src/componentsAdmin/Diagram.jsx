@@ -9,6 +9,9 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 
 const Diagram = () => {
+    let [average, setAverage] = useState("");
+    let [startTime, setStartTime] = useState("");
+    let [endTime, setEndTime] = useState("");
     let [ar, setAr] = useState([]);
     let [ar2, setAr2] = useState([]);
     const [job, setjob] = useState("Software Engineer");
@@ -45,10 +48,11 @@ const Diagram = () => {
             console.log(error);
         }
     }
-    const onchangeJob = async () => {
+    const onchangeJob = async (e) => {
+        setjob(e)
         let tempAr = [];
         for (let index = 0; index < ar2.length; index++) {
-            if (ar2[index].job === job) {
+            if (ar2[index].job === e) {
                 console.log(ar2[index].job);
                 tempAr.push(ar2[index]);
             }
@@ -57,21 +61,29 @@ const Diagram = () => {
         if (tempAr.length > 0) {
 
         } else {
-            toast.error("");
+            toast.error("no");
         }
         setAr(tempAr)
         console.log(tempAr);
         console.log(ar.length);
         console.log(ar2.length);
 
+        // let tempAverage = 0
+        // for (let index = 0; index < tempAr.length; index++) {
+        //     tempAverage +=  tempAr[index].time ;        
+        // }
+        // setAverage(tempAverage/tempAr.length) 
+
     }
+
 
 
     return (
         <>
+
             <h2 className="font-bold text-sm text-[#1E1E1E] font-inter mb-4">Let's first choose a role</h2>
             <div className="mb-4">
-                <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob() }} className="w-full">
+                <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e) }} className="w-full">
                     {arRole.map((item, index) => (
                         <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
                     ))}
