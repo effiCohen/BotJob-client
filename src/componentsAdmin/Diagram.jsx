@@ -4,6 +4,8 @@ import { API_URL, doApiGet } from '../services/apiService';
 import { Select, Option } from "@material-tailwind/react";
 import { reverse } from 'lodash';
 import { toast } from "react-toastify";
+import { PieChart } from '@mui/x-charts/PieChart';
+
 
 
 const Diagram = () => {
@@ -76,6 +78,18 @@ const Diagram = () => {
                 </Select>
             </div>
             <div>{job}</div>
+            <PieChart
+                series={[
+                    {
+                        data: [
+                            { id: 0, value: ar.length, label: 'series A' },
+                            { id: 1, value: ar2.length - ar.length, label: 'series B' },
+                        ],
+                    },
+                ]}
+                width={400}
+                height={200}
+            />
         </>
     )
 }
