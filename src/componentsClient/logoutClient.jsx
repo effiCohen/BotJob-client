@@ -5,9 +5,9 @@ import { deleteToken } from "../services/localService"
 function LogoutClient() {
   let nav = useNavigate()
 
-  useEffect(() => {
-    deleteToken();
+  useEffect(() => { 
     if (confirm("Are you sure you want to log out?")) {
+      deleteToken();
       nav("/");
       window.location.reload();
     }

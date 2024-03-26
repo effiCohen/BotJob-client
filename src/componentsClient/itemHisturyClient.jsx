@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addThisIntervews } from '../featuers/intervewSlice';
+import { API_URL, doApiMethod } from '../services/apiService';
 
 function ItemHisturyClient(props) {
   const myIntervews = useSelector((state) => state.intervewSlice.allMyIntervews);
@@ -17,6 +18,27 @@ function ItemHisturyClient(props) {
     dispatch(addThisIntervews({ ThisInterview: item._id }));
     nav('/homeQushtions');
   };
+
+  const deleteInterview = () => {
+    if (confirm("Are you sure you want to delete interview?")) {
+      doApi()
+      window.location.reload();
+    }
+  };
+
+
+  const doApi = async () => {
+    let url = API_URL + "/interviews/"+item._id;
+    try {
+        let resp = await doApiMethod(url, "DELETE", {});
+        if (resp.data.status = 200) {
+            console.log("Interview deleted");
+        }
+    }
+    catch (err) {
+        console.log(err.response);
+    }
+}
 
   return (
     <tr
@@ -45,14 +67,20 @@ function ItemHisturyClient(props) {
         )}
 
       </td>
-      
+      <td
+              onClick={deleteInterview}
+              className="whitespace-nowrap px-4 py-2"
+              style={{ cursor: 'pointer' }}
+            >
       {isHovered && (
               <div className="whitespace-nowrap px-8 ">
 
       <img src="/src/assets/delete.PNG" alt="GIF" style={{cursor: 'pointer',  width: '40px', height: '40px' , margin:'5px' }} />
        </div>
+      
+       
       )}
-
+ </td>
     </tr>
   );
 }
