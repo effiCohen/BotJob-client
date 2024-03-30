@@ -13,10 +13,10 @@ function HeaderClient() {
   const [ifAdmin, setIfAdmin] = useState(false);
 
   useEffect(() => {
-    doApi();
     let ifToken = checkTokenLocal()
     if (ifToken) {
       setIfTokenExists(true)
+      doApi();
     } else {
       setIfTokenExists(false)
     }
