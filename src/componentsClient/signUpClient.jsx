@@ -43,7 +43,6 @@ function SignUpClient() {
     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
   });
   let passwordRef = register("password", { required: true, minLength: 4, maxLength: 20 });
-  let dateRef = register("DateOfBirth", { required: true });
 
   const toLogin = () => {
     nav("/login");
@@ -104,18 +103,6 @@ function SignUpClient() {
                     {errors.password ? <small className='text-red-500'>* Enter valid password, min 4 chars</small> : ""}
 
                   </div>
-
-                </div>
-                <div className="flex-mx-3">
-                  {/* <div className="w-full px-3 mb-2 text-start">
-                    <label className="text-xs font-[Inter] px-1 font-bold text-[#292930]">Date of birth:</label>
-                    <div className="flex">
-                      <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                      <input {...dateRef} type="date" className="w-full -ml-10 pl-10 text-sm   py-1 text-left rounded-xl border-2 gap-10    border-[#292930] bg-[#FAF7FF] outline-none focus:border-gray-500" />
-                    </div>
-                    {errors.DateOfBirth ? <small className='text-red-500'>Missing date of birth</small> : ""}
-
-                  </div> */}
 
                 </div>
                 <div className="flex -mx-3">
