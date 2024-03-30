@@ -50,39 +50,42 @@ function ValidationClient() {
   return (
     <>
 
-      <div className="  flex  flex-col items-center justify-between overflow-hidden container bg-[#fffdfbfa] ">
-        <h1 className="text-center text-[34px] font-[Poppins] bg-[#FFFDFB]  "> Let’s go! </h1>
+      <div className="  flex   items-center self-center mx-auto  justify-between overflow-hidden container bg-[#fffdfbfa] px-5  ">
+        <div className=" bg-transparent flex-col  p-5 m-4 mx-auto rounded-3xl shadow-md   border border-gray-300 flex w-full   lg:w-[55%] ">
 
-        <figure >
-          <img src="/src/assets/Asset@2x-8 1.png" alt="email@ " className='h-[15%] w-[25%] mx-auto max-w-lg   ' />
-        </figure>
-        <form onSubmit={handleSubmit(send)} className="max-w-xl px-5 text-center flex flex-col  items-center justify-center mb-auto  ">
-          <h1 className='font-bolt font-[inter] text-[30px]'>we just emailed you.</h1>
-          <p className=" text-lg text-zinc-500 font-[Poppins]"> We’ve sent Email with activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
-          <div className="flex gap-5 max-w-lg items-end">
-            {/* {inputFields.map((inputField, index) => (
+          <h1 className="text-center text-4xl lg:text-[34px] text-black font-[Inter] bg-[#FFFDFB] m-5 "> Let’s go! </h1>
+
+          <figure >
+            <img src="/src/assets/Asset@2x-8 1.png" alt="email@ " className='lg:h-[30%] lg:w-[30%] size-40 mx-auto max-w-lg    ' />
+          </figure>
+          <form onSubmit={handleSubmit(send)} className=" px-5 text-center flex flex-col  items-center justify-center mb-auto  ">
+            <h1 className='font-bolt text-black  text-4xl lg:text-[30px]'>we just emailed you.</h1>
+            <p className=" text-lg text-zinc-500 "> We’ve sent Email with activation code to your mail <span className="font-bold text-[#141414]">{myEmail}</span>.</p>
+            <div className="flex gap-5 max-w-lg items-end">
+              {/* {inputFields.map((inputField, index) => (
               <div key={index}>{inputField}</div>
                
             ))} */}
-            <input {...codeRef1} type="text" className="w-10 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-            <input {...codeRef2} type="text" className="w-10 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-            <input {...codeRef3} type="text" className="w-10 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-            <input {...codeRef4} type="text" className="w-10 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-            <input {...codeRef5} type="text" className="w-10 h-10 flex items-center text-center text-black text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
-          </div>
-          {errors.code1 ? <small className='text-red-700'>The first number is invalid</small> : ""}
-          {errors.code2 ? <small className='text-red-700'>The second number is invalid</small> : ""}
-          {errors.code3 ? <small className='text-red-700'>The third number is invalid</small> : ""}
-          {errors.code4 ? <small className='text-red-700'>The fourth number is invalid</small> : ""}
-          {errors.code5 ? <small className='text-red-700'>The last number is invalid</small> : ""}
-          <div className="flex">
-            <div className=" px-3 mt-5 text-center">
-              <button className="block w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">Verify</button>
+              <input {...codeRef1} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
+              <input {...codeRef2} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
+              <input {...codeRef3} type="text" className="w-10 bg-transparent  h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
+              <input {...codeRef4} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
+              <input {...codeRef5} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
             </div>
-          </div>
-        </form>
+            {errors.code1 ? <small className='text-red-700'>The first number is invalid</small> : ""}
+            {errors.code2 ? <small className='text-red-700'>The second number is invalid</small> : ""}
+            {errors.code3 ? <small className='text-red-700'>The third number is invalid</small> : ""}
+            {errors.code4 ? <small className='text-red-700'>The fourth number is invalid</small> : ""}
+            {errors.code5 ? <small className='text-red-700'>The last number is invalid</small> : ""}
+            <div className="flex">
+              <div className=" px-3 mt-5 text-center">
+                <button className="block w-[95%]  bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">Verify</button>
+              </div>
+            </div>
+          </form>
 
 
+        </div>
       </div>
 
     </>
