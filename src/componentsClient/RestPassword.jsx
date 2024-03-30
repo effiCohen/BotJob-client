@@ -48,7 +48,7 @@ const RestPassword = () => {
     const doApi = async () => {
         let url = API_URL + "/users/changePass";
         try {
-            let resp = await doApiMethod(url, "PATCH",{ email: myEmail, password });
+            let resp = await doApiMethod(url, "PATCH", { email: myEmail, password });
             console.log(resp);
             if (resp.data.status = 200) {
                 toast.success('Password reset successfully');
@@ -62,46 +62,53 @@ const RestPassword = () => {
 
     return (
         <div className="min-w-screen min-h-fit rounded-3xl flex items-center justify-center px-2 py-2 bg-[#FFFDFB]">
-            <div className="w-full overflow-hidden flex items-center justify-center" style={{ maxWidth: '1000px' }}>
-                <div className="md:flex w-full flex items-center justify-center">
-                    <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
-                        <div className="text-center mb-4">
-                            <h1 className="font-bold text-3xl text-[#1E1E1E] font-[inter]">Reset password</h1>
-                            <p className="text-gray-300 text-sm font-[Poppins] text-center ml-6">Please type something you’ll remember</p>
-                        </div>
-                        <form onSubmit={handleSubmit}>
-                            <div className="flex-mx-3">
-                                <div className="w-full px-3 mb-2 text-start">
-                                    <label className="text-xs font-[inter] px-1 text-[#292930]">New password</label>
-                                    <div className="flex">
-                                        <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
-                                        <input
-                                            type="password"
-                                            value={password}
-                                            onChange={handlePasswordChange}
-                                            className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
-                                            placeholder="Password"
-                                        />
-                                    </div>
-                                    {errors.password && <small className="text-red-700">{errors.password}</small>}
-                                    <label className="text-xs px-1 font-[inter] text-[#292930]">Confirm new password</label>
-                                    <div className="flex">
-                                        <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
-                                        <input
-                                            type="password"
-                                            value={confirmPassword}
-                                            onChange={handleConfirmPasswordChange}
-                                            className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
-                                            placeholder="Confirm Password"
-                                        />
-                                    </div>
-                                    {errors.confirmPassword && <small className="text-red-700">{errors.confirmPassword}</small>}
-                                    <div className="w-full px-3 mt-5">
-                                        <button type="submit" className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple]">Confirm Password</button>
+            <div className=" bg-transparent flex-col mx-auto rounded-3xl shadow-md  p-4 border border-gray-300 flex w-full justify-center  mt-16  lg:w-[55%] ">
+
+                <div className="w-full overflow-hidden flex items-center justify-center">
+                    <div className="md:flex w-full flex items-center justify-center">
+                        <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
+                            <div className="text-center mb-4">
+                                <h1 className="text-center text-4xl lg:text-[34px] text-black font-[Inter] bg-[#FFFDFB] m-5">Reset password</h1>
+                                <p className="text-gray-400 text-sm font-[inter] text-center mt-3">Please type something you’ll remember</p>
+                            </div>
+                            <form onSubmit={handleSubmit}>
+                                <div className="flex-mx-3">
+                                    <div className="w-full px-3 mb-2 text-start ">
+                                        <div className='m-3 '>
+                                            <label className="text-sm font-[Inter] px-1 text-[#292930] m-1">New password</label>
+                                            <div className="flex">
+                                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
+                                                <input
+                                                    type="password"
+                                                    value={password}
+                                                    onChange={handlePasswordChange}
+                                                    className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                                    placeholder="Password"
+                                                />
+                                            </div>
+                                        </div>
+                                        {errors.password && <small className="text-red-700">{errors.password}</small>}
+                                        <div className='m-3'>
+                                            <label className="text-sm font-[Inter] px-1 text-[#292930] m-1">Confirm new password</label>
+                                            <div className="flex ">
+                                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
+                                                <input
+                                                    type="password"
+                                                    value={confirmPassword}
+                                                    onChange={handleConfirmPasswordChange}
+                                                    className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                                    placeholder="Confirm Password"
+                                                />
+                                            </div>
+                                        </div>
+                                        {errors.confirmPassword && <small className="text-red-700">{errors.confirmPassword}</small>}
+                                        <div className="w-full px-3 mt-5">
+                                            <button type="submit" className="block w-[90%]  mx-auto  bg-[#3871C1] hover:bg-[#ffcad4a6] hover:text-[#2E3837] font-[Inter] text-white rounded-2xl px-3 py-3 ">Confirm Password</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
