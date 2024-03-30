@@ -54,19 +54,20 @@ const ForgotPass = () => {
                     <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                         <div className="text-center mb-4">
                             <h1 className="font-bold text-3xl text-[#1E1E1E] font-[inter]">Forgot password?</h1>
-                            <p className='text-gray-300 text-sm font-[Poppins] text-center'>Don’t worry, Please enter your email account.</p>
+                            <p className='text-gray-400 text-sm font-[inter] text-center mt-3'>Don’t worry, Please enter your email account.</p>
                         </div>
                         <form onSubmit={handleSubmit(onSubForm)} className="flex-mx-3">
                             <div className="w-full px-3 mb-2 text-start">
-                                <label className="text-xs font-sans px-1 font-bold text-[#292930] ">Email:</label>
+                                <label className="text-xs font-[inter] px-1 font-bold  text-[#292930] ">Email:</label>
                                 <div className="flex">
                                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className=" text-gray-400 text-lg"></i></div>
-                                    <input {...emailRef} type="email" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="test@gmail.com" />
+                                    <input {...emailRef} type="email" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400 mt-2" placeholder="test@gmail.com" />
                                 </div>
                                 {errors.email ? <small className='text-red-700'>* Email invalid</small> : ""}
                                 <div className="w-full px-3 mt-5 ">
-                                    <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold  text-white rounded-2xl px-3 py-3 font-[simple]">Send code</button>
+                                    <button className="block w-[90%] max-w-xs mx-auto bg-[#3871C1] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold  text-white rounded-2xl px-3 py-3 font-[simple]">Send code</button>
                                 </div>
+                                
                             </div>
                             <p className='mx-auto text-center mt-8 font-[simple]'>Already have account? <b onClick={toLogin} className='cursor-pointer'>Sign in </b></p>
                         </form>
