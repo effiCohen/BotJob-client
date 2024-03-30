@@ -61,7 +61,7 @@ const Diagram = () => {
         if (tempAr.length > 0) {
             setAr(tempAr)
         } else {
-            toast.error("no ...");
+            toast.error(`It seems that no one has taken interview in ${job}`);
             setAr([])
         }
 
@@ -80,41 +80,50 @@ const Diagram = () => {
 
 
     return (
-        <div>
-            
-        <div className='flex'>
-            <div>
-                <PieChart
-                    series={[
-                        {
-                            data: [
-                                { id: 0, value: ar.length, label: 'series A' },
-                                { id: 1, value: ar2.length - ar.length, label: 'series B' },
-                            ],
-                        },
-                    ]}
-                    width={400}
-                    height={200}
-                />
-            </div>
-            <div>
-                <h2 className="font-bold text-sm text-[#1E1E1E] font-inter mb-4">Let's first choose a role</h2>
-                <div className="mb-4">
-                    <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e) }} className="w-full">
-                        {arRole.map((item, index) => (
-                            <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
-                        ))}
-                    </Select>
+        <>
+
+            <div className="flex  min-h-[80svh] flex-row justify-center items-center bg-[#fffdfb] ">
+
+                <div className="container bg-white p-5 rounded-3xl shadow-lg border border-gray-300 flex  md:flex-row md:w-1/2">
+
+                    <div className=" mx-auto">
+                        <div>
+                            <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e) }} className="w-full">
+                                {arRole.map((item, index) => (
+                                    <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
+                                ))}
+                            </Select>
+                        </div>
+                        <div className='mt-11 text-black'>
+                            <div>All interviews: {ar2.length}</div>
+                            <div>interviews in: {job}: {ar.length}</div>
+                            {ar.length > 0 ? <p>Frome: {ar[ar.length - 1].date_created.substring(10, length - 1)},to: {ar[0].date_created.substring(10, length - 1)}</p> : `Absence of Interviews for the ${job} Position`}
+                        </div>
+
+                    </div>
+
+                    <div className=' items-end  ml-16'>
+                        <PieChart
+                            series={[
+                                {
+                                    data: [
+                                        { id: 0, value: ar.length, label: `${job} interviews` },
+                                        { id: 1, value: ar2.length - ar.length, label: 'All interviews' },
+                                    ],
+                                },
+                            ]}
+                            width={500}
+                            height={200}
+                        />
+                    </div>
+
                 </div>
 
-                <div>num all: {ar2.length}</div>
-                <div>num {job}: {ar.length}</div>
-                {ar.length > 0 ? <p>frome: {ar[ar.length - 1].date_created.substring(10, length - 1)},to: {ar[0].date_created.substring(10, length - 1)}</p> : ""}
             </div>
 
 
-        </div>
-        </div>
+
+        </>
     )
 }
 
