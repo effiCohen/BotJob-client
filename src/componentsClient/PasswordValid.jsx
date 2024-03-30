@@ -59,7 +59,7 @@ const PasswordValid = () => {
                     <p className=" text-lg  font-[Poppins]"> We've sent Email with  activation code to your mail <span className="font-extrabold text-[#141414]">{myEmail}</span>.</p>
                     <div className="flex gap-5 max-w-lg items-end">
                         <div className="flex gap-5 max-w-lg items-end">
-                            {[1, 2, 3, 4, 5].map((index) => (
+                            {[0, 1, 2, 3, 4].map((index) => (
                                 <input
                                     key={index}
                                     type="text"
