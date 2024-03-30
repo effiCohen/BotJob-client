@@ -61,7 +61,7 @@ const Diagram = () => {
         if (tempAr.length > 0) {
             setAr(tempAr)
         } else {
-            toast.error(`It seems that no one has taken interview in ${job}`);
+            toast.error(`It seems that no one has taken an interview in ${e}`);
             setAr([])
         }
 
@@ -82,19 +82,19 @@ const Diagram = () => {
     return (
         <>
 
-            <div className="flex  min-h-[80svh] flex-row justify-center items-center bg-[#fffdfb] ">
+            <div className="   flex  min-h-[90svh] flex-row justify-center items-center bg-[#fffdfb]">
+                <div className=" bg-transparent  p-5 rounded-3xl shadow-2xl  border border-gray-300 flex w-full  md:flex-row lg:w-[55%] ">
 
-                <div className="container bg-white p-5 rounded-3xl shadow-lg border border-gray-300 flex  md:flex-row md:w-1/2">
-
-                    <div className=" mx-auto">
+                    <div className=" mx-auto p-3">
                         <div>
-                            <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e) }} className="w-full">
+                            <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e); }} className="w-full"   >
+
                                 {arRole.map((item, index) => (
                                     <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
                                 ))}
                             </Select>
                         </div>
-                        <div className='mt-11 text-black'>
+                        <div className='mt-11 text-black w-full'>
                             <div>All interviews: {ar2.length}</div>
                             <div>interviews in: {job}: {ar.length}</div>
                             {ar.length > 0 ? <p>Frome: {ar[ar.length - 1].date_created.substring(10, length - 1)},to: {ar[0].date_created.substring(10, length - 1)}</p> : `Absence of Interviews for the ${job} Position`}
@@ -102,15 +102,26 @@ const Diagram = () => {
 
                     </div>
 
-                    <div className=' items-end  ml-16'>
+                    <div className=' items-end  '>
                         <PieChart
+                            colors={['#3871c1bc', '#ffcad4a6']} // Use palette
+
                             series={[
                                 {
+
+                                    cx: 115,
+                                    cornerRadius: 10,
+
                                     data: [
+
                                         { id: 0, value: ar.length, label: `${job} interviews` },
                                         { id: 1, value: ar2.length - ar.length, label: 'All interviews' },
+
                                     ],
+
+
                                 },
+
                             ]}
                             width={500}
                             height={200}
@@ -119,7 +130,7 @@ const Diagram = () => {
 
                 </div>
 
-            </div>
+            </div >
 
 
 
