@@ -22,7 +22,6 @@ function HomeAnswer() {
     let url = API_URL + "/questions/" + ThisQuestion;
     try {
       let resData = await doApiGet(url);
-      console.log(resData.data);
       setThisData(resData.data);
       setShowText(resData.data.question);
     } catch (error) {
@@ -44,15 +43,6 @@ function HomeAnswer() {
       <img onClick={() => BackToQuestions()} src="/src/assets/left-arrow.png" className="mr-3 h-6 sm:h-6" style={{  marginLeft: '10px' ,height:'30px' }} alt="" />
 
         <div className="flex  justify-center  items-center mx-auto max-w-screen-sm">
-          {/* <img onClick={() => BackToQuestions()} src="/src/assets/return.png" className="mr-3 h-6 sm:h-6" alt="" /> */}
-          {/* <button onClick={() => BackToQuestions()} class="cursor-pointer duration-200 hover:scale-125 active:scale-100" title="Go Back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" class="stroke-blue-300">
-              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" d="M11 6L5 12M5 12L11 18M5 12H19"></path>
-            </svg>
-          </button> */}
-
-
-
           <h1 className=" font-bold  text-gray-900 sm:text-3xl   lg:text-2xl font-[Inter] mb-3 ">Learn from answers</h1>
           <div></div>
         </div>

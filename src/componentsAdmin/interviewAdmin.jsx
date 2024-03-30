@@ -21,9 +21,7 @@ function InterviewAdmin() {
       let resData = await doApiGet(url);
       let data = resData.data
       let dataAr = resData.data.questions
-      console.log(data);
       setInterview(data)
-      console.log(dataAr);
       setAr(dataAr)
     } catch (error) {
       console.log(error);

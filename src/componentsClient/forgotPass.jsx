@@ -28,9 +28,7 @@ const ForgotPass = () => {
                 console.log("We will send you a password recovery code to your email");
                 toast.success("We will send you a password recovery code to your email");
                 dispatch(addEmail({ email: _dataBody.email }));
-                console.log(myEmail);
                 nav("/passwordValidation");
-                // window.location.reload();
             }
         }
         catch (err) {

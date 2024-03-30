@@ -22,7 +22,6 @@ function QuestionAdmin() {
     let url = API_URL + "/questions/" + ThisQuestion;
     try {
       let resData = await doApiGet(url);
-      console.log(resData.data);
       setThisData(resData.data);
       setShowText(resData.data[buttons[0].tipe]);
     } catch (error) {

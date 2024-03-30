@@ -43,7 +43,6 @@ function DashboardAdmin() {
       setAr(tempAr)
     } else {
       toast.error("The search value was not found");
-      console.log("The search value was not found");
       if (searchText == "") {
         setAr(ar2)
       }
