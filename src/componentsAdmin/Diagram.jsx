@@ -71,7 +71,7 @@ const Diagram = () => {
     return (
         <>
 
-            <div className="   flex  min-h-[90svh] flex-row justify-center items-center bg-[#fffdfb] font-[Inter]">
+            <div className="   flex  min-h-[90svh] flex-row justify-center items-center bg-[#FAF7FF] font-[Inter]">
                 <div className=" bg-transparent  p-5 rounded-3xl shadow-2xl  border border-gray-300 flex w-full  md:flex-row lg:w-[55%] ">
 
                     <div className=" mx-auto p-3">

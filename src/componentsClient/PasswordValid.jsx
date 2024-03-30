@@ -45,8 +45,8 @@ const PasswordValid = () => {
     return (
         <>
 
-            <div className=" flex   items-center self-center mx-auto  justify-between overflow-hidden container bg-[#fffdfbfa] px-5 ">
-                <div className=" bg-transparent flex-col mx-auto rounded-3xl shadow-md  p-4 border border-gray-300 flex w-full justify-center  mt-16  lg:w-[55%] ">
+            <div className=" flex   items-center self-center mx-auto  justify-between overflow-hidden container bg-[#FAF7FF] px-5 ">
+                <div className=" bg-transparent flex-col mx-auto rounded-3xl shadow-md  p-4 border border-gray-300 bg-white flex w-full justify-center  mt-16  lg:w-[55%] ">
 
                     <h1 className="text-center text-4xl lg:text-[34px] text-black font-[Inter] bg-[#FFFDFB] m-5  "> Let’s go! </h1>
 

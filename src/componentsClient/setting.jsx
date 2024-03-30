@@ -45,7 +45,7 @@ const Setting = () => {
 
     return (
         <>
-            <div className="flex justify-center items-center min-h-screen bg-[#fffdfb]">
+            <div className="flex justify-center items-center min-h-[90svh] bg-[#FAF7FF]">
                 <div className="container mx-auto  bg-white p-8 rounded-3xl shadow-lg border border-gray-300 flex flex-col md:flex-row">
                     <div className="w-full md:w-1/2">
                         <h1 className="font-bold text-3xl text-[#1E1E1E] font-inter mb-4">Let's build the interview</h1>

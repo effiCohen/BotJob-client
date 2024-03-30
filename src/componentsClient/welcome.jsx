@@ -1,7 +1,5 @@
 import React from "react";
 import 'tailwindcss/tailwind.css';
-import { Carousel, IconButton } from "@material-tailwind/react";
-import { Card, CardHeader, CardBody, Typography, Avatar } from "@material-tailwind/react";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -15,27 +13,12 @@ function Welcome() {
     const toLogin = () => {
         nav("/login");
     };
-    function StarIcon() {
-        return (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-5 w-5 text-yellow-700"
-            >
-                <path
-                    fillRule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                    clipRule="evenodd"
-                />
-            </svg>
-        );
-    }
+
 
     return (
         <>
             <section className="relative py-16 lg:py-20 ">
-                <div className="lg:max-w-3xl max-w-2xl p-4  mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between rounded-3xl shadow-lg border border-gray-100">
+                <div className="lg:max-w-3xl max-w-2xl p-4  mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between rounded-3xl shadow-lg border bg-white border-gray-100">
                     <div className="flex-shrink-0 w-full lg:w-1/2  lg:mb-0">
                         <img className="w-3/4 lg:w-full mx-auto lg:mx-0" src="src/assets/Rehearse.svg" alt="BotJob Ai Logo" />
                     </div>
@@ -96,7 +79,7 @@ function Welcome() {
                     <div className="container p-6 mx-auto mb-10 xl:px-0">
                         <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
                             <div className="lg:col-span-2 xl:col-auto">
-                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
+                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-white dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
                                     <p className="text-2xl leading-normal">"This platform provided me with invaluable insights and feedback that greatly enhanced my interview performance. I landed my dream job at Google thanks to the<mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">preparation</mark>  I received here."</p>
                                     <div className="flex items-center mt-8 space-x-3">
                                         <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
@@ -110,7 +93,7 @@ function Welcome() {
                                 </div>
                             </div>
                             <div className="">
-                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
+                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-white dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
                                     <p className="text-2xl leading-normal ">“The interview simulations and expert feedback on this platform were instrumental in <mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">helping me gain</mark>  confidence and refine my responses. I successfully secured a position at Netflix after using this platform.”</p>
                                     <div className="flex items-center mt-8 space-x-3">
                                         <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
@@ -124,7 +107,7 @@ function Welcome() {
                                 </div>
                             </div>
                             <div className="">
-                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
+                                <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-white dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
                                     <p className="text-2xl leading-normal">“Using this platform significantly improved my interview skills  and gave me a competitive edge. The personalized feedback and <mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">AI-driven</mark>  insights helped me secure multiple job offers. I highly recommend it!”</p>
                                     <div className="flex items-center mt-8 space-x-3">
                                         <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">

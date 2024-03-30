@@ -60,8 +60,8 @@ const RestPassword = () => {
     }
 
     return (
-        <div className="min-w-screen min-h-fit rounded-3xl flex items-center justify-center px-2 py-2 bg-[#FFFDFB]">
-            <div className=" bg-transparent flex-col mx-auto rounded-3xl shadow-md  p-4 border border-gray-300 flex w-full justify-center  mt-16  lg:w-[55%] ">
+        <div className="min-w-screen min-h-fit rounded-3xl flex items-center justify-center px-2 py-2 bg-[#FAF7FF]">
+            <div className=" bg-transparent flex-col mx-auto rounded-3xl shadow-md  p-4 border border-gray-300 flex w-full justify-center bg-white  mt-16  lg:w-[55%] ">
 
                 <div className="w-full overflow-hidden flex items-center justify-center">
                     <div className="md:flex w-full flex items-center justify-center">
@@ -81,7 +81,7 @@ const RestPassword = () => {
                                                     type="password"
                                                     value={password}
                                                     onChange={handlePasswordChange}
-                                                    className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                                    className="w-full -ml-10 pl-10 pr-3 py-1 text-black bg-white rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
                                                     placeholder="Password"
                                                 />
                                             </div>
@@ -95,7 +95,7 @@ const RestPassword = () => {
                                                     type="password"
                                                     value={confirmPassword}
                                                     onChange={handleConfirmPasswordChange}
-                                                    className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                                    className="w-full -ml-10 pl-10 pr-3 py-1 bg-white text-black rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
                                                     placeholder="Confirm Password"
                                                 />
                                             </div>

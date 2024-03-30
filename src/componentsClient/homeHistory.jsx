@@ -96,7 +96,7 @@ function HomeHistory() {
                         title="New interview"
                     >
                         <svg
-                            className="stroke-[#ffafcc] fill-none group-hover:bg-white group-active:stroke-[#ffafcc] group-active:fill-[#ffafcc] group-active:duration-0 duration-300"
+                            className="stroke-[#ffafcc] fill-none  group-active:stroke-[#ffafcc] group-active:fill-[#ffafcc] group-active:duration-0 duration-300"
                             viewBox="0 0 24 24"
                             height="45px"
                             width="45px"
