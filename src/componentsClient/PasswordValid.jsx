@@ -58,7 +58,7 @@ const PasswordValid = () => {
                     </figure>
                     <form onSubmit={handleSubmit(send)} className=" text-center flex flex-col  items-center justify-center   ">
                         <h1 className='font-bolt font-[Inter] text-black  text-4xl lg:text-[30px]'>We just sent you an email.</h1>
-                        <p className=" text-lg text-zinc-500"> We've sent Email with  activation code to your mail <span className="font-bold text-[#141414]">{myEmail}</span>.</p>
+                        <p className="m-3 text-lg text-zinc-500"> We've sent Email with  activation code to your mail <span className="font-bold text-[#141414]">{myEmail}</span>.</p>
                         <div className="flex gap-5 max-w-lg items-end">
                             <div className="flex gap-5 max-w-lg items-end">
                                 {[0, 1, 2, 3, 4].map((index) => (
@@ -67,6 +67,7 @@ const PasswordValid = () => {
                                         type="text"
                                         className="w-10 h-10 flex items-center text-center bg-transparent text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg"
                                         {...codeRefs[index]}
+                                        maxLength={1}
                                     />
                                 ))}
                             </div>

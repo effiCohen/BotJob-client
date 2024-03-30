@@ -40,7 +40,6 @@ const Diagram = () => {
             let resData = await doApiGet(url);
             let data = resData.data;
             reverse(data);
-            console.log(data);
             setAr(data)
             setAr2(data)
             dispatch(addAdminIntervews({ allAdminIntervews: data }));
@@ -53,7 +52,6 @@ const Diagram = () => {
         let tempAr = [];
         for (let index = 0; index < ar2.length; index++) {
             if (ar2[index].job === e) {
-                console.log(ar2[index].job);
                 tempAr.push(ar2[index]);
             }
 
@@ -65,15 +63,6 @@ const Diagram = () => {
             setAr([])
         }
 
-        console.log(tempAr);
-        console.log(ar.length);
-        console.log(ar2.length);
-
-        // let tempAverage = 0
-        // for (let index = 0; index < tempAr.length; index++) {
-        //     tempAverage +=  tempAr[index].time ;        
-        // }
-        // setAverage(tempAverage/tempAr.length) 
 
     }
 
@@ -82,7 +71,7 @@ const Diagram = () => {
     return (
         <>
 
-            <div className="   flex  min-h-[90svh] flex-row justify-center items-center bg-[#fffdfb]">
+            <div className="   flex  min-h-[90svh] flex-row justify-center items-center bg-[#fffdfb] font-[Inter]">
                 <div className=" bg-transparent  p-5 rounded-3xl shadow-2xl  border border-gray-300 flex w-full  md:flex-row lg:w-[55%] ">
 
                     <div className=" mx-auto p-3">
@@ -97,7 +86,7 @@ const Diagram = () => {
                         <div className='mt-11 text-black w-full'>
                             <div>All interviews: {ar2.length}</div>
                             <div>interviews in: {job}: {ar.length}</div>
-                            {ar.length > 0 ? <p>Frome: {ar[ar.length - 1].date_created.substring(10, length - 1)},to: {ar[0].date_created.substring(10, length - 1)}</p> : `Absence of Interviews for the ${job} Position`}
+                            {ar.length > 0 ? <p>Between: {new Date(ar[ar.length - 1].date_created).toLocaleDateString('en-GB')} -  {new Date(ar[0].date_created).toLocaleDateString('en-GB')}</p> : `Absence of Interviews for the ${job} Position`}
                         </div>
 
                     </div>
