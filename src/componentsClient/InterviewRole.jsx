@@ -22,7 +22,6 @@ function InterviewRole() {
             setting = settingLocal;
             doApi(setting);
         } else {
-            console.log("Go to settings to select preferences");
             toast.error("Go to settings to select preferences");
             nav("/setting");
         }
@@ -34,7 +33,6 @@ function InterviewRole() {
         let url = API_URL + "/interviews";
         try {
             let resp = await doApiMethod(url, "POST", _dataBody);
-            console.log(resp);
             if (resp.data._id) {
                 dispatch(addNewIntervew({ newIntervew: resp.data }));
                 nav("/Interview");
@@ -65,46 +63,40 @@ function InterviewRole() {
                     <div className="w-full lg:w-[50%] text-left lg:text-left m-12">
                         <h2 className="text-left font-[Inter] text-2xl lg:text-xl font-bold text-[#2E3837] mt-2">Before we start let's set some rules</h2>
                         <ul className='m-2' >
-                            <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
-                                <span className="mr-2">&#8226;</span> {/* Dot character */}
+                            <li className='flex items-start'> 
+                                <span className="mr-2">&#8226;</span> 
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     No phone
-                                    {/* <img src="/src/assets/no-phone.png" alt="Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
-                            <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
-                                <span className="mr-2">&#8226;</span> {/* Dot character */}
+                            <li className='flex items-start'> 
+                                <span className="mr-2">&#8226;</span> 
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     Without Google
-                                    {/* <img src="/src/assets/google1.png" alt="Google Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
-                            <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
-                                <span className="mr-2">&#8226;</span> {/* Dot character */}
+                            <li className='flex items-start'> 
+                                <span className="mr-2">&#8226;</span> 
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     Without chat
-                                    {/* <img src="/src/assets/artificial-intelligence.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
-                            <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
-                                <span className="mr-2">&#8226;</span> {/* Dot character */}
+                            <li className='flex items-start'>
+                                <span className="mr-2">&#8226;</span>
                                 <h2 className="text-left font-[Inter] font-bold text-xl text-bold text-[#2E3837]">
                                     Be clear
-                                    {/* <img src="/src/assets/pencil.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
-                            <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
-                                <span className="mr-2">&#8226;</span> {/* Dot character */}
+                            <li className='flex items-start'> 
+                                <span className="mr-2">&#8226;</span> 
                                 <h2 className="text-left font-[Inter] text-xl font-semibold text-[#2E3837]">
                                     Don't forget to breathe
-                                    {/* <img src="/src/assets/difficulty-breathing.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
-                            <li className='flex items-start'> {/* Flex container with items-start aligns children to the start of the cross axis */}
-                                <span className="mr-2">&#8226;</span> {/* Dot character */}
+                            <li className='flex items-start'> 
+                                <span className="mr-2">&#8226;</span>
                                 <h2 className="text-left font-[Inter] text-xl font-semibold text-[#2E3837]">
                                     Stopwatch activat for test precision
-                                    {/* <img src="/src/assets/clock.png" alt="Chat GPT Icon" className="inline-block w-6 h-6 mx-2" /> */}
                                 </h2>
                             </li>
                         </ul>
@@ -114,7 +106,6 @@ function InterviewRole() {
 
                     </div>
                     <div className="w-full lg:w-[50%]">
-                        {/* <img src="/src/assets/20945347.jpg" className="w-full" /> */}
                         <Lottie options={{ loop: true, autoplay: true, animationData: lottieJson }} height={500} width={500} />
 
                     </div>

@@ -4,11 +4,9 @@ import { useDispatch } from 'react-redux';
 import { API_URL, doApiMethod } from '../services/apiService';
 
 function ItemAnswer(props) {
-    // const dispatch = useDispatch();
     let item = props.item;
     console.log(item);
     let thisQuestion = { question: "", aiAnswer: "", userAnswer: "" };
-    // const newIntervew = useSelector(state => state.newIntervewSlics.newIntervew);
 
     useEffect(() => {
         doApi()
@@ -35,11 +33,6 @@ function ItemAnswer(props) {
             let resp = await doApiMethod(url, "PUT", _dataBody);
             console.log(resp);
             console.log(resp.data);
-            // if (resp.data._id) {
-            //     // dispatch(addNewIntervew({ newIntervew: resp.data }));
-            //     // nav("/Interview");
-            //     console.log("test");
-            // }
         }
         catch (err) {
             console.log(err.response.data);

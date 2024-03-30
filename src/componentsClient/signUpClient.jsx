@@ -14,7 +14,6 @@ function SignUpClient() {
 
   const onSubForm = (data) => {
     data.email = data.email.toLowerCase();
-    console.log("data", data);
     doApi(data)
   };
 
@@ -23,11 +22,9 @@ function SignUpClient() {
     let url = API_URL + "/users";
     try {
       let resp = await doApiMethod(url, "POST", _dataBody);
-      console.log("resp", resp);
       if (resp.data._id) {
         dispatch(addEmail({ email: _dataBody.email }));
         toast.success("You sign up");
-        console.log("You sign up");
         nav("/validation");
       }
     }

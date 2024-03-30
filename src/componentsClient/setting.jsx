@@ -39,7 +39,6 @@ const Setting = () => {
             "experience": experience,
             "questions": questionCount
         };
-        console.log(settingObg);
         saveSettingLocal(settingObg);
         nav("/InterviewRole");
     };

@@ -49,7 +49,6 @@ const RestPassword = () => {
         let url = API_URL + "/users/changePass";
         try {
             let resp = await doApiMethod(url, "PATCH", { email: myEmail, password });
-            console.log(resp);
             if (resp.data.status = 200) {
                 toast.success('Password reset successfully');
                 navigate('/login');

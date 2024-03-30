@@ -16,7 +16,6 @@ const loginClient = () => {
   const dispatch = useDispatch();
 
   const onSubForm = (data) => {
-    console.log(data);
     doApi(data);
   }
 
@@ -33,7 +32,6 @@ const loginClient = () => {
     }
     catch (err) {
       toast.error(err.response.data.err);
-      console.log(err.response.data.err);
     }
   }
 

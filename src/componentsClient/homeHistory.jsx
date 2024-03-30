@@ -44,21 +44,16 @@ function HomeHistory() {
     }
 
     const onSearchClick = () => {
-        console.log(searchText);
         let tempAr = [];
         for (let index = 0; index < ar2.length; index++) {
             if (ar2[index].job == searchText) {
                 tempAr.push(ar2[index]);
             }
         }
-        console.log(tempAr);
-        console.log(tempAr.length);
         if (tempAr.length > 0) {
-            console.log(tempAr.length);
             setAr(tempAr)
         } else {
             toast.error("The search value was not found");
-            console.log("The search value was not found");
             if (searchText == "") {
                 setAr(ar2)
             }
@@ -92,9 +87,6 @@ function HomeHistory() {
                     </div>
                 </div>
                 <div className="flex items-center justify-center m-5">
-                    {/* <input value={searchText} onChange={handleChange} type="search" name="search" placeholder="Search" className="bg-white h-10 px-5  text-sm focus:outline-none shadow-md rounded-lg p-2 m-2" />
-                    <button onClick={onSearchClick} type="submit" className="ml-2"><img src="/src/assets/search1.png" alt="Icon 1" className="h-8 w-8" /></button> */}
-
                 </div>
                 <div>
                     <button
@@ -119,13 +111,6 @@ function HomeHistory() {
                         </svg>
 
                     </button>
-
-                    {/* <button
-                        onClick={toNewInterview}
-                        className="block w-full mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-full py-3 px-6 font-[Inter]"
-                    >
-                        +
-                    </button> */}
                 </div>
                 <div></div>
 

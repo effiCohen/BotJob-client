@@ -17,7 +17,6 @@ const PasswordValid = () => {
             email: myEmail,
             validationCode: myCode
         };
-        console.log(myData);
         doApi(myData);
     }
 
@@ -25,10 +24,8 @@ const PasswordValid = () => {
         let url = API_URL + "/users/validation";
         try {
             let resp = await doApiMethod(url, "PATCH", _dataBody);
-            console.log(resp);
             if (resp.data.status = 200) {
                 toast.success("Verified user");
-                console.log("Verified user");
                 nav("/restpass");
             }
         }

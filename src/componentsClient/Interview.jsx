@@ -76,13 +76,10 @@ function Interview() {
 
   const doApiTime = async () => {
     let stringTime = time.hr.toString() + ":" + time.min.toString() + ":" + time.sec.toString();
-    console.log(stringTime);
-    console.log(myInterview._id);
     let url = API_URL + "/interviews/" + myInterview._id;
     let _dataBody = {
       Time: stringTime
     }
-    console.log(_dataBody);
     try {
       let resp = await doApiMethod(url, "PUT", _dataBody);
       if (resp.data.modifiedCount == 1) {
@@ -98,8 +95,6 @@ function Interview() {
 
   const onNextClick = () => {
     doApiAnswer(answer)
-    console.log(cuonter);
-    console.log(myInterview.questions.length);
     if (cuonter < myInterview.questions.length) {
       doApi()
       setAnswer("")
@@ -116,7 +111,6 @@ function Interview() {
   return (
     <>
 
-      {/* <h1 className="text-4xl font-bold leading-tight font-bold text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-3xl font-pj mb-3">Question :</h1> */}
       <h2 className='font-bold font-[Inter] text-black text-3xl mt-9 '>{question.question} </h2>
       <div className="flex flex-col items-center w-[32rem] mx-auto shadow-md rounded-lg p-4 m-5 mt-14">
         <Textarea value={answer} onChange={handleChange} variant="static" placeholder="Your Answer..." rows={8} />

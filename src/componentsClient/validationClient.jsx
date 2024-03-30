@@ -11,9 +11,6 @@ function ValidationClient() {
   let { register, handleSubmit, formState: { errors } } = useForm();
   const myEmail = useSelector(state => state.myDetailsSlice.email);
 
-
-
-
   const send = (data) => {
     let myCode = data.code1 + data.code2 + data.code3 + data.code4 + data.code5;
     let myData = {
@@ -30,7 +27,6 @@ function ValidationClient() {
       let resp = await doApiMethod(url, "PATCH", _dataBody);
       console.log(resp);
       if (resp.data.status = 200) {
-        console.log("You are now a valid user");
         toast.success("You are now a valid user");
         nav("/login");
       }
@@ -62,10 +58,6 @@ function ValidationClient() {
             <h1 className='font-bolt text-black  text-4xl lg:text-[30px]'>we just emailed you.</h1>
             <p className=" text-lg text-zinc-500 "> We’ve sent Email with activation code to your mail <span className="font-bold text-[#141414]">{myEmail}</span>.</p>
             <div className="flex gap-5 max-w-lg items-end">
-              {/* {inputFields.map((inputField, index) => (
-              <div key={index}>{inputField}</div>
-               
-            ))} */}
               <input {...codeRef1} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
               <input {...codeRef2} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
               <input {...codeRef3} type="text" className="w-10 bg-transparent  h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
