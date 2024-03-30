@@ -1,7 +1,5 @@
 import React from "react";
 import 'tailwindcss/tailwind.css';
-import { Carousel, IconButton } from "@material-tailwind/react";
-import { Card, CardHeader, CardBody, Typography, Avatar } from "@material-tailwind/react";
 import { useNavigate } from 'react-router-dom';
 
 
