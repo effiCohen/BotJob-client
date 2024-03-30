@@ -1,46 +1,157 @@
 // import React from 'react'
 
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { API_URL, doApiMethod } from '../services/apiService';
+import { toast } from 'react-toastify';
+
 const RestPassword = () => {
+    const navigate = useNavigate();
+    const myEmail = useSelector(state => state.myDetailsSlice.email);
+
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [errors, setErrors] = useState({});
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
+
+    const handleConfirmPasswordChange = (e) => {
+        setConfirmPassword(e.target.value);
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Password validation
+        const errors = {};
+        if (!password) {
+            errors.password = 'Password is required';
+        }
+        if (!confirmPassword) {
+            errors.confirmPassword = 'Confirm Password is required';
+        }
+        if (password !== confirmPassword) {
+            errors.confirmPassword = 'Passwords do not match';
+        }
+
+        if (Object.keys(errors).length > 0) {
+            setErrors(errors);
+            return;
+        }
+
+        // Send password to server
+        doApi()
+    };
+    const doApi = async () => {
+        let url = API_URL + "/users/changePass";
+        try {
+            let resp = await doApiMethod(url, "PATCH",{ email: myEmail, password });
+            console.log(resp);
+            if (resp.data.status = 200) {
+                toast.success('Password reset successfully');
+                navigate('/login');
+            }
+        }
+        catch (err) {
+            console.log(err.response.data);
+        }
+    }
 
     return (
-        <div className="min-w-screen min-h-fit rounded-3xl   flex items-center justify-center px-2 py-2 bg-[#FFFDFB]  ">
-            <div className="   w-full overflow-hidden flex items-center justify-center " style={{ maxWidth: '1000px' }}>
-                <div className="md:flex  w-full flex items-center justify-center">
-
+        <div className="min-w-screen min-h-fit rounded-3xl flex items-center justify-center px-2 py-2 bg-[#FFFDFB]">
+            <div className="w-full overflow-hidden flex items-center justify-center" style={{ maxWidth: '1000px' }}>
+                <div className="md:flex w-full flex items-center justify-center">
                     <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                         <div className="text-center mb-4">
                             <h1 className="font-bold text-3xl text-[#1E1E1E] font-[inter]">Reset password</h1>
-                            <p className='text-gray-300 text-sm font-[Poppins] text-center ml-6'>Please type something you’ll remember</p>
+                            <p className="text-gray-300 text-sm font-[Poppins] text-center ml-6">Please type something you’ll remember</p>
                         </div>
-                        <div>
-
+                        <form onSubmit={handleSubmit}>
                             <div className="flex-mx-3">
                                 <div className="w-full px-3 mb-2 text-start">
-                                    <label className="text-xs font-[inter] px-1  text-[#292930] "> New password</label>
+                                    <label className="text-xs font-[inter] px-1 text-[#292930]">New password</label>
                                     <div className="flex">
                                         <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
-                                        <input type="password" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Password" />
+                                        <input
+                                            type="password"
+                                            value={password}
+                                            onChange={handlePasswordChange}
+                                            className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                            placeholder="Password"
+                                        />
                                     </div>
-                                    <label className="text-xs  px-1 font-[inter] text-[#292930] ">Confirm new password</label>
+                                    {errors.password && <small className="text-red-700">{errors.password}</small>}
+                                    <label className="text-xs px-1 font-[inter] text-[#292930]">Confirm new password</label>
                                     <div className="flex">
                                         <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
-                                        <input type="password" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Confirm Password" />
+                                        <input
+                                            type="password"
+                                            value={confirmPassword}
+                                            onChange={handleConfirmPasswordChange}
+                                            className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                            placeholder="Confirm Password"
+                                        />
                                     </div>
-
-                                    <div className="w-full px-3 mt-5 ">
-                                        <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple]">Confirm Password</button>
+                                    {errors.confirmPassword && <small className="text-red-700">{errors.confirmPassword}</small>}
+                                    <div className="w-full px-3 mt-5">
+                                        <button type="submit" className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple]">Confirm Password</button>
                                     </div>
-
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
-
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default RestPassword
+export default RestPassword;
+
+// const RestPassword = () => {
+
+//     return (
+//         <div className="min-w-screen min-h-fit rounded-3xl   flex items-center justify-center px-2 py-2 bg-[#FFFDFB]  ">
+//             <div className="   w-full overflow-hidden flex items-center justify-center " style={{ maxWidth: '1000px' }}>
+//                 <div className="md:flex  w-full flex items-center justify-center">
+
+//                     <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
+//                         <div className="text-center mb-4">
+//                             <h1 className="font-bold text-3xl text-[#1E1E1E] font-[inter]">Reset password</h1>
+//                             <p className='text-gray-300 text-sm font-[Poppins] text-center ml-6'>Please type something you’ll remember</p>
+//                         </div>
+//                         <div>
+
+//                             <div className="flex-mx-3">
+//                                 <div className="w-full px-3 mb-2 text-start">
+//                                     <label className="text-xs font-[inter] px-1  text-[#292930] "> New password</label>
+//                                     <div className="flex">
+//                                         <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
+//                                         <input type="password" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Password" />
+//                                     </div>
+//                                     <label className="text-xs  px-1 font-[inter] text-[#292930] ">Confirm new password</label>
+//                                     <div className="flex">
+//                                         <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
+//                                         <input type="password" className="w-full -ml-10 pl-10 pr-3 py-1 bg-[#FAF7FF] rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400" placeholder="Confirm Password" />
+//                                     </div>
+
+//                                     <div className="w-full px-3 mt-5 ">
+//                                         <button className="block w-[90%] max-w-xs mx-auto bg-[#2E3837] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl px-3 py-3 font-[simple]">Confirm Password</button>
+//                                     </div>
+
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//             </div>
+
+//         </div>
+//     )
+// }
+
+// export default RestPassword
