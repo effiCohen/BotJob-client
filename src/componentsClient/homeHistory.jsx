@@ -21,10 +21,6 @@ function HomeHistory() {
         doApi()
     }, [])
 
-    const toNewInterview = () => {
-        nav("/InterviewRole");
-    };
-
     const doApi = async () => {
         let url = API_URL + "/interviews/myInterview"
         try {
@@ -42,7 +38,6 @@ function HomeHistory() {
             console.log(error);
         }
     }
-
     const onSearchClick = () => {
         let tempAr = [];
         for (let index = 0; index < ar2.length; index++) {
@@ -57,12 +52,15 @@ function HomeHistory() {
             if (searchText == "") {
                 setAr(ar2)
             }
-        }
-    }
+        }}
 
     const handleChange = (event) => {
         setSearchText(event.target.value);
     }
+
+    const toNewInterview = () => {
+        nav("/InterviewRole");
+    };
 
     return (
         <div className="mt-12 w-full my-6  ">
@@ -91,17 +89,13 @@ function HomeHistory() {
                 <div>
                     <button
                         onClick={toNewInterview}
-
                         className="group cursor-pointer outline-none hover:rotate-90 duration-300"
-                        title="New interview"
-                    >
+                        title="New interview">
                         <svg
                             className="stroke-[#ffafcc] fill-none  group-active:stroke-[#ffafcc] group-active:fill-[#ffafcc] group-active:duration-0 duration-300"
                             viewBox="0 0 24 24"
                             height="45px"
-                            width="45px"
-
-                        >
+                            width="45px" >
                             <path
                                 strokeWidth="1.5"
                                 d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
@@ -109,13 +103,10 @@ function HomeHistory() {
                             <path strokeWidth="1.5" d="M8 12H16"></path>
                             <path strokeWidth="1.5" d="M12 16V8"></path>
                         </svg>
-
                     </button>
                 </div>
                 <div></div>
-
             </div>
-
             <div className="flex flex-col">
                 <div className="inline-block min-w-full py-2 sm:px-6 lg:px-6">
                     <div className="overflow-hidden">

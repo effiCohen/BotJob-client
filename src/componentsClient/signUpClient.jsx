@@ -16,8 +16,6 @@ function SignUpClient() {
     data.email = data.email.toLowerCase();
     doApi(data)
   };
-
-
   const doApi = async (_dataBody) => {
     let url = API_URL + "/users";
     try {

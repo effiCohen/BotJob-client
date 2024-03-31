@@ -61,7 +61,7 @@ const Setting = () => {
                         <div className="mb-4">
                             <Select label="Years of experience" value={experience} onChange={(e) => setExperience(e)} className="w-full">
                                 {arexperience.map((item, index) => (
-                                    <Option key={index} value={(index + 1).toString()}>{(index + 1).toString()}</Option>
+                                    <Option key={index} value={(index + 1).toString()}>{(index).toString()}</Option>
                                 ))}
                             </Select>
                         </div>
