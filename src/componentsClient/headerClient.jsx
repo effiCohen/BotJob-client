@@ -81,10 +81,9 @@ function HeaderClient() {
             </ul>
           </div>
           <div className="navbar-end">
-            <ul className='menu justify-between menu-horizontal px-1'>
-              <button onClick={onlogout} className="group flex items-center justify-start w-10 h-10  rounded-md  transition-all duration-300 hover:w-48 ">
-                <img src="/src/assets/log-out.png" alt="Icon 1" className="h-8 w-8" />
-                <div className="w-3/4 h-full flex items-center justify-center group-hover:opacity-100 text-night-rider opacity-0 transition-opacity duration-300 font-bold font-sans">Logout</div>
+            <ul className='menu  menu-horizontal '>
+              <button onClick={onlogout} className="group    w-10 h-10  rounded-md  ">
+                <img src="/src/assets/log-out.png" alt="Icon 1" className="h-8 w-8" title="logout" />
               </button>
             </ul>
           </div>
