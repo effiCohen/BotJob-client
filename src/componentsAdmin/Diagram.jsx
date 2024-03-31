@@ -48,13 +48,14 @@ const Diagram = () => {
         }
     }
     const onchangeJob = async (e) => {
-        setjob(e)
         let tempAr = [];
         for (let index = 0; index < ar2.length; index++) {
+            setjob(job);
             if (ar2[index].job === e) {
                 tempAr.push(ar2[index]);
+                
             }
-
+            
         }
         if (tempAr.length > 0) {
             setAr(tempAr)
@@ -73,14 +74,11 @@ const Diagram = () => {
 
             <div className="   flex  min-h-[90svh] flex-row justify-center items-center bg-[#FAF7FF] font-[Inter]">
                 <div className=" bg-transparent  p-5 rounded-3xl shadow-2xl  border border-gray-300 flex w-full  md:flex-row lg:w-[55%] ">
-
                     <div className=" mx-auto p-3">
                         <div>
                             <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e); }} className="w-full"   >
-
                                 {arRole.map((item, index) => (
-                                    <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>
-                                ))}
+                                    <Option  key={index} value={arRole[index].job}>{arRole[index].job}</Option>))}
                             </Select>
                         </div>
                         <div className='mt-11 text-black w-full'>
@@ -88,41 +86,26 @@ const Diagram = () => {
                             <div>interviews in: {job}: {ar.length}</div>
                             {ar.length > 0 ? <p>Between: {new Date(ar[ar.length - 1].date_created).toLocaleDateString('en-GB')} -  {new Date(ar[0].date_created).toLocaleDateString('en-GB')}</p> : `Absence of Interviews for the ${job} Position`}
                         </div>
-
                     </div>
-
                     <div className=' items-end  '>
                         <PieChart
                             colors={['#3871c1bc', '#ffcad4a6']} // Use palette
-
                             series={[
                                 {
-
                                     cx: 115,
                                     cornerRadius: 10,
-
                                     data: [
-
                                         { id: 0, value: ar.length, label: `${job} interviews` },
                                         { id: 1, value: ar2.length - ar.length, label: 'All interviews' },
-
                                     ],
-
-
                                 },
-
                             ]}
                             width={500}
                             height={200}
                         />
                     </div>
-
                 </div>
-
             </div >
-
-
-
         </>
     )
 }
