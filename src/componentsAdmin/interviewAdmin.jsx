@@ -40,7 +40,7 @@ function InterviewAdmin() {
 
   return (
     <>
-    <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800" style={{ marginTop: '50px' }}>
+    <div className="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800" style={{ marginTop: '50px' }}>
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl relative">
         <div className="absolute left-0 top-0 h-full">
         <img onClick={() => BackToDashboardAdmin()} src="/src/assets/left-arrow.png" className="mr-3 h-6 sm:h-6" style={{ marginTop: '-40px', marginLeft: '-20px' ,height:'35px' , width:'40px'}} alt="" />
