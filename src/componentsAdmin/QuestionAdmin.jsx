@@ -69,7 +69,7 @@ function QuestionAdmin() {
       </div>
 
       {showText !== null && showText !== undefined ? (
-        <div className="flex flex-col items-center w-[32rem] mx-auto">
+        <div className="flex flex-col items-center w-[32rem] mx-auto shadow-md rounded-lg p-4 m-5 ">
           <p>{showText}</p>
           <div className="flex w-full justify-between py-1.5">
             <div className="flex gap-2"></div>
