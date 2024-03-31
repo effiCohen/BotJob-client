@@ -32,8 +32,7 @@ const Diagram = () => {
         } catch (error) {
             console.log(error);
         }
-    };
-
+     };
     const doApiInterviews = async () => {
         let url = API_URL + "/interviews/allInterviews"
         try {
@@ -46,16 +45,14 @@ const Diagram = () => {
         } catch (error) {
             console.log(error);
         }
-    }
+    };
     const onchangeJob = async (e) => {
         let tempAr = [];
         for (let index = 0; index < ar2.length; index++) {
             setjob(job);
             if (ar2[index].job === e) {
-                tempAr.push(ar2[index]);
-                
-            }
-            
+                tempAr.push(ar2[index]);                
+            }          
         }
         if (tempAr.length > 0) {
             setAr(tempAr)
@@ -63,9 +60,7 @@ const Diagram = () => {
             toast.error(`It seems that no one has taken an interview in ${e}`);
             setAr([])
         }
-
-
-    }
+    };
 
 
 
