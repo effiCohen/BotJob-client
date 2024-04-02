@@ -81,7 +81,7 @@ const RestPassword = () => {
                                                     type="password"
                                                     value={password}
                                                     onChange={handlePasswordChange}
-                                                    className="w-full -ml-10 pl-10 pr-3 py-1 text-black bg-white rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                                    className="w-full text-black -ml-10 pl-2  py-1 bg-white rounded-xl text-sm border-2  outline-none border-gray-300"
                                                     placeholder="Password"
                                                 />
                                             </div>
@@ -95,14 +95,14 @@ const RestPassword = () => {
                                                     type="password"
                                                     value={confirmPassword}
                                                     onChange={handleConfirmPasswordChange}
-                                                    className="w-full -ml-10 pl-10 pr-3 py-1 bg-white text-black rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400"
+                                                    className="w-full text-black -ml-10 pl-2  py-1 bg-white rounded-xl text-sm border-2  outline-none border-gray-300"
                                                     placeholder="Confirm Password"
                                                 />
                                             </div>
                                         </div>
                                         {errors.confirmPassword && <small className="text-red-700">{errors.confirmPassword}</small>}
                                         <div className="w-full px-3 mt-5">
-                                            <button type="submit" className="block w-[90%]  mx-auto  bg-[#3871C1] hover:bg-[#ffcad4a6] hover:text-[#2E3837] font-[Inter] text-white rounded-2xl px-3 py-3 ">Confirm Password</button>
+                                            <button type="submit" className="block w-[90%]  mx-auto  bg-[#ac5089] hover:bg-[#ba7ea7ec] font-[Inter] text-white rounded-2xl px-3 py-3 ">Confirm Password</button>
                                         </div>
                                     </div>
                                 </div>
