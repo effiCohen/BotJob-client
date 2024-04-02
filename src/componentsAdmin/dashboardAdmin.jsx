@@ -65,7 +65,7 @@ function DashboardAdmin() {
               </svg>
             </div>
             <input type="text" value={searchText} onChange={handleChange} className="w-full max-w-[160px] bg-white pl-2 text-base font-semibold outline-0 drop-shadow-lg" placeholder="Search Role" id="" />
-            <input type="button" onClick={onSearchClick} value="Search" className="bg-[#ffafcc] p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-[#ffafccaf] transition-colors shadow-lg" />
+            <input type="button" onClick={onSearchClick} value="Search" className="bg-[#B80672] p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-[#ac5089] transition-colors shadow-lg" />
           </div>
         </div>
       </div>

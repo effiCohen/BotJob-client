@@ -80,7 +80,7 @@ const loginClient = () => {
               </div>
               <div className="flex justify-center">
                 <div className="w-[50%]">
-                  <button className="block w-[90%]  mx-auto bg-[#ac5089] hover:bg-[#ba7ea7ec] text-[18px]  text-white rounded-2xl  py-3 font-[Inter] mt-5">Login</button>
+                  <button className="block w-[90%]  mx-auto bg-[#B80672] hover:bg-[#ac5089] text-[18px]  text-white rounded-2xl  py-3 font-[Inter] mt-5">Login</button>
                 </div>
               </div>
               <div className="flex items-center space-x-4 mt-5">
@@ -91,7 +91,7 @@ const loginClient = () => {
             </form>
 
           </div>
-          <button onClick={toSignUp} className=" w-1/3  mx-auto hover:bg-[#ba7ea7] bg-[#740c59] text-[20px]   text-white rounded-2xl px-3 py-3 font-[Inter] mt-5">Create Account</button>
+          <button onClick={toSignUp} className=" w-1/3  mx-auto hover:bg-[#B80672] bg-[#ac5089] text-[20px]   text-white rounded-2xl px-3 py-3 font-[Inter] mt-5">Create Account</button>
         </div>
       </div>
     </div >

@@ -102,7 +102,7 @@ function InterviewRole() {
                         </ul>
 
 
-                        <button onClick={startTheInterview} className="font-[Inter] bg-[#ac5089] w-full lg:w-[70%] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-700 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#ba7ea7ec] before:to-[#ba7ea7ec] before:transition-all before:duration-700 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#ffffff] hover:text-[#ebf7ff] mt-5"> Start</button>
+                        <button onClick={startTheInterview} className="font-[Inter] bg-[#B80672] w-full lg:w-[70%] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-700 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#ac5089] before:to-[#ac5089] before:transition-all before:duration-700 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#ffffff] hover:text-[#ebf7ff] mt-5"> Start</button>
 
                     </div>
                     <div className="w-full lg:w-[50%]">

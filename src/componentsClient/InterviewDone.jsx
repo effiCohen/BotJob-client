@@ -37,7 +37,7 @@ function InterviewDone() {
           {` ${time.hr < 10 ? '0' : ' '}${time.hr} : ${time.min < 10 ? '0' : ''}${time.min} : ${time.sec < 10 ? '0' : ''}${time.sec}`}
         </p>
         <div className='mx-auto flex justify-center items-center  my-4'>
-          <button onClick={toAllAnsClick} className=" mt-10 block lg:w-40 w-[95%]  bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To all answers</button>
+          <button onClick={toAllAnsClick} className=" mt-10 block lg:w-40 w-[95%]  bg-[#B80672] hover:bg-[#ac5089]   text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">To all answers</button>
 
         </div>
         <div className=" mt-5 hidden md:block w-full lg:flex justify-center mx-auto items-center ">

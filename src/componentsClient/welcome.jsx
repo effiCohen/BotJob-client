@@ -26,8 +26,8 @@ function Welcome() {
                         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Rehearse.AI</h1>
                         <p className="text-gray-500 text-lg mb-6"> Practice  job interviews on the go.</p>
                         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
-                            <button onClick={toLogin} className="btn bg-[#ac5089] hover:bg-[#ba7ea7ec] text-white border-none  lg:mr-4  mb-2 lg:mb-0">Login</button>
-                            <button onClick={toSignUp} className="btn hover:bg-[#ba7ea7] bg-[#740c59] text-white hover:text-white border-none  ">Create Account</button>
+                            <button onClick={toLogin} className="btn bg-[#B80672] hover:bg-[#ac5089] text-white border-none  lg:mr-4  mb-2 lg:mb-0">Login</button>
+                            <button onClick={toSignUp} className="btn hover:bg-[#B80672] bg-[#ac5089] text-white hover:text-white border-none  ">Create Account</button>
                         </div>
                     </div>
 

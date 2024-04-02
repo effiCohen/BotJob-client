@@ -57,7 +57,7 @@ function QuestionAdmin() {
           <button
             onClick={() => onAnswerClick(index)}
             key={index}
-           className="bg-[#ffafcc] w-[85%] lg:w-[29%] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-300 ease-in-out shadow-md hover:scale-95 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#3871C1] before:to-[#000000] before:transition-all before:duration-700 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#FBF9F3] hover:text-[#FBF9F3]">
+           className="bg-[#B80672] w-[85%] lg:w-[29%] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-300 ease-in-out shadow-md hover:scale-95 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#ac5089] before:to-[#ac5089] before:transition-all before:duration-700 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#FBF9F3] hover:text-[#FBF9F3]">
             <span className="">{buttons[index].text}</span>
             <img
               src="/src/assets/click (1).png"

@@ -18,7 +18,7 @@ function HeaderAdmin() {
 
   return (
     <div>
-      <div className="flex justify-between  bg-[#ffcad4a6] mb-auto top-0  w-full text-black font-[Inter]">
+      <div className="flex justify-between  bg-[#B80672] mb-auto top-0  w-full text-white font-[Inter]">
         <div></div>
         <div className='flex'>
           <div className="my-4 mx-11">

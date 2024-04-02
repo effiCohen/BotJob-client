@@ -104,7 +104,7 @@ function SignUpClient() {
                   </div>
                   <div className="flex -mx-3">
                     <div className="w-full px-3 mt-5">
-                      <button className="mt-2 block w-[90%] max-w-xs mx-auto bg-[#ba7ea7] hover:bg-[#ba7ea7ec] text-[18px]   text-white rounded-2xl px-3 py-3 font-[Inter]"><b>Create Account</b></button>
+                      <button className="mt-2 block w-[90%] max-w-xs mx-auto bg-[#B80672] hover:bg-[#ac5089] text-[18px]   text-white rounded-2xl px-3 py-3 font-[Inter]"><b>Create Account</b></button>
                       <p className='mx-auto text-center mt-8 text-[#2E3837]  font-[Inter]'>Already have an account? <b onClick={toLogin} className='cursor-pointer underline'>Sign in </b></p>
                     </div>
                   </div>

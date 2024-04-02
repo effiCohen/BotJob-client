@@ -102,7 +102,7 @@ const RestPassword = () => {
                                         </div>
                                         {errors.confirmPassword && <small className="text-red-700">{errors.confirmPassword}</small>}
                                         <div className="w-full px-3 mt-5">
-                                            <button type="submit" className="block w-[90%]  mx-auto  bg-[#ac5089] hover:bg-[#ba7ea7ec] font-[Inter] text-white rounded-2xl px-3 py-3 ">Confirm Password</button>
+                                            <button type="submit" className="block w-[90%]  mx-auto  bg-[#B80672] hover:bg-[#ac5089] font-[Inter] text-white rounded-2xl px-3 py-3 ">Confirm Password</button>
                                         </div>
                                     </div>
                                 </div>
