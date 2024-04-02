@@ -32,7 +32,7 @@ const Diagram = () => {
         } catch (error) {
             console.log(error);
         }
-     };
+    };
     const doApiInterviews = async () => {
         let url = API_URL + "/interviews/allInterviews"
         try {
@@ -51,13 +51,15 @@ const Diagram = () => {
         for (let index = 0; index < ar2.length; index++) {
             setjob(job);
             if (ar2[index].job === e) {
-                tempAr.push(ar2[index]);                
-            }          
+                tempAr.push(ar2[index]);
+            }
         }
         if (tempAr.length > 0) {
+            setjob(e)
             setAr(tempAr)
         } else {
             toast.error(`It seems that no one has taken an interview in ${e}`);
+            setjob(e)
             setAr([])
         }
     };
@@ -73,12 +75,13 @@ const Diagram = () => {
                         <div>
                             <Select label="Select Role" value={job} onChange={(e) => { setjob(e); onchangeJob(e); }} className="w-full"   >
                                 {arRole.map((item, index) => (
-                                    <Option  key={index} value={arRole[index].job}>{arRole[index].job}</Option>))}
+                                    <Option key={index} value={arRole[index].job}>{arRole[index].job}</Option>))}
                             </Select>
                         </div>
                         <div className='mt-11 text-black w-full'>
                             <div>All interviews: {ar2.length}</div>
-                            <div>interviews in: {job}: {ar.length}</div>
+                            {ar.length > 0 ? <div>interviews in: {job}: {ar.length}</div> : ""}
+
                             {ar.length > 0 ? <p>Between: {new Date(ar[ar.length - 1].date_created).toLocaleDateString('en-GB')} -  {new Date(ar[0].date_created).toLocaleDateString('en-GB')}</p> : `Absence of Interviews for the ${job} Position`}
                         </div>
                     </div>
