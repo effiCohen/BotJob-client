@@ -56,7 +56,7 @@ function HeaderClient() {
   return (
     <div>
       {ifTokenExists ? (
-        <div className="navbar font-[Inter] bg-[#ac5089] mb-auto top-0 text-white  w-full h-[10px] ">
+        <div className="navbar font-[Inter] bg-[#740c59] mb-auto top-0 text-white  w-full h-[10px] ">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
