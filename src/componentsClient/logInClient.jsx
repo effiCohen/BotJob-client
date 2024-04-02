@@ -59,20 +59,20 @@ const loginClient = () => {
             <form onSubmit={handleSubmit(onSubForm)} className="md:w-96   md:px-10 ">
               <div className="flex items-center justify-center ">
                 <div className="mt-8 w-full sm:w-64 px-1  text-start">
-                  <label className="text-xs font-[Inter]  font-bold  text-[#292930]">Email:</label>
+                  <label className="text-md font-[Inter]    text-[#292930]">Email:</label>
                   <div className="mt-2 flex items-center justify-center">
                     <div className="w-10 z-10 pl-0  pointer-events-none flex items-center justify-center"><Icon path={mdiEmailOutline} size={0.7} /> </div>
-                    <input {...emailRef} type="email" className="w-full text-start text-sm -ml-10 pl-10 pr-3 py-1 bg-white rounded-xl border-2 border-[#292930c6] outline-none focus:border-gray-400 font-[Poppins] text-black" placeholder="JohenDue@gmail.com" />
+                    <input {...emailRef} type="email" className="w-full text-start text-md -ml-10 pl-10 pr-3 py-1 bg-white rounded-xl border-2 border-gray-300 outline-none  font-[Inter] text-black " placeholder="JohenDue@gmail.com" />
                   </div>
                   {errors.email ? <small className='text-red-700'>* Email invalid</small> : ""}
                 </div>
               </div>
               <div className="  flex items-center justify-center">
                 <div className="mt-2 w-full sm:w-64 px-1 mb-2 text-start">
-                  <label className="text-xs font-[Inter]  font-bold  text-[#292930]"> Password:</label>
+                  <label className="text-md font-[Inter]    text-[#292930]"> Password:</label>
                   <div className="mt-2 flex items-center justify-center">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><Icon path={mdiLockOutline} size={0.7} /></div>
-                    <input {...passwordRef} type="password" className="w-full -ml-10 pl-10 pr-3 text-sm text-start py-1 rounded-xl border-2   border-[#292930] bg-white outline-none focus:border-gray-500 font-[Poppins] " placeholder="password." />
+                    <input {...passwordRef} type="password" className="w-full text-start text-md -ml-10 pl-10 py-1 bg-white rounded-xl border-2 border-gray-300 outline-none  font-[Inter] text-black " placeholder="Password" />
                   </div>
                   {errors.password ? <small className='text-red-700'>* Enter valid password, min 3 chars</small> : ""}
                   <p onClick={toforgatPass} className='text-red-700 text-end text-xs cursor-pointer mt-3'>Forgot password?</p>
@@ -80,7 +80,7 @@ const loginClient = () => {
               </div>
               <div className="flex justify-center">
                 <div className="w-[50%]">
-                  <button className="block w-[90%]  mx-auto bg-[#3871C1] hover:bg-[#3871c1cd]   text-white rounded-2xl  py-3 font-[Inter] mt-5">Login</button>
+                  <button className="block w-[90%]  mx-auto bg-[#ac5089] hover:bg-[#ba7ea7ec] text-[18px]  text-white rounded-2xl  py-3 font-[Inter] mt-5">Login</button>
                 </div>
               </div>
               <div className="flex items-center space-x-4 mt-5">
@@ -91,7 +91,7 @@ const loginClient = () => {
             </form>
 
           </div>
-          <button onClick={toSignUp} className="block w-[90%] max-w-xs mx-auto bg-[#ffafcc] hover:bg-[#ffafccba]   text-white rounded-2xl px-3 py-3 font-[Inter] mt-5">Create account</button>
+          <button onClick={toSignUp} className=" w-1/3  mx-auto hover:bg-[#ba7ea7] bg-[#740c59] text-[20px]   text-white rounded-2xl px-3 py-3 font-[Inter] mt-5">Create Account</button>
         </div>
       </div>
     </div >

@@ -23,11 +23,11 @@ function Welcome() {
                         <img className="w-3/4 lg:w-full mx-auto lg:mx-0" src="src/assets/Rehearse.svg" alt="BotJob Ai Logo" />
                     </div>
                     <div className="text-center lg:text-left lg:w-1/2 ">
-                        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Rehearse</h1>
-                        <p className="text-gray-500 text-lg mb-6">Now you can practice the job interviews in one place and always be in control</p>
+                        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Rehearse.AI</h1>
+                        <p className="text-gray-500 text-lg mb-6"> Practice  job interviews on the go.</p>
                         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
-                            <button onClick={toLogin} className="btn hover:bg-[#ffafccc2] text-white border-none bg-[#ffafcc] lg:mr-4  mb-2 lg:mb-0">Login</button>
-                            <button onClick={toSignUp} className="btn hover:bg-[#3871c1bc] text-white border-none bg-[#3871C1]">Create account</button>
+                            <button onClick={toLogin} className="btn bg-[#ac5089] hover:bg-[#ba7ea7ec] text-white border-none  lg:mr-4  mb-2 lg:mb-0">Login</button>
+                            <button onClick={toSignUp} className="btn hover:bg-[#ba7ea7] bg-[#740c59] text-white hover:text-white border-none  ">Create Account</button>
                         </div>
                     </div>
 
