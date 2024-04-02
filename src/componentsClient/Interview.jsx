@@ -120,8 +120,8 @@ function Interview() {
         </div>
       </div>
       <div className="mb-3">{cuonter < myInterview.questions.length ?
-        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[Inter] mt-5">Next question</button> :
-        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[Inter] mt-5">Finish</button>}
+        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#740c59] hover:bg-[#ba7ea7ec] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[Inter] mt-5">Next question</button> :
+        <button onClick={onNextClick} className="block w-[90%] max-w-xs mx-auto bg-[#740c59] hover:bg-[#ba7ea7ec] hover:text-[#2E3837] font-bold text-white rounded-2xl py-3 font-[Inter] mt-5">Finish</button>}
       </div>
 
       <div className="cursor-pointer font-semibold overflow-hidden relative z-100 group px-8 py-2">
