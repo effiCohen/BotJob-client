@@ -52,7 +52,8 @@ function HomeHistory() {
             if (searchText == "") {
                 setAr(ar2)
             }
-        }}
+        }
+    }
 
     const handleChange = (event) => {
         setSearchText(event.target.value);
@@ -80,7 +81,7 @@ function HomeHistory() {
                                 </svg>
                             </div>
                             <input type="text" value={searchText} onChange={handleChange} className="w-full max-w-[160px] bg-white pl-2 text-base font-semibold outline-0 drop-shadow-lg" placeholder="Search Role" id="" />
-                            <input type="button" onClick={onSearchClick} value="Search" className="bg-[#ffafcc] p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-[#ffafccaf] transition-colors shadow-lg" />
+                            <input type="button" onClick={onSearchClick} value="Search" className="bg-[#B80672] p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-[#b80671dd] transition-colors shadow-lg" />
                         </div>
                     </div>
                 </div>
@@ -92,7 +93,7 @@ function HomeHistory() {
                         className="group cursor-pointer outline-none hover:rotate-90 duration-300"
                         title="New interview">
                         <svg
-                            className="stroke-[#ffafcc] fill-none  group-active:stroke-[#ffafcc] group-active:fill-[#ffafcc] group-active:duration-0 duration-300"
+                            className="stroke-[#B80672] fill-none  group-active:stroke-[#B80672] group-active:fill-[#B80672] group-active:duration-0 duration-300"
                             viewBox="0 0 24 24"
                             height="45px"
                             width="45px" >

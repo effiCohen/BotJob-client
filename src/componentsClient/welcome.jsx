@@ -20,7 +20,7 @@ function Welcome() {
             <section className="relative py-16 lg:py-20 ">
                 <div className="lg:max-w-3xl max-w-2xl p-4  mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between rounded-3xl shadow-lg border bg-white border-gray-100">
                     <div className="flex-shrink-0 w-full lg:w-1/2  lg:mb-0">
-                        <img className="w-3/4 lg:w-full mx-auto lg:mx-0" src="src/assets/Rehearse.svg" alt="BotJob Ai Logo" />
+                        <img className="w-3/4 lg:w-full mx-auto lg:mx-0" src="src/assets/Rehearse1.svg" alt="BotJob Ai Logo" />
                     </div>
                     <div className="text-center lg:text-left lg:w-1/2 ">
                         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Rehearse.AI</h1>
