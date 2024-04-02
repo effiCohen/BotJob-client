@@ -52,11 +52,11 @@ function ValidationClient() {
           <h1 className="text-center text-4xl lg:text-[34px] text-black font-[Inter]  m-5 "> Let’s go! </h1>
 
           <figure >
-            <img src="/src/assets/sendEmail.png" alt="email@ " className='lg:h-[20%] lg:w-[30%] size-40 mx-auto    ' />
+            <img src="/src/assets/Asset@2x-8 1.png" alt="email@ " className='lg:h-[30%] lg:w-[30%] size-40 mx-auto max-w-lg    ' />
           </figure>
           <form onSubmit={handleSubmit(send)} className=" px-5 text-center flex flex-col  items-center justify-center mb-auto  ">
-            <h1 className='font-bolt text-black  text-4xl lg:text-[30px]'>we just emailed you.</h1>
-            <p className=" text-lg text-zinc-500 "> We’ve sent Email with activation code to your mail <span className="font-bold text-[#141414]">{myEmail}</span>.</p>
+            <h1 className='font-bolt text-black  text-4xl lg:text-[30px]'>We’ve just email you an activation code</h1>
+            <p className=" text-lg text-zinc-500 ">  <span className="font-bold text-[#141414]">{myEmail}</span>.</p>
             <div className="flex gap-5 max-w-lg items-end">
               <input {...codeRef1} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
               <input {...codeRef2} type="text" className="w-10 bg-transparent h-10 flex items-center text-center  text-base border-2 border-gray-300 focus:border-[#141414] outline-none rounded-lg" />
@@ -71,7 +71,7 @@ function ValidationClient() {
             {errors.code5 ? <small className='text-red-700'>The last number is invalid</small> : ""}
             <div className="flex">
               <div className=" px-3 mt-5 text-center">
-                <button className="block w-[95%]   bg-[#3871C1] hover:bg-[#ffcad4a6] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">Verify</button>
+                <button className="block w-[95%]   bg-[#ac5089] hover:bg-[#ba7ea7ec]   text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">Verify</button>
               </div>
             </div>
           </form>

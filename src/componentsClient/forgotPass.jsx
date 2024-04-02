@@ -61,11 +61,11 @@ const ForgotPass = () => {
                                     <label className="text-xs font-[Inter] px-1 font-bold  text-[#292930] ">Email:</label>
                                     <div className="flex">
                                         <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
-                                        <input {...emailRef} type="email" className="w-full -ml-10 pl-10 pr-3 py-1 bg-white rounded-xl text-sm border-2 border-[#292930c6] outline-none focus:border-gray-400 mt-2 text-black" placeholder="test@gmail.com" />
+                                        <input {...emailRef} type="email" className="w-full text-black -ml-10 pl-2  py-1 bg-white rounded-xl text-sm border-2  outline-none border-gray-300" placeholder="Email@gmail.com" />
                                     </div>
                                     {errors.email ? <small className='text-red-700'>* Email invalid</small> : ""}
                                     <div className="w-full px-3 mt-5 ">
-                                        <button className="block w-[90%] max-w-xs mx-auto bg-[#3871C1] hover:bg-[#ffcad4a6] hover:text-[#2E3837]   text-white rounded-2xl px-3 py-3 font-[Inter] font-bold">Send code</button>
+                                        <button className="block w-[90%] max-w-xs mx-auto bg-[#ac5089] hover:bg-[#ba7ea7ec]  text-white rounded-2xl px-3 py-3 font-[Inter] font-bold">Send code</button>
                                     </div>
 
                                 </div>
