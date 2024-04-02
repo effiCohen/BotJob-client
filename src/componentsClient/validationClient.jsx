@@ -71,7 +71,7 @@ function ValidationClient() {
             {errors.code5 ? <small className='text-red-700'>The last number is invalid</small> : ""}
             <div className="flex">
               <div className=" px-3 mt-5 text-center">
-                <button className="block w-[95%]   bg-[#ba7ea7] hover:bg-[#ba7ea7ec] hover:text-[#2E3837]  text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">Verify</button>
+                <button className="block w-[95%]   bg-[#ac5089] hover:bg-[#ba7ea7ec]   text-white rounded-2xl px-3 py-3 font-bold font-[simple] ">Verify</button>
               </div>
             </div>
           </form>

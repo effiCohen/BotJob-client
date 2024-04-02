@@ -65,7 +65,7 @@ const ForgotPass = () => {
                                     </div>
                                     {errors.email ? <small className='text-red-700'>* Email invalid</small> : ""}
                                     <div className="w-full px-3 mt-5 ">
-                                        <button className="block w-[90%] max-w-xs mx-auto bg-[#ba7ea7] hover:bg-[#ba7ea7ec] hover:text-[#2E3837]   text-white rounded-2xl px-3 py-3 font-[Inter] font-bold">Send code</button>
+                                        <button className="block w-[90%] max-w-xs mx-auto bg-[#ac5089] hover:bg-[#ba7ea7ec]  text-white rounded-2xl px-3 py-3 font-[Inter] font-bold">Send code</button>
                                     </div>
 
                                 </div>
