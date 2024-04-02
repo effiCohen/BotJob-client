@@ -75,7 +75,7 @@ const Setting = () => {
                                 </Select>
                             </div>
                         </div>
-                        <button onClick={() => onSaveClick()} className="block mx-auto bg-[#ffafcc] hover:bg-[#FAF7FF] hover:text-[#2E3837] font-bold text-white rounded-lg px-6 py-3">
+                        <button onClick={() => onSaveClick()} className="block mx-auto bg-[#ac5089] hover:bg-[#ba7ea7ec]font-bold text-white rounded-lg px-6 py-3">
                             Save
                         </button>
                     </div>
