@@ -111,7 +111,7 @@ function Interview() {
   return (
     <>
 
-      <h2 className='font-bold font-[Inter] text-black text-3xl mt-9 '>{question.question} </h2>
+      <h2 className='font-bold font-[Inter] text-black text-3xl mt-9 '>{question.question}? </h2>
       <div className="flex flex-col items-center w-[32rem] mx-auto shadow-md rounded-lg p-4 m-5 mt-14">
         <Textarea value={answer} onChange={handleChange} variant="static" placeholder="Your Answer..." rows={8} />
         <div className="flex w-full justify-between ">
