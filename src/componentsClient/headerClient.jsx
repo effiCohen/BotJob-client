@@ -56,18 +56,18 @@ function HeaderClient() {
   return (
     <div>
       {ifTokenExists ? (
-        <div className="navbar bg-[#ac5089] mb-auto top-0 text-white  w-full h-[10px] ">
+        <div className="navbar font-[Inter] bg-[#ac5089] mb-auto top-0 text-white  w-full h-[10px] ">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
               </div>
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52">
                 <li onClick={onHomeClick}><a>Home</a></li>
-                <li onClick={onSetting}><a>Setting</a></li>
                 <li onClick={onNewInterview}><a>New interview</a></li>
+                <li onClick={onSetting}><a>Setting</a></li>
                 {ifAdmin ? <li onClick={onAdmin}><a>Admin</a></li> : null}
               </ul>
             </div>
@@ -75,8 +75,8 @@ function HeaderClient() {
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu justify-between menu-horizontal px-1">
+            <li onClick={onNewInterview}><a>New interview</a></li>
               <li onClick={onSetting}><a> Setting </a></li>
-              <li onClick={onNewInterview}><a>New interview</a></li>
               {ifAdmin ? <li onClick={onAdmin}><a>Admin</a></li> : null}
             </ul>
           </div>
