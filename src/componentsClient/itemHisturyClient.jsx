@@ -42,7 +42,7 @@ function ItemHisturyClient(props) {
 
   return (
     <tr
-      className={`transition-all duration-300 border-b border-gray-200 text-black ${isHovered ? 'bg-[#B80672] truncated-row' : 'bg-transparent'
+      className={`transition-all duration-300 border-b border-gray-200 text-black ${isHovered ? 'bg-[#f6cfe99b] truncated-row' : 'bg-transparent'
         }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
