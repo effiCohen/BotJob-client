@@ -87,7 +87,7 @@ const Diagram = () => {
                     </div>
                     <div className=' items-end  '>
                         <PieChart
-                            colors={['#3871c1bc', '#ffcad4a6']} // Use palette
+                            colors={['#ac5089', '#ba7ea7ec']} // Use palette
                             series={[
                                 {
                                     cx: 115,
