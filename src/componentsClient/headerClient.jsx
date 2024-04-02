@@ -71,7 +71,7 @@ function HeaderClient() {
                 {ifAdmin ? <li onClick={onAdmin}><a>Admin</a></li> : null}
               </ul>
             </div>
-            <img src="/src/assets/Rehearse.svg" onClick={onHomeClick} className='size-24 hidden lg:flex' alt="" />
+            <img src="/src/assets/Rehearse.png" onClick={onHomeClick} className='size-24 hidden lg:flex' alt="" />
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu justify-between menu-horizontal px-1">
